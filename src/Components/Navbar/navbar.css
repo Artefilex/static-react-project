@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--whiteColor);
+  width: 100%;
+  padding: 1rem;
+  height: header;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
+}
+.header .logo {
+  color: var(--blackColor);
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.header .logo .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  transform: translateY(5px);
+}
+@media screen and (max-width: 768px) {
+  .header .navBar {
+    padding: 1rem;
+    position: absolute;
+    background: var(--whiteColorDeam);
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -500rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+    transition: 0.9s ease-in-out;
+  }
+  .header .navBar .navList {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navList .navItem {
+    padding: 0.5rem 0rem;
+  }
+  .header .navBar .navList .navItem .navLink {
+    font-size: 0.9rem;
+    color: var(--textColor);
+    font-weight: 600;
+  }
+  .header .navBar .navList .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .navBar .navList .btn {
+    margin-top: 1rem;
+  }
+  .header .navBar .navList .btn a {
+    font-weight: 600;
+    color: var(--whiteColor);
+  }
+  .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--PrimaryColor);
+  }
+  .header .navBar .closeNavbar:hover {
+    color: var(--blackColor);
+  }
+  .header .activeNavbar {
+    top: 7rem;
+  }
+  .header .toogleNavbar {
+    display: flex;
+  }
+  .header .toogleNavbar .icon {
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--PrimaryColor);
+  }
+  .header .toogleNavbar:hover {
+    color: var(--SecondaryColor);
+  }
+}
+@media screen and (min-width: 769px) {
+  .header .closeNavbar,
+  .header .toogleNavbar {
+    display: none;
+  }
+  .header .navBar .navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .header .navBar .navList .navItem .navLink {
+    color: var(--textColor);
+    padding: 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500px;
+  }
+  .header .navBar .navList .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .navBar .navList .btn {
+    margin-left: 1rem;
+  }
+  .header .navBar .navList .btn a {
+    color: var(--whiteColor);
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header .navbar .navList .navItem {
+    padding: 0, 0.9rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 8.5rem;
+  }
+}/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,112 @@
+.main {
+  width: 100%;
+}
+.main .secTitle .title {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--textColor);
+  margin: 1rem;
+  z-index: 2;
+}
+.main .secTitle .title::after {
+  position: absolute;
+  content: "";
+  background: var(--SecondaryColor);
+  height: 3px;
+  width: 110px;
+  right: 0;
+  bottom: 0px;
+  z-index: -1;
+}
+.main .seContent {
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.main .seContent .singleDestination {
+  padding: 1rem;
+  height: 100%;
+  display: grid;
+  row-gap: 10px;
+  border-radius: 10px;
+  align-items: center;
+  background: var(--cardBG);
+  box-shadow: 0 2px 4px rgba(140, 140, 141, 0.9);
+  overflow: hidden;
+}
+.main .seContent .singleDestination:hover {
+  background: var(--cardHover);
+  box-shadow: 0 2px 4px rgba(85, 85, 114, 0.9);
+  transition: 0.3s ease;
+}
+.main .seContent .singleDestination .imageDiv {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+.main .seContent .singleDestination .imageDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1s ease;
+}
+.main .seContent .singleDestination .imageDiv:hover img {
+  transform: scale(1.1);
+}
+.main .seContent .singleDestination .cardInfo {
+  padding: 1rem;
+}
+.main .seContent .singleDestination .cardInfo .title {
+  color: var(--blackColor);
+  font-size: 1.25rem;
+}
+.main .seContent .singleDestination .cardInfo .name {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 14px;
+}
+.main .seContent .singleDestination .fees {
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1.5px solid var(--greyText);
+  border-bottom: 1.5px solid var(--greyText);
+}
+.main .seContent .singleDestination .fees .grade {
+  color: var(--textColor);
+  max-width: 100px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.main .seContent .singleDestination .fees .grade small {
+  text-align: center;
+  background: var(--gradientColor);
+  border-radius: 1rem;
+  padding: 1px 10px;
+  color: var(--whiteColor);
+}
+.main .seContent .singleDestination .fees .price {
+  font-size: 2rem;
+  color: var(--blackColor);
+}
+.main .seContent .singleDestination .desc {
+  font-size: 13.5px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.main .seContent .singleDestination .btn {
+  margin-top: 1rem;
+  color: var(--whiteColor);
+  font-weight: 600;
+  gap: 0.5rem;
+}
+.main .seContent .singleDestination .btn .icon {
+  align-self: center;
+  font-size: 18px;
+}/*# sourceMappingURL=main.css.map */
