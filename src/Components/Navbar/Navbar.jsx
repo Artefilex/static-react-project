@@ -40,7 +40,7 @@ const Navbar = () => {
             <li className="navItem">
               <a href="#" className='navLink'> News</a>
             </li>
-            <button className='btn'> <a href="#">Book Now </a></button>
+            <button className='btn'> <a href="#"> Book Now </a></button>
           </ul>
           <div className='closeNavbar'> <AiOutlineClose className='icon' onClick={() => setActive("navBar")} /> </div>
         </div>

@@ -95,7 +95,7 @@ body{
 }
 @media screen and (min-width: 1400px) {
   body{
-    zoom: 2;
+    zoom: 1.5;
   }
   
 }
