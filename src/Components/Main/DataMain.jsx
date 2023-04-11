@@ -1,11 +1,11 @@
 import {memo } from 'react'
 import { GrLocation } from "react-icons/gr"
 import { BsClipboardCheck } from "react-icons/bs"
-
+import Buttons from "../Buttons/Buttons"
 const DataMain = ({travels}) => {
     
     return (
-        <div className='singleDestination' data-aos="zoom-in" >
+        <div className='Main_Content-Items' data-aos="zoom-in" >
             <div className="imageDiv">
                 <img src={travels.imgSrc} alt={travels.destTitle} />
             </div>
@@ -27,9 +27,9 @@ const DataMain = ({travels}) => {
                 <div className='desc'>
                     <p>{travels.descripton}</p>
                 </div>
-                <button className='btn flex'> 
-                <span>DETAİLS</span>  <BsClipboardCheck className='icon' /> 
-                </button>
+                <Buttons> 
+                 <span>DETAİLS</span>  <BsClipboardCheck className='icon' /> 
+                </Buttons>
             </div>
         </div>
     )

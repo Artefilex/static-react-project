@@ -107,8 +107,8 @@
 .home .homeContent .cardDiv .input input::placeholder {
   font-size: 13px;
 }
-.home .homeContent .cardDiv .input input:focus {
-  border: 1px solid var(--PrimaryColor);
+.home .homeContent .cardDiv .input input:hover {
+  cursor: poniter;
 }
 .home .homeContent .cardDiv .input .icon {
   color: var(--PrimaryColor);
@@ -116,6 +116,8 @@
   margin-left: 10px;
 }
 .home .homeContent .cardDiv .searchOption {
+  border: none;
+  outline: none;
   position: absolute;
   background: var(--gradientColor);
   width: -moz-max-content;
@@ -131,6 +133,7 @@
 }
 .home .homeContent .cardDiv .searchOption:hover {
   background: var(--PrimaryColor);
+  cursor: pointer;
 }
 .home .homeContent .cardDiv .searchOption .icon {
   font-size: 18px;

@@ -1,7 +1,7 @@
-.main {
+.Main {
   width: 100%;
 }
-.main .secTitle .title {
+.Main .Main_Section_Title .title {
   position: relative;
   width: -moz-max-content;
   width: max-content;
@@ -9,7 +9,7 @@
   margin: 1rem;
   z-index: 2;
 }
-.main .secTitle .title::after {
+.Main .Main_Section_Title .title::after {
   position: absolute;
   content: "";
   background: var(--SecondaryColor);
@@ -19,12 +19,12 @@
   bottom: 0px;
   z-index: -1;
 }
-.main .seContent {
+.Main .Main_Section_Content {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem;
 }
-.main .seContent .singleDestination {
+.Main .Main_Section_Content .Main_Content-Items {
   padding: 1rem;
   height: 100%;
   display: grid;
@@ -35,39 +35,39 @@
   box-shadow: 0 2px 4px rgba(140, 140, 141, 0.9);
   overflow: hidden;
 }
-.main .seContent .singleDestination:hover {
+.Main .Main_Section_Content .Main_Content-Items:hover {
   background: var(--cardHover);
   box-shadow: 0 2px 4px rgba(85, 85, 114, 0.9);
   transition: 0.3s ease;
 }
-.main .seContent .singleDestination .imageDiv {
+.Main .Main_Section_Content .Main_Content-Items .imageDiv {
   height: 180px;
   width: 100%;
   overflow: hidden;
 }
-.main .seContent .singleDestination .imageDiv img {
+.Main .Main_Section_Content .Main_Content-Items .imageDiv img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 1s ease;
 }
-.main .seContent .singleDestination .imageDiv:hover img {
+.Main .Main_Section_Content .Main_Content-Items .imageDiv:hover img {
   transform: scale(1.1);
 }
-.main .seContent .singleDestination .cardInfo {
+.Main .Main_Section_Content .Main_Content-Items .cardInfo {
   padding: 1rem;
 }
-.main .seContent .singleDestination .cardInfo .title {
+.Main .Main_Section_Content .Main_Content-Items .cardInfo .title {
   color: var(--blackColor);
   font-size: 1.25rem;
 }
-.main .seContent .singleDestination .cardInfo .name {
+.Main .Main_Section_Content .Main_Content-Items .cardInfo .name {
   color: var(--textColor);
   font-weight: 400;
   font-size: 14px;
 }
-.main .seContent .singleDestination .fees {
+.Main .Main_Section_Content .Main_Content-Items .fees {
   width: 100%;
   justify-content: space-between;
   padding: 1rem;
@@ -75,7 +75,7 @@
   border-top: 1.5px solid var(--greyText);
   border-bottom: 1.5px solid var(--greyText);
 }
-.main .seContent .singleDestination .fees .grade {
+.Main .Main_Section_Content .Main_Content-Items .fees .grade {
   color: var(--textColor);
   max-width: 100px;
   line-height: 20px;
@@ -84,29 +84,60 @@
   justify-content: center;
   text-transform: uppercase;
 }
-.main .seContent .singleDestination .fees .grade small {
+.Main .Main_Section_Content .Main_Content-Items .fees .grade small {
   text-align: center;
   background: var(--gradientColor);
   border-radius: 1rem;
   padding: 1px 10px;
   color: var(--whiteColor);
 }
-.main .seContent .singleDestination .fees .price {
+.Main .Main_Section_Content .Main_Content-Items .fees .price {
   font-size: 2rem;
   color: var(--blackColor);
 }
-.main .seContent .singleDestination .desc {
+.Main .Main_Section_Content .Main_Content-Items .desc {
   font-size: 13.5px;
   color: var(--textColor);
   font-weight: 500;
 }
-.main .seContent .singleDestination .btn {
+.Main .Main_Section_Content .Main_Content-Items .btn {
   margin-top: 1rem;
   color: var(--whiteColor);
   font-weight: 600;
   gap: 0.5rem;
 }
-.main .seContent .singleDestination .btn .icon {
+.Main .Main_Section_Content .Main_Content-Items .btn .icon {
   align-self: center;
   font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 150px;
+  }
+  .Main_Section_Content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Main_Section_Content .Main_Content-Items {
+    height: auto;
+  }
+}
+@media screen and (min-width: 840px) {
+  .Main_Section_Content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Main_Section_Content .Main_Content-Items {
+    height: auto;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .Main_Section_Content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Main_Section_Content .Main_Content-Items {
+    height: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

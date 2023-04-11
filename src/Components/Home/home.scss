@@ -112,11 +112,10 @@
                     &::placeholder {
                         font-size: 13px;
                     }
-
-                    &:focus {
-                        border: 1px solid var(--PrimaryColor);
-
+                    &:hover{
+                        cursor: poniter;
                     }
+                   
 
                 }
 
@@ -128,6 +127,8 @@
             }
 
             .searchOption {
+                border: none;
+                outline: none;
                 position: absolute;
                 background: var(--gradientColor);
                 width: max-content;
@@ -141,6 +142,7 @@
 
                 &:hover {
                     background: var(--PrimaryColor);
+                    cursor: pointer;
                 }
                 .icon{
                   font-size: 18px;
@@ -154,6 +156,7 @@
 
             }
         }
+        
         .homeFooterIcons{
             width: 100%;
             justify-content: space-between;

@@ -5,8 +5,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-
-    fees: "700$",
+    fees: 5000,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -15,7 +14,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -24,7 +23,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -33,7 +32,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -42,7 +41,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -51,7 +50,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -60,7 +59,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -69,7 +68,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -78,7 +77,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 
@@ -88,7 +87,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -97,7 +96,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -106,7 +105,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -115,7 +114,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -124,7 +123,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -133,7 +132,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 {
@@ -142,7 +141,7 @@ export const Data = [
     imgSrc: "https://images.pexels.com/photos/8451490/pexels-photo-8451490.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     destTitle: "lorem ipsum",
     grade: "cultural relax",
-    fees: "700$",
+    fees: 700,
     descripton: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, itaque?"
 },
 

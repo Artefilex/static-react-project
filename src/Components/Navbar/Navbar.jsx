@@ -3,6 +3,9 @@ import "./navbar.css"
 import { MdTravelExplore } from "react-icons/md"
 import { AiOutlineClose } from "react-icons/ai"
 import { TbGridDots } from "react-icons/tb"
+import Buttons from '../Buttons/Buttons'
+import Links from './Links/Links'
+
 
 const Navbar = () => {
   const [active, setActive] = useState("navBar")
@@ -19,30 +22,16 @@ const Navbar = () => {
           </a>
         </div>
 
-
         <div className={active}>
-          <ul className="navList flex">
-            <li className="navItem">
-              <a href="#" className='navLink'>Home </a>
-            </li>
-            <li className="navItem">
-              <a href="#" className='navLink'>Packages </a>
-            </li>
-            <li className="navItem">
-              <a href="#" className='navLink'> Shop </a>
-            </li>
-            <li className="navItem">
-              <a href="#" className='navLink'>About </a>
-            </li>
-            <li className="navItem">
-              <a href="#" className='navLink'> Pages</a>
-            </li>
-            <li className="navItem">
-              <a href="#" className='navLink'> News</a>
-            </li>
-            <button className='btn'> <a href="#"> Book Now </a></button>
-          </ul>
-          <div className='closeNavbar'> <AiOutlineClose className='icon' onClick={() => setActive("navBar")} /> </div>
+          <div className="navList flex"> 
+            <Links  />
+            <Buttons> <a href="#"> Book Now </a></Buttons>
+          </div>
+
+          
+          <div className='closeNavbar'> 
+          <AiOutlineClose className='icon' onClick={() => setActive("navBar")} /> 
+          </div>
         </div>
 
         <div className='toogleNavbar' onClick={toogleNavbar}>

@@ -1,8 +1,8 @@
 
-.main {
+.Main{
     width: 100%;
 
-    .secTitle {
+    .Main_Section_Title{
         .title {
             position: relative;
             width: max-content;
@@ -23,12 +23,12 @@
         }
     }
 
-    .seContent {
+    .Main_Section_Content {
         justify-content: center;
         gap: 1.5rem;
         padding: 1rem;
 
-        .singleDestination {
+        .Main_Content-Items{
             padding: 1rem;
             height: 100%;
             display: grid;
@@ -131,7 +131,7 @@
     }
 }
 
-@media screen and(min-width: 500px) {
+@media screen and (min-width: 500px) {
    .title{
     font-size: 1.5rem;
     &::after{
@@ -139,26 +139,26 @@
     }
 
    }
-   .seContent{
+   .Main_Section_Content{
     grid-template-columns: repeat(2 ,1fr);
-    .singleDestination{
+    .Main_Content-Items{
         height: auto;
     }
    }
   }
 
-  @media screen and(min-width: 840px) {
-    .seContent{
+  @media screen and (min-width: 840px) {
+    .Main_Section_Content{
      grid-template-columns: repeat(3 ,1fr);
-     .singleDestination{
+     .Main_Content-Items{
          height: auto;
      }
     }
    }  
-   @media screen and(min-width: 1240px) {
-    .seContent{
+   @media screen and (min-width: 1240px) {
+    .Main_Section_Content{
      grid-template-columns: repeat(4 ,1fr);
-     .singleDestination{
+     .Main_Content-Items{
          height: auto;
      }
     }

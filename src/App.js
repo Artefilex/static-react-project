@@ -1,15 +1,17 @@
-import { Home ,Footer ,Navbar ,Main } from "./Components";
-import Login from "./Components/Login/Login";
+import {Footer,Navbar ,Home} from "./Components";
+import { BrowserRouter as Router } from "react-router-dom";
+import Location from "./Components/Navbar/Routes/Location";
+
+
 function App() {
   return (
-    <>
-     <Login/>
-      {/* <Navbar/>
+    <Router>
+       <Navbar/>
        <Home/>
-      < Main/> 
-      <Footer/> */}
-     
-    </>
+       <Location/>
+       <Footer/> 
+    
+    </Router>
   );
 }
 
