@@ -1,6 +1,14 @@
 .Main {
   width: 100%;
 }
+.Main .Main_Section_Title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Main .Main_Section_Title .btn {
+  margin-left: 1rem;
+}
 .Main .Main_Section_Title .title {
   position: relative;
   width: -moz-max-content;

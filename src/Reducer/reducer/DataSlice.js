@@ -1,8 +1,9 @@
-import { createSlice, nanoid} from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 import { Data } from "../../Assests/data";
 const  initialState = {
     data : Data,
-    filter:[]
+    filter:[],
+    filtered:[]
 }
 
 
@@ -11,15 +12,27 @@ const DataSlice = createSlice({
     initialState,
     reducers:{
         addData(state,action){
-            state.filter.push(action.payload)
+            state.filter= action.payload
+            state.filtered = state.data.filter((elem) => (
+                state.filter.find((item) => (
+                    item.range >= elem.fees && 
+                    item.title === elem.destTitle.toLocaleLowerCase("TR") &&
+                    (item.date !==  elem.date || item.date === elem.date) 
+                ))
+            ))
+             
+        },
+        clearFilter(state){
+            state.filtered= []
+            state.filter = []
         }
-   
+    
     }
 
 })
 
 
 
-export const {addData} = DataSlice.actions
+export const {addData ,clearFilter} = DataSlice.actions
 
 export default DataSlice.reducer
