@@ -1,9 +1,8 @@
 import {memo } from 'react'
 import { GrLocation } from "react-icons/gr"
 import { BsClipboardCheck } from "react-icons/bs"
-import Buttons from "../Buttons/Buttons"
 const DataMain = ({travels}) => {
-    
+     
     return (
         <div className='Main_Content-Items' data-aos="zoom-in" >
             <div className="imageDiv">
@@ -18,21 +17,20 @@ const DataMain = ({travels}) => {
                 <div className='fees flex'>
                     <div className='grade'>
                         <span> {travels.grade} <small>+1</small></span>
-
                     </div>
                     <div className="price">
-                        <h5>{travels.fees}</h5>
+                        <h5>{travels.fees} $</h5>
                     </div>
                 </div>
                 <div className='desc'>
                     <p>{travels.descripton}</p>
                 </div>
-                <Buttons> 
-                 <span>DETAİLS</span>  <BsClipboardCheck className='icon' /> 
-                </Buttons>
+                <button className='btn' > 
+                <a href={`/${encodeURIComponent(travels.imgSrc.trim())}`} > <span>DETAİLS</span>  <BsClipboardCheck className='icon' /> </a>
+                </button>
             </div>
         </div>
     )
 }
-
+ 
 export default memo(DataMain)

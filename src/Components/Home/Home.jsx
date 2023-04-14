@@ -9,6 +9,7 @@ import HomeIcons from './Home_Content/HomeIcons'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
+// import HomeInput from './Home_Content/HomeInput'
 const Home = () => {
 useEffect(()=>{
   Aos.init({duration:2000})
@@ -22,7 +23,8 @@ useEffect(()=>{
       <video src={videos} typeof='video/mp4' muted loop autoPlay ></video>
       <div className="homeContent container">
          <HomeHeader/>
-         <InputArea/>
+         {/* <HomeInput/> */}
+         <InputArea/> 
          <HomeIcons/>
       </div>
     </section >

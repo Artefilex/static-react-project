@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
        <Navbar/>
-       <Home/>
+       <Home/>       
        <Location/>
        <Footer/> 
     

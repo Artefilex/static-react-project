@@ -3,10 +3,10 @@ import { CiLocationOn } from "react-icons/ci"
 import {HiFilter} from "react-icons/hi"
 import {useSelector ,useDispatch} from 'react-redux'
 import { addData } from '../../../Reducer/reducer/DataSlice'
+import { Formik } from 'formik'
 
 
-
-const InputArea = () => {
+const  HomeInput = () => {
 const filteredData = useSelector(state => state.data.filtered) 
 const filtered = useSelector(state => state.data.filter) 
 const dispatch = useDispatch()
@@ -101,4 +101,4 @@ const handleRange = (e) => { setRange(e.target.value)};
   )
 }
 
-export default InputArea
+export default HomeInput
