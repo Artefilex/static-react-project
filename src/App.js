@@ -5,9 +5,9 @@ import Location from "./Components/Navbar/Routes/Location";
 
 function App() {
   return (
+  
     <Router>
-       <Navbar/>
-       <Home/>       
+       <Navbar/>        
        <Location/>
        <Footer/> 
     

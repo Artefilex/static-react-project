@@ -3,7 +3,7 @@ import { CiLocationOn } from "react-icons/ci"
 import {HiFilter} from "react-icons/hi"
 import {useSelector ,useDispatch} from 'react-redux'
 import { addData } from '../../../Reducer/reducer/DataSlice'
-import { Formik } from 'formik'
+
 
 
 const  HomeInput = () => {

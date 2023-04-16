@@ -6,6 +6,7 @@ import { Data } from "../../Assests/data"
 import DataMain from './DataMain'
 import Aos from 'aos'
 import "aos/dist/aos.css"
+import Home from '../Home/Home'
 
 
 
@@ -33,6 +34,8 @@ const Main = () => {
       }, [])
 
       return (
+            <>  
+            <Home/>
             <section className='Main container'>
                   <div data-aos="fade-down" className='Main_Section_Title'>
                         <h3 className='title'>
@@ -53,6 +56,7 @@ const Main = () => {
                         }
                   </div>
             </section>
+            </>
       )
 }
 

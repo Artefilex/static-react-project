@@ -23,7 +23,6 @@ useEffect(()=>{
       <video src={videos} typeof='video/mp4' muted loop autoPlay ></video>
       <div className="homeContent container">
          <HomeHeader/>
-         {/* <HomeInput/> */}
          <InputArea/> 
          <HomeIcons/>
       </div>

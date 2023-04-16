@@ -1,10 +1,13 @@
 import {memo } from 'react'
 import { GrLocation } from "react-icons/gr"
 import { BsClipboardCheck } from "react-icons/bs"
+
 const DataMain = ({travels}) => {
      
     return (
-        <div className='Main_Content-Items' data-aos="zoom-in" >
+      
+      
+      <div className='Main_Content-Items' data-aos="zoom-in" >
             <div className="imageDiv">
                 <img src={travels.imgSrc} alt={travels.destTitle} />
             </div>
@@ -30,6 +33,7 @@ const DataMain = ({travels}) => {
                 </button>
             </div>
         </div>
+      
     )
 }
  

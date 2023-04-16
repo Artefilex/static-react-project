@@ -1,12 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Data } from '../../Assests/data'
-
+import { addBasket } from '../../Reducer/reducer/DataSlice'
+import { useDispatch } from 'react-redux'
 function DataLocation() {
+  
     const { id } = useParams()
-
-
-
+   const dispatch = useDispatch()
     return (
         <div  className='Main_More' >
            
@@ -47,7 +47,7 @@ function DataLocation() {
                                  </div> 
                                </div>
 
-                               <button className='btn'>
+                               <button onClick={()=> dispatch(addBasket(datas.imgSrc))} className='btn'>
                                  <span>Add To Basket </span>
                                </button>
                             </div>
