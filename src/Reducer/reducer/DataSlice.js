@@ -27,13 +27,8 @@ const DataSlice = createSlice({
         clearFilter(state){
             state.filtered= []
             state.filter = []
-        },
-        addBasket(state, action){
-
-            const addtobasket = state.data.filter((item) => item.imgSrc === action.payload )
-            state.basket = [...state.basket, addtobasket]
-           
         }
+        
 
     
     }
@@ -42,6 +37,6 @@ const DataSlice = createSlice({
 
 
 
-export const {addData ,clearFilter ,addBasket} = DataSlice.actions
+export const {addData ,clearFilter} = DataSlice.actions
 
 export default DataSlice.reducer

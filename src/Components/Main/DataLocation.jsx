@@ -1,19 +1,24 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Data } from '../../Assests/data'
-import { addBasket } from '../../Reducer/reducer/DataSlice'
+import { addBasket } from '../../Reducer/reducer/MarketSlice'
 import { useDispatch } from 'react-redux'
+import { addNewsToLocalStorage } from '../../Reducer/reducer/MarketSlice'
 function DataLocation() {
+  const { id } = useParams()
+  const dispatch = useDispatch()
+  const handleClick = (imgSrc) => {
+     dispatch(addBasket(imgSrc))
+     if (!localStorage.getItem('market')?.includes(imgSrc)) {
+      addNewsToLocalStorage(imgSrc)
+    }
+  } 
   
-    const { id } = useParams()
-   const dispatch = useDispatch()
     return (
         <div  className='Main_More' >
-           
             {
                 Data.filter((item) => item.imgSrc === decodeURIComponent(id)).map((datas, key) => (
                     <div key={key} className='Main_More-details'>
-
+                       
                         <div className='Main_More-details-up'>
                             <div data-aos="fade-right" className='Main_More-details-img'>
                                 <img src={datas.imgSrc} alt={datas.imgSrc} />
@@ -46,8 +51,9 @@ function DataLocation() {
                                    </p> 
                                  </div> 
                                </div>
-
-                               <button onClick={()=> dispatch(addBasket(datas.imgSrc))} className='btn'>
+                               
+                               <button onClick={() => handleClick(datas.imgSrc)} className='btn'>
+                              
                                  <span>Add To Basket </span>
                                </button>
                             </div>
@@ -63,8 +69,6 @@ function DataLocation() {
                             ))
                         }
                         </div>
-                      
-
                     </div>
                 ))
             }
