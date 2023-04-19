@@ -1,39 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector,useDispatch } from "react-redux";
+
+import { showPayment } from "../../Reducer/reducer/MarketSlice";
 
 const PaymentForm = () => {
-    const [value, setValue] = useState('');
-
-    const handleChange = (event) => {
-      const { value: newValue } = event.target;
-      const formattedValue =formatValue(newValue.slice(0, 9));
-      setValue(formattedValue);
-    };
+    const [value, setValue] = useState([]);
+    const amount = useSelector(state => state.market.total)
+    const [show , setShow] = useState(false)
+   const dispatch = useDispatch()
+    const handleClick = () => {
+      setShow(!show)
+      dispatch(showPayment(show))
+      
+    }
+    useEffect(()=>{
+     setValue(amount)
+    },[amount])
   
-    const formatValue = (value) => {
-      const formattedValue = value.replace(/\s/g, '').match(/.{1,4}/g);
-      if (formattedValue) {
-        return formattedValue.join(' ');
-      }
-      return value;
-    };
-    
+      
     return (
-    <form className='Payment-form-section'>
-      <h4>
-        Ödemeyi onayla
-      </h4>
-      <input
-      type="text"
-      className="input"
-      placeholder={"wdqwd"}
-      value={value}
-      onChange={handleChange}
-    />
+    <div className='Payment-form-section' >
+      <h2> Tatil Özeti </h2>
+     <div className="total">
+     <h4>Toplam Tutar : </h4> <h4> $ {value}</h4>
+     </div>
 
-
-     <button type="submit"> Ödemeyi Onayla</button>
-    </form>
+     <button className="btn" onClick={handleClick }> 
+         
+           Ödeme Bilgileri
+        
+     </button>
+    </div>
   )
 }
 
 export default PaymentForm
+

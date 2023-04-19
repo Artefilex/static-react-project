@@ -7,11 +7,9 @@
     min-height: 100vh;
     background: rgb(224, 224, 224);
     zoom: .75;
-    .Shop-empty{
-        padding-top: 10rem;
-    }
+   
     .Shop-center{
-       
+         
          display: flex;
          flex-direction: column;
          justify-content: center;
@@ -19,6 +17,51 @@
          width: 100%;
          padding: 1rem;
          padding-top: 10rem;
+            
+         .Shop-empty{
+           
+            width: 100%;
+            display: flex;
+            padding-left: 5rem;
+            align-items: center;
+            justify-content: center;
+            height: 10rem;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+            .alert{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                gap: 2rem;
+                width: 80%;    
+                h2{
+                    text-transform: capitalize;
+                }
+                button{
+                    padding: 1rem 2rem;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    cursor: pointer;
+                    color: white;
+                    background: -webkit-linear-gradient(181deg, rgba(92, 63, 150, 1) 24%, rgb(1, 130, 156) 100%);
+                    border-radius: 30px;
+                    transition: .4s ease; 
+                     &:hover{
+                        transform: scale(.96);
+                        background:-webkit-linear-gradient(181deg, rgba(63, 150, 98, 1) 0%, rgba(0, 125, 150, 1) 100%);
+                     }
+                    span{
+                        text-shadow: 1px 1px 1px rgb(0,0,0);
+                        font-size: 1.3rem;
+                        font-weight: bold;
+
+                    }
+                }
+            }
+        }
          .Shop-product{
             display: flex;
             flex-direction: column;
@@ -128,7 +171,7 @@
                 }
             }
            }
-        .Payment-form{
+         .Payment-form{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -137,13 +180,57 @@
             padding: 1rem;
            .Payment-form-section{
               background: white;
+              border-radius: 5px;
+              box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
               width: 100%;
              height: 10rem;
+             padding: 1rem;
+             display: flex;
+             flex-direction: column;
+             align-items: flex-start;
+             justify-content: space-between;
+             .total{
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+             }
+             h2{
+                color: rgba(0, 0, 0, 0.731)
+             }
+             h4:nth-child(1){
+                color: rgba(0, 0, 0, 0.566)
+             }
+             button{
+                padding: 0.5rem 1rem;
+                width: 100%;
+                font-size: 15px;
+                font-weight: 900;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+               color: white;
+             }
            }
       
-         }
+          }
     }
- 
+  .Payment{
+    width: 70%;
+    height: 150vh;
+    display: flex;
+    .Payment-method{
+        position: relative;
+        top: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        height: 120vh;
+        padding-top: 10rem;
+        background: white;
+    }
+  }
    
    
 }
@@ -171,9 +258,23 @@
       width: 80%;
       flex-direction: row;
       align-items: flex-start;
+      .Shop-empty{
+        width: 75%;
+       padding-left: 0;
+       .alert{    
+           
+           h2{
+            text-align: center; 
+           }
+           button{
+               width: 70%;
+           }
+       }
+   }
       .Shop-product{
         width: 60%;
       }
+   
       .Payment-form{
           width: 400px;
           height: 90vh;
@@ -186,12 +287,27 @@
 @media screen and (max-width:700px){
  .Shop{
     zoom: .5;
+    .Shop-center{
+        .Shop-empty{
+            .alert{
+                
+                flex-direction: column;
+                h2{
+                 text-align: center; 
+                }
+                button{
+                    width: 70%;
+                }
+            }
+        }
+    }
  }   
  
 }
 @media screen and ( max-width: 200px ){
   .Shop{
     .Shop-center{
+        padding-top: 15rem;
        .Shop-product{
         .Shop-item-main {
             height: 30rem !important;
@@ -207,7 +323,21 @@
 
 @media screen and (max-width:400px){
     .Shop{
-      .Shop-center{
+      .Shop-center{     
+            .Shop-empty{
+                height: 15rem;
+                padding-left: 0;
+                .alert{    
+                    flex-direction: column;
+                    h2{
+                     text-align: center; 
+                    }
+                    button{
+                        width: 70%;
+                    }
+                }
+            }
+      
         .Shop-product{
             .Shop-item-main{
                 flex-direction: column;

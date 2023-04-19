@@ -6,6 +6,7 @@ import { addNewsToLocalStorage } from '../../Reducer/reducer/MarketSlice'
 function DataLocation() {
   const { id } = useParams()
   const dispatch = useDispatch()
+  
   const handleClick = (imgSrc) => {
      dispatch(addBasket(imgSrc))
      if (!localStorage.getItem('market')?.includes(imgSrc)) {

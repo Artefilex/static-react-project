@@ -80,7 +80,7 @@ input{
 }
 
 body{
-  background: rgb(178, 178, 178);
+  background: rgb(255, 255, 255);
 }
 
 @media screen and(min-width: 1400px) {

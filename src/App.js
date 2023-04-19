@@ -1,4 +1,4 @@
-import {Footer,Navbar ,Home} from "./Components";
+import {Footer,Navbar } from "./Components";
 import { BrowserRouter as Router } from "react-router-dom";
 import Location from "./Components/Navbar/Routes/Location";
 

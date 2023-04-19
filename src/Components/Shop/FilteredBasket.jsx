@@ -1,16 +1,18 @@
 
 import  { useEffect, useState } from 'react'
-
 import {ImBin} from "react-icons/im"
 import { getBasketData } from '../../Reducer/reducer/MarketSlice'
-import { useSelector } from 'react-redux'
-const FilteredBasket = () => {
+import { useSelector ,useDispatch} from 'react-redux'
+import { calculateAmaount } from '../../Reducer/reducer/MarketSlice'
 
-    const filtered = useSelector(state => state.market.data)
+ const FilteredBasket = () => {    
+ const filtered = useSelector(state => state.market.data)
  const [basket, setBasket] = useState([])
  const [count, setCount] = useState({})
  const filteredData = filtered.filter((data) => basket.find(item => data.imgSrc === item ))
- 
+ const [totalAmount, setTotalAmount] = useState(0);
+ const dispatch = useDispatch()
+
  const increase = (imgSrc) =>{
     setCount((prevState)=> ({
       ...prevState,
@@ -23,6 +25,16 @@ const FilteredBasket = () => {
     [imgSrc]: Math.max((prevState[imgSrc] || 0) - 1, 0)
   }))
 }
+useEffect(() => {
+  let total = 0;
+  filteredData.forEach((item) => {
+    total += count[item.imgSrc]
+      ? count[item.imgSrc] * item.ekstra + item.fees
+      : item.fees;
+  });
+  dispatch(calculateAmaount(total))
+  setTotalAmount(total);
+}, [count, filteredData, dispatch]);
 
 const handleRemove = (url) =>{
   const myData = JSON.parse(localStorage.getItem('market'));
@@ -31,6 +43,8 @@ const handleRemove = (url) =>{
   window.location.reload();
 }
 
+
+console.log(totalAmount)
  useEffect(()=>{
   setBasket(getBasketData())
  },[])
@@ -58,12 +72,12 @@ const handleRemove = (url) =>{
              </div>
              <div className='Shop-amount'>
                <h4>Total Amount </h4>
-                <h2>
+              <h2>
                 {
-             count[item.imgSrc] ? (count[item.imgSrc] * item.ekstra + item.fees ): item.fees
-             }
-                </h2>
-              
+               
+               count[item.imgSrc] ? (count[item.imgSrc] * item.ekstra + item.fees ): item.fees
+              }
+                </h2> 
               </div>
             </div>
              <div className='clear-button'>

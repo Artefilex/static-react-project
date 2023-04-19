@@ -3,7 +3,8 @@ import { Data } from "../../Assests/data";
 
 const initialState = {
     data: Data,
-    market:[]
+    total:'',
+    active: false
     
 }
 
@@ -11,10 +12,14 @@ const MarketSlice = createSlice({
     name: "market",
     initialState,
     reducers:{
+       calculateAmaount(state,action){
+        state.total = action.payload
+       },
        addBasket(state, action){
          state.market.push(state.data.filter((item) => item.imgSrc === action.payload) ) 
-
-        
+       },
+       showPayment(state,action){
+        state.active = action.payload
        }
 
     }
@@ -29,6 +34,6 @@ export const getBasketData = () => {
     return JSON.parse(localStorage.getItem("market")) || []
 }
 
-export const { addBasket } = MarketSlice.actions
+export const { addBasket, calculateAmaount ,showPayment} = MarketSlice.actions
 
 export default MarketSlice.reducer

@@ -11,15 +11,14 @@ const Links = () => {
       <NavLink to={"/packages"} className='navLink'>Packages </NavLink>
     </li>
     <li className="navItem">
-      <a href={"/shop"} className='navLink'> Shop </a>
+      <NavLink to={"/shop"} className='navLink'> Shop </NavLink>
     </li>
     <li className="navItem">
-      <NavLink  to={"/about "} NavLink className='navLink'>About </NavLink>
+      <NavLink  to={"/about "} className='navLink'>About </NavLink>
     </li>
     <li className="navItem">
       <NavLink  to={"/pages"}  className='navLink'> Pages</NavLink>
     </li>
-   
  </>
   )
 }
