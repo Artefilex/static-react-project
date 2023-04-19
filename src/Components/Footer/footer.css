@@ -1,21 +1,6 @@
-:root {
-  --PrimaryColor: rgb(0, 115, 168);
-  --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
-  --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(201, 33%, 16%);
-  --textColor: hsl(240, 4%, 36%);
-  --whiteColorDeam: hsl(0, 0%, 93%);
-  --greyText: rgb(190, 190, 190);
-  --inputColor: rgb(239, 239, 239);
-  --bodyColor: rgb(240, 240, 240);
-  --cardBG: rgb(225, 225, 235);
-}
-
 .footer {
   position: relative;
   width: 100%;
-  padding: 2rem 0;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -42,7 +27,7 @@
   mix-blend-mode: multiply;
 }
 .footer .secContent {
-  width: 100%;
+  width: 57%;
   height: -moz-max-content;
   height: max-content;
   padding: 2rem 0;
@@ -204,9 +189,6 @@
   }
 }
 @media screen and (min-width: 840px) {
-  .footer {
-    padding: 5rem 0;
-  }
   .footer .secContent .footerCard {
     flex-direction: row;
   }
@@ -238,5 +220,18 @@
   .footer .secContent .footerLinks .linkGroup .footerList {
     font-size: 16px;
     padding: 5px 0;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .footer .secContent {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .footer .secContent {
+    width: 95%;
+  }
+  .footer .secContent .footerCard .footerLinks {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=footer.css.map */

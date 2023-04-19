@@ -13,7 +13,7 @@
   --gradientColor: linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
   --whiteColor: hsl(0, 0%, 100%);
   --blackColor: hsl(201, 33%, 16%);
-  --textColor: hsl(240, 4%, 36%);
+  --textColor: hsl(240, 3%, 15%);
   --whiteColorDeam: hsl(0, 0%, 93%);
   --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
@@ -80,7 +80,7 @@ input{
 }
 
 body{
-  background: var(--bodyColor);
+  background: rgb(178, 178, 178);
 }
 
 @media screen and(min-width: 1400px) {

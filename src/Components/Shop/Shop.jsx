@@ -1,70 +1,41 @@
-import React, { useEffect, useState } from 'react'
 import "./shop.css"
-import {AiFillDelete} from "react-icons/ai"
-import { getBasketData } from '../../Reducer/reducer/MarketSlice'
-import { useSelector } from 'react-redux'
+import PaymentForm from './PaymentForm'
+import FilteredBasket from './FilteredBasket'
+import { useEffect, useState } from "react"
+import EmptyAlert from "./EmptyAlert"
 
 const Shop = () => {
- const filtered = useSelector(state => state.market.data)
- const [basket, setBasket] = useState([])
- const [count, setCount] = useState({})
- const filteredData = filtered.filter((data) => basket.find(item => data.imgSrc === item ))
-  
-  const increase = (imgSrc) =>{
-    setCount((prevState)=> ({
-      ...prevState,
-      [imgSrc]: prevState[imgSrc] ? prevState[imgSrc] + 1 : 1
-    }))
-  }
- const decrease = (imgSrc) =>{
-  setCount(prevState => ({
-    ...prevState,
-    [imgSrc]: Math.max((prevState[imgSrc] || 0) - 1, 0)
-  }))
-}
-
-const handleRemove = (url) =>{
-  const myData = JSON.parse(localStorage.getItem('market'));
-  const indexToRemove = myData.filter(item => item !== url);
-  localStorage.setItem('market', JSON.stringify(indexToRemove));
-}
-
- useEffect(()=>{
-  setBasket(getBasketData())
- },[])
-
+  const storedData = JSON.parse(localStorage.getItem('market'));
+  console.log(storedData)
+ const [empty, setEmty] = useState(false)
+  useEffect(()=>{
+    if(!storedData || storedData.length === 0 ){
+      setEmty(false)
+    }
+    else{
+      setEmty(true)
+    }
+  },[storedData])
 
   return (
     <div className='Shop'>
-     {
-    filteredData && filteredData.map((item ,index) =>(
-         <div key={index} className='Shop-item-main'>
-             <div className='Shop-item-seciton' > 
-                  <img src={item.imgSrc} alt={item.imgSrc} />  
-                  <span>{item.grade}</span>   
-             </div>
-             <div className='Shop-button'>
-                 <h4>Ekstra Gün +${item.ekstra}</h4>
-                 <div>
-                 <button onClick={() => increase(item.imgSrc)}>
-                     <span>+</span>
-                 </button>
-                  <span>{count[item.imgSrc] ? count[item.imgSrc]: 0}</span>
-                 <button onClick={() => decrease(item.imgSrc)}><span>-</span></button>
-                 </div>
-             </div>
-             <div className='Shop-amount'>{
-             count[item.imgSrc] ? (count[item.imgSrc] * item.ekstra + item.fees ): item.fees
-             } </div>
-             <div>
-              <button className='btn' onClick={()=> handleRemove(item.imgSrc) }>
-                <AiFillDelete/>
-              </button>
-             </div>
-         </div>
-      ))
-     }
-     
+   
+   {
+    !empty && <EmptyAlert/> 
+ }
+ <div className="Shop-center">
+ {    
+   empty  &&  <>
+     <div className='Shop-product'>
+         <FilteredBasket/>
+     </div>
+     <div className='Payment-form'>
+         <PaymentForm/>
+     </div>
+    </>
+  }
+
+  </div>
     </div>
   )
 }

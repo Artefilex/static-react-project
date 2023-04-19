@@ -44,8 +44,8 @@
   overflow: hidden;
 }
 .Main .Main_Section_Content .Main_Content-Items:hover {
-  background: var(--cardHover);
-  box-shadow: 0 2px 4px rgba(85, 85, 114, 0.9);
+  background: rgb(218, 218, 218);
+  box-shadow: 0 2px 4px rgba(64, 64, 79, 0.9);
   transition: 0.3s ease;
 }
 .Main .Main_Section_Content .Main_Content-Items .imageDiv {
