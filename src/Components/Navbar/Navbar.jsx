@@ -3,8 +3,8 @@ import "./navbar.css"
 import { MdTravelExplore } from "react-icons/md"
 import { AiOutlineClose } from "react-icons/ai"
 import { TbGridDots } from "react-icons/tb"
-import Buttons from '../Buttons/Buttons'
 import Links from './Links/Links'
+import UserBtn from './UserBtn'
 
 
 const Navbar = () => {
@@ -25,7 +25,9 @@ const Navbar = () => {
         <div className={active}>
           <div className="navList flex"> 
             <Links  />
-            <Buttons> <a href="#"> Book Now </a></Buttons>
+
+            <UserBtn/>
+           
           </div>
 
           

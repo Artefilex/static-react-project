@@ -4,6 +4,7 @@ import Main from '../../Main/Main'
 import DataLocation from '../../Main/DataLocation'
 import Shop from '../../Shop/Shop'
 import Payment from '../../Shop/Payment'
+import Login from "../../Login/Login"
 const Location = () => {
   return (
     <Routes>
@@ -14,6 +15,7 @@ const Location = () => {
         <Route path='/pages' Component={Main} /> 
         <Route path='/:id' Component = {DataLocation}/>
         <Route path= "/shop/payment" Commponent={Payment} />
+        <Route path= "/login" Component={Login} />
     </Routes>
   )
 }

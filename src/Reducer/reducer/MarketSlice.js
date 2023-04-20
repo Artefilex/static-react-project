@@ -4,7 +4,8 @@ import { Data } from "../../Assests/data";
 const initialState = {
     data: Data,
     total:'',
-    active: false
+    active: false,
+    market: []
     
 }
 

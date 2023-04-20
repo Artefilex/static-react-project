@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFormik } from 'formik'
 import validationSchema from "./validations";
+import { useDispatch } from 'react-redux';
+import { addUser } from '../../Reducer/reducer/AuthorSlice';
+import "./login.css"
 const Login = () => {
+  const dispatch = useDispatch()
+ 
+  
+
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
   useFormik({
     initialValues: {
@@ -10,14 +17,17 @@ const Login = () => {
      
     },
     onSubmit: (values) => {
+      dispatch(addUser(values))
       console.log(values);
     },
     validationSchema,
   });
 
     return (
-    <div>
-      <h1>Sign İn</h1>
+    <div className='Login'>
+     <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+     <div className='Login-Item'>
+     <h1>Sign İn</h1>
       <form onSubmit={handleSubmit}> 
         <label > User Name: </label>
 
@@ -42,6 +52,7 @@ const Login = () => {
 
          <button type='submit'> Login</button>
     </form>
+     </div>
     </div>
   )
 }

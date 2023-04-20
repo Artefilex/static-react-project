@@ -1,18 +1,15 @@
-import {Footer,Navbar } from "./Components";
-import { BrowserRouter as Router } from "react-router-dom";
-import Location from "./Components/Navbar/Routes/Location";
-
+import Container from "./Components/Container";
 
 function App() {
   return (
-  
-    <Router>
-       <Navbar/>        
-       <Location/>
-       <Footer/> 
-    
-    </Router>
+  // container da kullanıcı kayıtlı ise göreceği içerikler olacak
+  // bunun için öncelikle login yapmalıyız kullanıcı bilgisini alıp döneceğiz 
+  //  book now kısmını kaldırıp login logouta ceviricez eğer login varsa shop kısmını gösterebilirz 
+  // yoksa göstermeyiz kullanıcı varsa ödeme yolu sectirirz bunlar yapılacak 
+   <Container/>
   );
 }
+
+
 
 export default App;
