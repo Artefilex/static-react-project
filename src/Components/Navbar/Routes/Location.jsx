@@ -5,6 +5,7 @@ import DataLocation from '../../Main/DataLocation'
 import Shop from '../../Shop/Shop'
 import Payment from '../../Shop/Payment'
 import Login from "../../Login/Login"
+import Join from '../../Login/Join'
 const Location = () => {
   return (
     <Routes>
@@ -16,6 +17,7 @@ const Location = () => {
         <Route path='/:id' Component = {DataLocation}/>
         <Route path= "/shop/payment" Commponent={Payment} />
         <Route path= "/login" Component={Login} />
+        <Route  path="/join" Component={Join}/>
     </Routes>
   )
 }

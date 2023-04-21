@@ -25,10 +25,10 @@ const MarketSlice = createSlice({
 
     }
 })
-export const addNewsToLocalStorage = (market) => {
-    const existingNews = JSON.parse(localStorage.getItem("market")) || [];
-    const updatedNews = [...existingNews, market];
-    localStorage.setItem("market", JSON.stringify(updatedNews));
+export const addBasketToLocalStorage = (market) => {
+    const existingBasket = JSON.parse(localStorage.getItem("market")) || [];
+    const updatedBasket = [...existingBasket, market];
+    localStorage.setItem("market", JSON.stringify(updatedBasket));
   };
 
 export const getBasketData = () => {

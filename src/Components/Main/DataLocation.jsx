@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { Data } from '../../Assests/data'
 import { addBasket } from '../../Reducer/reducer/MarketSlice'
 import { useDispatch } from 'react-redux'
-import { addNewsToLocalStorage } from '../../Reducer/reducer/MarketSlice'
+import { addBasketToLocalStorage } from '../../Reducer/reducer/MarketSlice'
 function DataLocation() {
   const { id } = useParams()
   const dispatch = useDispatch()
@@ -10,7 +10,7 @@ function DataLocation() {
   const handleClick = (imgSrc) => {
      dispatch(addBasket(imgSrc))
      if (!localStorage.getItem('market')?.includes(imgSrc)) {
-      addNewsToLocalStorage(imgSrc)
+      addBasketToLocalStorage(imgSrc)
     }
   } 
   

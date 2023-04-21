@@ -1,6 +1,8 @@
+
 import Container from "./Components/Container";
 
 function App() {
+  
   return (
   // container da kullanıcı kayıtlı ise göreceği içerikler olacak
   // bunun için öncelikle login yapmalıyız kullanıcı bilgisini alıp döneceğiz 
