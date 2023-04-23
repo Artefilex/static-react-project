@@ -21,16 +21,11 @@ const Navbar = () => {
             <h1> <MdTravelExplore className="icon" /> Travel.</h1>
           </a>
         </div>
-
         <div className={active}>
           <div className="navList flex"> 
             <Links  />
-
             <UserBtn/>
-           
           </div>
-
-          
           <div className='closeNavbar'> 
           <AiOutlineClose className='icon' onClick={() => setActive("navBar")} /> 
           </div>

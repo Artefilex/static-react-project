@@ -126,7 +126,8 @@
                 left: 50%;
                 transform: translate(-50%);
                 justify-content: center;
-
+                color: white;
+                font-weight: 700;
                 &:hover {
                     background: var(--PrimaryColor);
                     cursor: pointer;

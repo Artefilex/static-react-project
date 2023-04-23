@@ -116,6 +116,8 @@
   left: 50%;
   transform: translate(-50%);
   justify-content: center;
+  color: white;
+  font-weight: 700;
 }
 .home .homeContent .cardDiv .searchOption:hover {
   background: var(--PrimaryColor);

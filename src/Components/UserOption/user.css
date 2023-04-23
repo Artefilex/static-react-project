@@ -1,0 +1,100 @@
+.User {
+  position: absolute;
+  top: 4.5rem;
+  width: 18rem;
+  height: 25rem;
+  background: white;
+  right: 1rem;
+  border: 1px solid rgba(108, 108, 108, 0.5);
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+.User .User-Item {
+  display: flex;
+  flex-direction: colum;
+  align-items: center;
+  width: 95%;
+}
+.User .User-Item .User-Item-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.User .User-Item .User-Item-section .user-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(181, 181, 181);
+  padding-bottom: 1rem;
+}
+.User .User-Item .User-Item-section .user-profile img {
+  width: 50px;
+  border-radius: 30px;
+}
+.User .User-Item .User-Item-section .user-profile .user-info {
+  display: flex;
+  flex-direction: column;
+}
+.User .User-Item .User-Item-section .user-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(181, 181, 181);
+}
+.User .User-Item .User-Item-section .user-options a {
+  text-transform: capitalize;
+  color: black;
+  padding: 0.2rem 0.4rem;
+  width: 100%;
+}
+.User .User-Item .User-Item-section .user-options a:hover {
+  background: rgb(235, 235, 235);
+}
+.User .User-Item .User-Item-section .user-options .user-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.User .User-Item .User-Item-section .user-options .user-box span:nth-child(2) {
+  background: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  border-radius: 50px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: 900;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.User .User-Item .User-Item-section .logout {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+}
+.User .User-Item .User-Item-section .logout:active {
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 1200px) {
+  .User {
+    right: 20%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .User {
+    right: 25%;
+  }
+}/*# sourceMappingURL=user.css.map */

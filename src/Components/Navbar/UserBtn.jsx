@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import UserOption from '../UserOption/UserOption'
+
 
 const UserBtn = () => {
  const activeUser = useSelector(state => state.author.user)
- const [userActive ,setUserActive] = useState(false)
+ const userActive = JSON.parse(localStorage.getItem("isActive"))
  const [open ,setOpen] = useState(false) 
 
-//  useEffect(()=>{
-//     if(activeUser.Username !== null || activeUser.userName !== undefined ){
-//        setUserActive(true)
-//     }else{
-//      setUserActive(false)
-//     }
-//   },[activeUser])
-  
+ useEffect(()=>{
+   
+  },[activeUser ])
+
 
   const handleLocation = () =>{
     window.location.href = '/login'
@@ -29,15 +27,13 @@ const UserBtn = () => {
   return (
 
     <div> 
-        { userActive === false && <button onClick={handleLocation} className='btn'>  Log In </button>}
+        { !userActive && <button onClick={handleLocation} className='btn'>  Log In </button>}
 
        {
         userActive &&<>
               <button className='btn' onClick={handleClick}> User </button>
          {
-            open && <div>
-                acık
-            </div>
+            open && <UserOption/>
          }
         </>
        }
