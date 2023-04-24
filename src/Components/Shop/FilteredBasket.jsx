@@ -12,7 +12,7 @@ import { calculateAmaount } from '../../Reducer/reducer/MarketSlice'
  const filteredData = filtered.filter((data) => basket.find(item => data.imgSrc === item ))
  const [totalAmount, setTotalAmount] = useState(0);
  const dispatch = useDispatch()
-
+ const isActive = useSelector((state) => state.author.activeUser);
  const increase = (imgSrc) =>{
     setCount((prevState)=> ({
       ...prevState,
@@ -51,43 +51,47 @@ console.log(totalAmount)
  
  return (
     <>
+    { isActive && <>
       {
-    filteredData && filteredData.map((item ,index) =>(
-         <div key={index} className='Shop-item-main'>
-             <div className='Shop-item-seciton' > 
-                  <img src={item.imgSrc} alt={item.imgSrc} />  
-                  <span>{item.grade}</span>   
-             </div>
-            <div className='Shop-btn-amount'>
-            <div className='Shop-button'>
-                 <h4>Ekstra Gün +${item.ekstra}</h4>
-                 <div className='buttons'>
-                 <button onClick={() => decrease(item.imgSrc)}><span>-</span></button>
-                  <span>{count[item.imgSrc] ? count[item.imgSrc]: 0}</span> 
-                 <button onClick={() => increase(item.imgSrc)}>
-                     <span>+</span>
-                 </button>
-                 </div>
-                 
-             </div>
-             <div className='Shop-amount'>
-               <h4>Total Amount </h4>
-              <h2>
-                {
-               
-               count[item.imgSrc] ? (count[item.imgSrc] * item.ekstra + item.fees ): item.fees
-              }
-                </h2> 
-              </div>
-            </div>
-             <div className='clear-button'>
-              <button className='btn' onClick={()=> handleRemove(item.imgSrc) }>
-                <ImBin className='icon'/>
-              </button>
-             </div>
-         </div>
-      ))
-     }
+          filteredData && filteredData.map((item ,index) =>(
+               <div key={index} className='Shop-item-main'>
+                   <div className='Shop-item-seciton' > 
+                        <img src={item.imgSrc} alt={item.imgSrc} />  
+                        <span>{item.grade}</span>   
+                   </div>
+                  <div className='Shop-btn-amount'>
+                  <div className='Shop-button'>
+                       <h4>Ekstra Gün +${item.ekstra}</h4>
+                       <div className='buttons'>
+                       <button onClick={() => decrease(item.imgSrc)}><span>-</span></button>
+                        <span>{count[item.imgSrc] ? count[item.imgSrc]: 0}</span> 
+                       <button onClick={() => increase(item.imgSrc)}>
+                           <span>+</span>
+                       </button>
+                       </div>
+                       
+                   </div>
+                   <div className='Shop-amount'>
+                     <h4>Total Amount </h4>
+                    <h2>
+                      {
+                     
+                     count[item.imgSrc] ? (count[item.imgSrc] * item.ekstra + item.fees ): item.fees
+                    }
+                      </h2> 
+                    </div>
+                  </div>
+                   <div className='clear-button'>
+                    <button className='btn' onClick={()=> handleRemove(item.imgSrc) }>
+                      <ImBin className='icon'/>
+                    </button>
+                   </div>
+               </div>
+            ))
+           }
+    
+    </>
+    }
     </>
   )
 }

@@ -216,8 +216,10 @@
     }
   .Payment{
     width: 70%;
-    height: 150vh;
+    margin-top: 15rem;
+    min-height: 150vh;
     display: flex;
+    flex-direction: column;
     .Payment-method{
         position: relative;
         top: 8rem;

@@ -8,6 +8,7 @@ import { useSelector } from "react-redux"
 
 const Shop = () => {
   const active = useSelector(state => state.market.active)
+  const isActive = useSelector(state => state.author.activeUser)
   const storedData = JSON.parse(localStorage.getItem('market'));
   const [empty, setEmty] = useState(false)
   useEffect(()=>{
@@ -34,8 +35,12 @@ const Shop = () => {
     {
          !empty && <EmptyAlert  /> 
       }  
+    {
+     !isActive &&  <EmptyAlert/>
+    }
+
     {    
-      empty  &&  <>
+      empty  && isActive && <>
         <div className='Shop-product'>
             <FilteredBasket/>
         </div>

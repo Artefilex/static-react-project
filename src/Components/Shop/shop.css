@@ -204,8 +204,10 @@
 }
 .Shop .Payment {
   width: 70%;
-  height: 150vh;
+  margin-top: 15rem;
+  min-height: 150vh;
   display: flex;
+  flex-direction: column;
 }
 .Shop .Payment .Payment-method {
   position: relative;

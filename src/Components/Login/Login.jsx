@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { addUser } from "../../Reducer/reducer/AuthorSlice";
 import "./login.css";
 
 
 const Login = () => {
-  const isActive = useSelector(state=> state.author.activeUser)
+ 
   const [form ,setForm] = useState({
     username:"",
     password: ""
