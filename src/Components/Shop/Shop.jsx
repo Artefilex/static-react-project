@@ -38,7 +38,9 @@ const Shop = () => {
     {
          !empty && <EmptyAlert/> 
       }  
-    
+    {
+    !isActive &&    <EmptyAlert/>
+    }
 
     {    
       empty  && isActive && <>
@@ -46,7 +48,7 @@ const Shop = () => {
             <FilteredBasket/>
         </div>
         <div className='Payment-form'>
-            <PaymentForm/>
+         <PaymentForm/>
         </div>
        </>
      }
