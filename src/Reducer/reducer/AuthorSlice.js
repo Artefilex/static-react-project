@@ -24,12 +24,21 @@ const UsersSlice = createSlice({
     },
     userCardInfo ( state, action){
         state.userAllInfo.push(state.userProfile)
-        state.userAllInfo =[...state.userAllInfo, action.payload]   
+        state.userAllInfo =[...state.userAllInfo, action.payload]  
+         
      }
   
   
     }
 })
+
+export const addAllInfoToLocalStorage = (userAllInfo) =>{
+    const allInfo = JSON.parse(localStorage.getItem("allInfo")) || []
+    const updateInfo = [...allInfo, userAllInfo]
+    localStorage.setItem("allInfo", JSON.stringify(updateInfo))
+    
+}
+
 export const addUserToLocalStorage = (users) =>{
     const existingUser = JSON.parse(localStorage.getItem("users")) || [ ]
     const updateUser = [...existingUser , users]

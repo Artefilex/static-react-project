@@ -43,8 +43,6 @@ const handleRemove = (url) =>{
   window.location.reload();
 }
 
-
-console.log(totalAmount)
  useEffect(()=>{
   setBasket(getBasketData())
  },[])

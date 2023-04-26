@@ -56,7 +56,7 @@ const Login = () => {
 
             <input
               name="password"
-              type="text"
+              type="password"
               value={form.password}
               onChange={handleChange}
             />

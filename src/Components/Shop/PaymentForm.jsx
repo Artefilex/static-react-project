@@ -11,6 +11,7 @@ const PaymentForm = () => {
   const handleClick = () => {
     setShow(!show);
     dispatch(showPayment(show));
+   
   };
   const isActive = useSelector((state) => state.author.activeUser);
 

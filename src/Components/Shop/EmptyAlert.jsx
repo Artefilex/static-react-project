@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 const EmptyAlert = () => {
   const isActive = useSelector((state) => state.author.activeUser);
 
-  console.log(isActive);
+ 
   const backPage = () => {
     window.location.href = "http://localhost:3000/";
   };

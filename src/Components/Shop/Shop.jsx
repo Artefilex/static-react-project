@@ -9,11 +9,14 @@ import { useSelector } from "react-redux"
 const Shop = () => {
   const active = useSelector(state => state.market.active)
   const isActive = useSelector(state => state.author.activeUser)
+ 
+
   const storedData = JSON.parse(localStorage.getItem('market'));
   const [empty, setEmty] = useState(false)
   useEffect(()=>{
     if(!storedData || storedData.length === 0 ){
       setEmty(false)
+     
     }
     else{
       setEmty(true)
@@ -33,11 +36,9 @@ const Shop = () => {
    {
     !active &&  <div className="Shop-center">
     {
-         !empty && <EmptyAlert  /> 
+         !empty && <EmptyAlert/> 
       }  
-    {
-     !isActive &&  <EmptyAlert/>
-    }
+    
 
     {    
       empty  && isActive && <>
