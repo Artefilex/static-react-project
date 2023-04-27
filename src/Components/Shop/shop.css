@@ -335,8 +335,20 @@
   flex-direction: column;
   align-items: center;
 }
-.Shop .Payment .Payment-method .Payment-information .Payment-Card h2 {
-  width: 100%;
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .card-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .card-flex h2 {
+  margin-bottom: 1rem;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .card-flex .icon {
+  cursor: default;
+  margin-left: 1rem;
+  color: rgb(75, 75, 75);
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section {
   display: flex;
@@ -347,7 +359,6 @@
   width: 90%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   margin-right: 1rem;
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .address h4 {
@@ -363,15 +374,32 @@
   align-items: flex-start;
   gap: 1rem;
 }
-.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo h2 {
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .card-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .card-flex h2 {
   margin-bottom: 1rem;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .card-flex .icon {
+  cursor: default;
+  margin-left: 1rem;
+  color: rgb(75, 75, 75);
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   zoom: 0.8;
   width: 95%;
+  border: 1px solid grey;
+  padding: 2rem;
+  background: rgb(217, 217, 217);
+  height: 15rem;
+  border-radius: 15px;
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-info {
   width: 30%;

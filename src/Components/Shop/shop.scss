@@ -351,9 +351,24 @@ $border: 1px solid grey;
             width: 70% ;
             flex-direction: column;
             align-items: center;
-          h2 {
-            width: 100%;
-          }
+            .card-flex{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+               width: 90%;
+                h2{
+                    margin-bottom: 1rem;
+                    
+                }
+                .icon{
+                    cursor: default;
+                    margin-left: 1rem;
+                    color: rgb(75, 75, 75);
+                }
+                
+               }
+
           .Payment-Card-Section{
             display: flex;
             flex-direction: column;
@@ -362,23 +377,36 @@ $border: 1px solid grey;
                 width: 90%;
                 display: flex;
                 flex-direction: column;
-                padding: 1rem;
+                
                 
                 margin-right: 1rem;
                 h4{
-                    margin-top:1rem ;
+                    margin-top: 1rem ;
                     margin-bottom: 0.5rem;
                     width: max-content;
                     border-bottom: $border;
                 
                  }
-                
+                 
                 
             }
             .cardInfo{
+               .card-flex{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content:flex-start;
+               
                 h2{
                     margin-bottom: 1rem;
                 }
+                .icon{
+                    cursor: default;
+                    margin-left: 1rem;
+                    color: rgb(75, 75, 75);
+                }
+                
+               }
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -387,8 +415,14 @@ $border: 1px solid grey;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    align-items: center;
                     zoom: 0.8;
                     width: 95%;
+                    border: $border;
+                    padding: 2rem;
+                    background: rgb(217, 217, 217);
+                    height: 15rem;
+                    border-radius: 15px;
                 }
             }
           }

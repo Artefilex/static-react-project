@@ -12,6 +12,7 @@ const Payment = () => {
           {!localStorage.getItem("allInfo") && <Form />}
             {show && <Form />}
         </div>
+     
             {!show && <Summary />}
         <div>
           <button className="btn" onClick={() => setShow(!show)}>
