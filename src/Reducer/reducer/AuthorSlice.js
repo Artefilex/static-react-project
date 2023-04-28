@@ -5,7 +5,9 @@ const initialState = {
     users:  JSON.parse(localStorage.getItem("users")) || [],
     activeUser: JSON.parse(localStorage.getItem("isActive")) || false ,
     userProfile: JSON.parse(localStorage.getItem("userProfile")),
-    userAllInfo: []
+    userCard: {},
+    userAdrress: {},
+
 }
 
 const UsersSlice = createSlice({
@@ -26,7 +28,20 @@ const UsersSlice = createSlice({
         state.userAllInfo.push(state.userProfile)
         state.userAllInfo =[...state.userAllInfo, action.payload]  
          
+     },
+     userCard (state,action){
+        state.userCard = action.payload
+      if(state.userCard){
+        localStorage.setItem("cardInfo",JSON.stringify(state.userCard))
+      }
+     },
+     userLocation(state,action){
+        state.userAdrress = action.payload
+        if(state.userAdrress){
+            localStorage.setItem("locationInfo",JSON.stringify(state.userAdrress))
+          }
      }
+    
   
   
     }
@@ -35,9 +50,9 @@ const UsersSlice = createSlice({
 export const addAllInfoToLocalStorage = (userAllInfo) =>{
     const allInfo = JSON.parse(localStorage.getItem("allInfo")) || []
     const updateInfo = [...allInfo, userAllInfo]
-    localStorage.setItem("allInfo", JSON.stringify(updateInfo))
-    
+    localStorage.setItem("allInfo", JSON.stringify(updateInfo))    
 }
+
 
 export const addUserToLocalStorage = (users) =>{
     const existingUser = JSON.parse(localStorage.getItem("users")) || [ ]
@@ -49,6 +64,12 @@ export const getUser = () =>{
 }
 
  
-export const { addUser ,userCardInfo} = UsersSlice.actions
+export const {
+    addUser ,
+    userCardInfo,
+    userCard,
+    userLocation
+
+} = UsersSlice.actions
 
 export default UsersSlice.reducer

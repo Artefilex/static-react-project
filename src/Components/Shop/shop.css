@@ -4,9 +4,67 @@
   align-items: flex-start;
   width: 100%;
   justify-content: flex-start;
-  min-height: 100vh;
   background: rgb(224, 224, 224);
   zoom: 0.75;
+}
+.Shop form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+.Shop form .form-div {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Shop form .form-div h2 {
+  text-align: left;
+  width: 95%;
+}
+.Shop form .form-div .input-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 100%;
+}
+.Shop form .form-div .input-div label {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: rgb(100, 100, 100);
+}
+.Shop form .form-div .input-div input, .Shop form .form-div .input-div select {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.Shop form .form-div .input-div input {
+  border: 1px solid rgb(235, 235, 235);
+  outline: none;
+  background: rgb(244, 244, 244);
+}
+.Shop form .form-div .input-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.Shop form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  width: 85%;
+  border-radius: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.Shop form button:active {
+  transform: scale(0.98);
 }
 .Shop .Shop-center {
   display: flex;
@@ -203,12 +261,9 @@
   color: white;
 }
 .Shop .Payment {
-  width: 70%;
-  margin-top: 1rem;
-  min-height: 150vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 }
 .Shop .Payment .Payment-method {
   position: relative;
@@ -220,71 +275,13 @@
   width: 100%;
   padding: 1rem;
   background: white;
+  margin-bottom: 8rem;
 }
 .Shop .Payment .Payment-method .invoice {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-}
-.Shop .Payment .Payment-method .invoice form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
-  width: 100%;
-}
-.Shop .Payment .Payment-method .invoice form .form-div {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Shop .Payment .Payment-method .invoice form .form-div h2 {
-  text-align: left;
-  width: 95%;
-}
-.Shop .Payment .Payment-method .invoice form .form-div .input-div {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  width: 90%;
-}
-.Shop .Payment .Payment-method .invoice form .form-div .input-div label {
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: rgb(100, 100, 100);
-}
-.Shop .Payment .Payment-method .invoice form .form-div .input-div input, .Shop .Payment .Payment-method .invoice form .form-div .input-div select {
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-}
-.Shop .Payment .Payment-method .invoice form .form-div .input-div input {
-  border: 1px solid rgb(235, 235, 235);
-  outline: none;
-  background: rgb(244, 244, 244);
-}
-.Shop .Payment .Payment-method .invoice form .form-div .input-date {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-}
-.Shop .Payment .Payment-method .invoice form button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  width: 85%;
-  border-radius: 10px;
-  font-size: 18px;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-.Shop .Payment .Payment-method .invoice form button:active {
-  transform: scale(0.98);
 }
 .Shop .Payment .Payment-method .invoice .payment-info {
   width: 30%;
@@ -316,7 +313,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 90%;
+  width: 95%;
   border: 1px solid grey;
   padding: 1rem;
 }
@@ -324,14 +321,14 @@
   font-weight: 800;
 }
 .Shop .Payment .Payment-method .Payment-information {
-  width: 90%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 3rem;
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-Card {
   display: flex;
-  width: 70%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -354,6 +351,10 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 90%;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .btn {
+  width: 95%;
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .address {
   width: 90%;
@@ -398,16 +399,116 @@
   border: 1px solid grey;
   padding: 2rem;
   background: rgb(217, 217, 217);
-  height: 15rem;
+  min-height: 15rem;
   border-radius: 15px;
 }
-.Shop .Payment .Payment-method .Payment-information .Payment-info {
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div h4 {
+  font-size: 20px;
+  font-weight: 900;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div span {
+  font-size: 30px;
+  font-weight: 800;
+  color: rgb(84, 84, 84);
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .info-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .info-header .icon {
+  margin-left: 1rem;
+  color: rgb(69, 69, 69);
+  font-size: 30px;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location p {
+  font-weight: 500;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location .summary-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location .summary-header span {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location .summary-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+  font-weight: 600;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .total {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  border: 1px solid grey;
+  background: rgb(229, 229, 229);
+  border-radius: 10px;
+}
+.Shop .Payment .Payment-method .Payment-information .Payment-info .total span {
+  font-weight: 900;
+  font-size: 20px;
 }
 
+@media screen and (min-width: 800px) {
+  .Shop .Payment {
+    width: 80%;
+  }
+  .Shop .Payment .Payment-method .Payment-information {
+    flex-direction: row;
+  }
+  .Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location .summary-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location .summary-header span::before {
+    content: "|";
+  }
+  .Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location .summary-body {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 700px) {
   .Shop {
     justify-content: center;
+  }
+  .Shop .Payment {
+    width: 80%;
+    margin-bottom: 1rem;
   }
   .Shop .Shop-center {
     width: 100%;
@@ -445,6 +546,9 @@
     width: 400px;
     height: 90vh;
   }
+  .Shop .Payment {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 700px) {
   .Shop {
@@ -460,7 +564,21 @@
     width: 70%;
   }
 }
-@media screen and (max-width: 200px) {
+@media screen and (min-width: 400px) {
+  .Payment .Payment-method .Payment-information .Payment-info {
+    margin-left: 3rem;
+  }
+  .Payment .Payment-method .Payment-information .Payment-info .summary {
+    width: 95%;
+  }
+  .Shop form .form-div .input-date {
+    flex-direction: row;
+  }
+  .Shop form .btn {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 250px) {
   .Shop .Shop-center {
     padding-top: 15rem;
   }
@@ -469,6 +587,13 @@
   }
   .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount {
     flex-direction: column;
+  }
+  .Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .Shop .Payment .Payment-method .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div {
+    width: 100%;
   }
 }
 @media screen and (max-width: 400px) {

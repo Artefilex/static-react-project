@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import {AiFillCreditCard} from "react-icons/ai"
 import {HiLocationMarker} from "react-icons/hi"
-import Form from './Form';
+import {SiYourtraveldottv} from "react-icons/si"
+import CardForm from './Form/CardForm';
+import AddressForm from './Form/AddressForm';
 const Summary = () => {
 
     const total = useSelector(state => state.market.total)
@@ -37,9 +39,9 @@ const Summary = () => {
                  <h4>Şehir: </h4><span>{item.city}</span>
                 </div>
               </div>
-              <button name='adrres' onClick={() => setShowAddress(!setShowAddress)} >Adrress bilgilerini Değiş </button> 
+              <button className='btn' onClick={() => setShowAddress(!showAddress)} >Adrress bilgilerini Değiş </button> 
               {
-              showAddress  &&   <Form/>
+              showAddress  &&   <AddressForm/>
               }
               <div>
               
@@ -54,12 +56,12 @@ const Summary = () => {
                 
                 </div>
                 <div> <h4>Kart Numarası</h4> <span>**** {item.cardNumber.substring(item.cardNumber.length - 4)}</span> </div>
-                <div><h4>Sona Erme Tarihi</h4> {item.date} </div>
+                <div><h4>Sona Erme Tarihi</h4><span> {item.date}</span> </div>
                </div>
                </div>
-              <button name='adrres' onClick={()=> setShowCard(!showCard)} > Kredi/Banka Kartı   </button> 
+              <button className='btn'  onClick={()=> setShowCard(!showCard)} > Kredi/Banka Kartı   </button> 
               {
-              showCard &&   <Form/>
+              showCard &&   <CardForm/>
               }
               <div>
               </div>
@@ -69,17 +71,22 @@ const Summary = () => {
           }
         </div>
       <div className= "Payment-info">
-        <h2>Tatil Özeti </h2>
-       
-        
+        <div className='info-header'>
+        <h2>Tatil Özeti  </h2>
+       <SiYourtraveldottv className="icon"/>
+        </div>
          <div className="summary">
           {
             filter && filter.map((item, i) =>(
               <div className="summary-location" key={i}>
+                 <div className='summary-header'>
                  <h4> {item.location}</h4>
                  <span> {item.grade} </span>
-                 <span> {item.fees} </span>
+                 </div>
+                <div className='summary-body'>
+                <span> $ {item.fees} </span>
                  <span>{item.date} / {item.dateFinish} </span>
+                </div>
                 <p> {item.descripton}</p>
                  </div>
             ) ) 
