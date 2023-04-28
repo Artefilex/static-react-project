@@ -15,9 +15,9 @@ const Navbar = () => {
 
   return (
     <section className='navbarSection'>
-      <header className="header flex">
+      <header className="header ">
         <div className="logoDiv">
-          <a href="#home" className="logo flex">
+          <a href="http://localhost:3000/" className="logo flex">
             <h1> <MdTravelExplore className="icon" /> Travel.</h1>
           </a>
         </div>

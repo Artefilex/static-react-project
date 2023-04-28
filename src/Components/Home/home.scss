@@ -1,249 +1,226 @@
-
+@import "../../index.scss";
 .home {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
+  width: $max-width;
+  position: relative;
+  @include row;
+  justify-content: center;
+  margin: auto;
+
+  .overlay {
+    position: absolute;
+    @include largeSize();
+    background: var(--SecondaryColor);
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+  }
+
+  video {
+    position: absolute;
+    @include largeSize();
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .homeContent {
+    width: $large-width;
+    height: max-content;
+    padding: 3rem 1.5rem 3rem;
+    row-gap: 3rem;
+    @include column();
+    align-items: stretch;
     justify-content: center;
     margin: auto;
+    z-index: 100;
+    color: var(--whiteColor);
 
-    .overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: var();
-        background: rgb(47, 106, 127);
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        mix-blend-mode: hard-light;
+    .textDiv {
+      padding: 4rem;
+      .smallText {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .homeTitle {
+        position: relative;
+        font-size: 1.8rem;
+      }
     }
 
-    video {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        object-fit: cover;
-    }
+    .cardDiv {
+      position: relative;
+      padding: $padding-2;
+      background: var(--whiteColor);
+      border-radius: $border-radius;
+      gap: 1rem;
 
-    .homeContent {
-        width: 95%;
-        height: max-content;
-        padding: 3rem 1.5rem 3rem;
-        display: flex;
-        row-gap: 3rem;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-        margin: auto;
-        z-index: 100;
-        color: var(--whiteColor);
+      label {
+        display: block;
+        color: var(--textColor);
+        padding-bottom: $padding;
+        font-size: 14px;
+        font-weight: 500;
+      }
 
-        .textDiv {
-            padding: 4rem;
+      .label_total {
+        justify-content: space-between;
+        align-items: center;
 
-            .smallText {
-                font-size: 13px;
-                text-transform: uppercase;
-            }
-
-            .homeTitle {
-                position: relative;
-                font-size: 1.8rem;
-            }
+        .total {
+          font-size: 18px;
+          color: var(--blackColor);
+          padding-bottom: $padding;
         }
+      }
 
-        .cardDiv {
-            position: relative;
-            padding: 2rem 1rem;
-            background: var(--whiteColor);
-            border-radius: 10px;
-            gap: 1rem;
+      .input {
+        height: 40px;
+        padding: $padding-1;
+        background: var(--inputColor);
+        border-radius: $border-radius-3;
 
+        input {
+          width: $max-width;
+          background: none;
+          @include default();
+          font-size: 13px;
 
-            label {
-                display: block;
-                color: var(--textColor);
-                padding-bottom: 10px;
-                font-size: 14px;
-                font-weight: 500;
-            }
-
-            .label_total {
-                justify-content: space-between;
-                align-items: center;
-
-                .total {
-                    font-size: 18px;
-                    color: var(--blackColor);
-                    padding-bottom: 10px;
-                }
-
-            }
-
-            .input {
-                height: 40px;
-                padding: 0 1rem;
-                background: var(--inputColor);
-                border-radius: 3rem;
-
-                input {
-                    background: none;
-                    border: none;
-                    outline: none;
-                    width: 100%;
-                    font-size: 13px;
-
-                    &::placeholder {
-                        font-size: 13px;
-                    }
-                    &:hover{
-                        cursor: poniter;
-                    }
-                   
-
-                }
-
-                .icon {
-                    color: var(--PrimaryColor);
-                    font-size: 18px;
-                    margin-left: 10px;
-                }
-            }
-
-            .searchOption {
-                border: none;
-                outline: none;
-                position: absolute;
-                background: var(--gradientColor);
-                width: max-content;
-                bottom: -0.7rem;
-                padding: 0.3rem 1rem;
-                column-gap: 1rem;
-                border-radius: 3rem;
-                left: 50%;
-                transform: translate(-50%);
-                justify-content: center;
-                color: white;
-                font-weight: 700;
-                &:hover {
-                    background: var(--PrimaryColor);
-                    cursor: pointer;
-                }
-                .icon{
-                  font-size: 18px;
-
-                }
-                span{
-                    font-size: 13px;
-                    cursor: pointer;
-                }
-
-
-            }
-        }
-        .danger{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            background: rgb(235, 200, 196 , 0.8);
-            border: 1px solid rgb(236, 142, 142);
-            padding: 1rem;
-            border-radius: 3px;
-            h3{
-                color:rgb(177, 81, 81);
-            }
-        }
-        
-        .homeFooterIcons{
-            width: 100%;
-            justify-content: space-between;
-          .icon{
-            font-size: 20px;
-            margin: 0 5px;
-            color: var(--whiteColor);
-            font-weight: 600;
-            &:hover{
-              color: var(--PrimaryColor);
-            }
+          &::placeholder {
+            font-size: 13px;
+          }
+          &:hover {
+            cursor: poniter;
           }
         }
+
+        .icon {
+          color: var(--PrimaryColor);
+          font-size: 18px;
+          margin-left: 10px;
+        }
+      }
+
+      .searchOption {
+        @include default();
+        position: absolute;
+        background: var(--gradientColor);
+        width: max-content;
+        bottom: -0.7rem;
+        padding: $padding-1;
+        column-gap: 1rem;
+        border-radius: $border-radius-3;
+        left: 50%;
+        transform: translate(-50%);
+        justify-content: center;
+        color: var(--whiteColor);
+        font-weight: 700;
+        &:hover {
+          background: var(--PrimaryColor);
+          cursor: pointer;
+        }
+        .icon {
+          font-size: 18px;
+        }
+        span {
+          font-size: 13px;
+          cursor: pointer;
+        }
+      }
     }
+    .danger {
+      @include row();
+      justify-content: center;
+      background: rgb(235, 200, 196, 0.8);
+      border: 1px solid rgb(236, 142, 142);
+      padding: $padding;
+      border-radius: $border-radius-2;
+      h3 {
+        color: rgb(177, 81, 81);
+      }
+    }
+
+    .homeFooterIcons {
+      width: $max-width;
+      justify-content: space-between;
+      .icon {
+        font-size: $span-size;
+        margin: 0 5px;
+        color: var(--whiteColor);
+        font-weight: 600;
+        &:hover {
+          color: var(--PrimaryColor);
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width:500px) {
-.home{
-    .homeContent{
-        .textDiv{
-            .smallText{
-                font-size: 16px;
-            }
-            .homeTitle{
-                position: relative;
-                font-size: 2.3rem;
-                width: max-content;
-                &::after{
-                    position: absolute;
-                    content: "";
-                    background: rgb(5, 186, 236) ;
-                    width: 145px ;
-                    height: 3px;
-                    right: 0;
-                    bottom: 5px;
-                    z-index: -1;
-                }
-            }
+@media screen and (min-width: 500px) {
+  .home {
+    .homeContent {
+      .textDiv {
+        .smallText {
+          font-size: 16px;
         }
-        .cardDiv{
-            grid-template-columns: repeat(2,1fr);
-
+        .homeTitle {
+          position: relative;
+          font-size: 2.3rem;
+          width: max-content;
+          &::after {
+            position: absolute;
+            content: "";
+            background: var(--SecondaryColor);
+            width: 145px;
+            height: 3px;
+            right: 0;
+            bottom: 5px;
+            z-index: -1;
+          }
         }
+      }
+      .cardDiv {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
+  }
 }
+@media screen and (min-width: 660px) {
+  .home {
+    .homeContent {
+      .cardDiv {
+        padding: $padding-2;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }
-@media screen and (min-width:660px) {
-    .home{
-        .homeContent{
-           
-            .cardDiv{
-                padding: 2rem 1rem;
-                grid-template-columns: repeat(3, 1fr);
-    
-            }
+@media screen and (min-width: 940px) {
+  .home {
+    height: 80vh;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .home {
+    height: 95vh;
+    .homeContent {
+      width: $xsmall-width;
+      .cardDiv {
+        padding: $padding-2;
+        grid-template-columns: repeat(3, 1fr);
+        .input {
+          margin-bottom: $margin-b;
         }
-    }
-    }
-
-    @media screen and (min-width:940px) {
-        .home{
-          height: 80vh;
+        .searchOption {
+          bottom: -1rem;
+          padding: $padding-1;
+          span {
+            font-size: $span-size;
+          }
         }
-        }    
-
-        @media screen and (min-width:1240px) {
-            .home{
-              height: 95vh;
-              .homeContent{
-                width: 65%;
-                .cardDiv{
-                    padding: 2rem 1rem;
-                    grid-template-columns: repeat(3 ,1fr);
-                    .input{
-                        margin-bottom: 1rem;
-
-                    }
-                    .searchOption{
-                        bottom: -1rem;
-                        padding: 8px 1rem;
-                        span{
-                            font-size: 17px;
-
-                        }
-                    }
-                }
-              }
-            }
-            }        
+      }
+    }
+  }
+}

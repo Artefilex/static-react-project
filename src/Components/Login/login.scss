@@ -1,18 +1,12 @@
-$text-shadow: 1px 0px 8px black;
-$input-text-shadow: 0px 0px 5px black;
-$btn-color: -webkit-linear-gradient(125deg, rgba(0, 234, 255, 1) 0%, rgba(53, 102, 223, 1) 50%, rgba(97, 31, 219, 1) 99%);
-$btn-hover-color:-webkit-linear-gradient(140deg, rgba(0, 234, 255, 1) 0%, rgba(53, 102, 223, 1) 50%, rgba(97, 31, 219, 1) 99%);
-$border-radius: 5px;
+@import "../../index.scss";
+
 .Login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include column;
   justify-content: center;
-  width: 100%;
+  width: $max-width;
   height: 95vh;
   img {
-    width: 100%;
-    height: 100%;
+    @include largeSize();
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -33,125 +27,107 @@ $border-radius: 5px;
     height: 25rem;
     border: 4px solid transparent;
     background: rgba(0, 0, 0, 0.126);
-    border-radius: 5px;
+    border-radius: $border-radius;
     border: 2px solid rgba(7, 55, 83, 0.222);
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: $box-shadow;
     h1 {
       text-align: center;
-      margin-bottom: 1rem;
-      color: white;
+      margin-bottom: $margin-b;
+      color: var(--whiteColor);
       text-shadow: $text-shadow;
     }
     form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+      @include column;
+      width: $max-width;
       gap: 1rem;
       margin-top: 2rem;
       .input-div {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          width: 90%;
-          gap: 0.5rem;
-          label{
-            color: white;
-            text-shadow: $text-shadow ;
-            width: 100%;
-            font-weight: 700;
-          }
-          input{
-            width: 100%;
-            border: none;
-            outline: none;
-            background: rgba(255, 255, 255, 0.475);
-            padding: 0.5rem 1rem ;
-            font-weight: 600;
-            color: rgb(241, 241, 241);
-            text-shadow: $input-text-shadow;
-            border-radius: $border-radius;
-          }
-      }
-      button{
-        width: 90%;
-        position: relative;
-       top: 1rem;
-       padding: 0.5rem 1rem;
-       border: none;
-       outline: none;
-       background: $btn-color;
-       cursor: pointer;
-       border-radius: $border-radius ;
-       transition: transform 0.3s ease;
-       span{
-        color: white;
-        font-size: 1rem;
-        font-weight: 600;
-       }
-       &:hover{
-        transform: scale(0.98);
-        background: $btn-hover-color;
-
+        @include column;
+        align-items: flex-start;
+        width: $medium-width;
+        gap: 0.5rem;
+        label {
+          color: var(--whiteColor);
+          text-shadow: $text-shadow;
+          width: $max-width;
+          font-weight: 700;
+        }
+        input {
+          width: $max-width;
+          @include default;
+          background: rgba(255, 255, 255, 0.475);
+          padding: $padding-1;
+          font-weight: 600;
+          color: var(--bodyColor);
+          text-shadow: $input-text-shadow;
+          border-radius: $border-radius;
         }
       }
-      
-    }
-    .join-btn{
-       position: relative;
-       top: 2rem;
-       display: flex;
-       align-items: center;
-       width: 100%;
-       justify-content: center;
-       a{
-        color: antiquewhite;
+      button {
+        width: $medium-width;
+        position: relative;
+        top: 1rem;
+        padding: $padding-1;
+        @include default;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        @include hover;
+      }
+      span {
+        color: var(--whiteColor);
+        font-size: $span-size;
         font-weight: 600;
-        text-shadow: $text-shadow;
-
-       }
+      }
     }
-   
-
   }
-  .join-div{
-    min-height: 36rem;
-    button{
-      margin-bottom: 1rem;
+  .join-btn {
+    position: relative;
+    top: 2rem;
+    @include column();
+    width: $max-width;
+    justify-content: center;
+    a {
+      color: var(--whiteColor);
+      font-weight: 600;
+      text-shadow: $text-shadow;
     }
+  }
+}
+.join-div {
+  min-height: 36rem;
+  button {
+    margin-bottom: $margin-b;
   }
 }
 
 @media screen and (max-width: 500px) {
- .Login{
-  
-  padding: 1rem;
-  .Login-Item{
-    margin-top: 3rem;
-    width: 95%;
-    height: 30rem;
-    form{
-      .input-div{
-        width: 100%;
+  .Login {
+    padding: 1rem;
+    .Login-Item {
+      margin-top: 3rem;
+      width: $large-width;
+      height: 30rem;
+      form {
+        .input-div {
+          width: $max-width;
+        }
       }
     }
   }
- }  
 }
 
 @media screen and (max-width: 270px) {
-  .Login{
+  .Login {
     zoom: 0.8;
-   padding: 0.5rem;
-   
- }}
- @media screen and (max-width: 180px) {
-  .Login{
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 180px) {
+  .Login {
     zoom: 0.5;
-   padding: 1rem;
-   .Login-Item{
-    margin-top: 20rem;
-   }
-   
-  }  
- }
+    padding: $padding;
+    .Login-Item {
+      margin-top: 20rem;
+    }
+  }
+}

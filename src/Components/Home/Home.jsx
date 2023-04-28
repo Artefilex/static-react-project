@@ -2,7 +2,6 @@
 import {useEffect} from 'react'
 import "./home.css"
 import videos from "../../Assests/header.mp4"
-
 import HomeHeader from "./Home_Content/HomeHeader"
 import InputArea from './Home_Content/InputArea'
 import HomeIcons from './Home_Content/HomeIcons'

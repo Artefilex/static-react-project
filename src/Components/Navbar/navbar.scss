@@ -1,7 +1,14 @@
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+}
+
 .header {
   position: fixed;
-  display: flex;
-  align-items: center;
+  @include row;
   justify-content: space-between;
   background: var(--whiteColor);
   width: 100%;
@@ -94,10 +101,9 @@
     }
     .navBar {
       .navList {
-        display: flex;
-        align-items: center;
+       @include row;
         justify-content: center;
-        flex-direction: row;
+        
         gap: 1rem;
         .navItem {
           .navLink {

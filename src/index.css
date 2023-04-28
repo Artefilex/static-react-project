@@ -1,59 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-*{
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-:root{
+:root {
   --PrimaryColor: rgb(0, 115, 168);
-  --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
-  --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(201, 33%, 16%);
-  --textColor: hsl(240, 3%, 15%);
-  --whiteColorDeam: hsl(0, 0%, 93%);
+  --SecondaryColor: rgb(16, 181, 203);
+  --gradientColor: linear-gradient( to right, rgb(16, 181, 203), rgb(0, 115, 168));
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(27, 45, 54);
+  --textColor: rgb(37, 37, 39);
+  --whiteColorDeam: rgb(237, 237, 237);
+  --whiteColorDeam-2: rgb(215, 215, 215);
   --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
   --bodyColor: rgb(240, 240, 240);
-  --cardBG: rgb(225, 225, 235); 
+  --background-bg: rgb(244, 244, 244);
+  --cardBG: rgb(225, 225, 235);
+  --dark: rgba(0, 0, 0, 0.688);
+  --icon-color: rgb(75, 75, 75);
 }
-a{ 
+
+a {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.section{
+.section {
   padding: 4rem 0 2rem;
-
 }
 
-.container{
+.container {
   padding: 1.5rem 0rem;
 }
 
-.icon{
+.icon {
   font-size: 2rem;
   cursor: pointer;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.grid{
+.grid {
   display: grid;
   align-items: center;
 }
 
-.btn{
-  padding: .6rem  1.5rem;
+.btn {
+  padding: 0.6rem 1.5rem;
   background: var(--gradientColor);
   border-radius: 3rem;
   border: none;
@@ -68,36 +71,32 @@ li{
   font-weight: 500;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--SecondaryColor);
 }
 
-img video{
-   width: 100%;
-   height: auto;
+img video {
+  width: 100%;
+  height: auto;
 }
 
-input{
+input {
   font-size: 100%;
 }
 
-body{
+body {
   background: rgb(255, 255, 255);
 }
 
-@media screen and(min-width: 1400px) {
-  .container{
+@media screen and (min-width: 1400px) {
+  body {
+    zoom: 1;
+  }
+  .container {
     width: 80%;
     margin: auto;
   }
-  .seciton{
-    padding: 6rem 0 4rem ;
+  .seciton {
+    padding: 6rem 0 4rem;
   }
-  
-}
-@media screen and (min-width: 1400px) {
-  body{
-    zoom: 1;
-  }
-  
-}
+}/*# sourceMappingURL=index.css.map */
