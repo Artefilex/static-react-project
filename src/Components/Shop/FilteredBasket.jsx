@@ -11,6 +11,7 @@ import { calculateAmaount } from '../../Reducer/reducer/MarketSlice'
  const [count, setCount] = useState({})
  const filteredData = filtered.filter((data) => basket.find(item => data.imgSrc === item ))
  const [totalAmount, setTotalAmount] = useState(0);
+ 
  const dispatch = useDispatch()
  const isActive = useSelector((state) => state.author.activeUser);
  const increase = (imgSrc) =>{

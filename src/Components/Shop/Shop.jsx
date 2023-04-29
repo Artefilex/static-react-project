@@ -1,65 +1,47 @@
-import "./shop.css"
-import PaymentForm from './PaymentForm'
-import FilteredBasket from './FilteredBasket'
-import { useEffect, useState } from "react"
-import EmptyAlert from "./EmptyAlert"
-import Payment from "./Payment"
-import { useSelector } from "react-redux"
+import "./shop.css";
+import PaymentForm from "./PaymentForm";
+import FilteredBasket from "./FilteredBasket";
+import { useEffect, useState } from "react";
+import EmptyAlert from "./EmptyAlert";
+import Payment from "./Payment";
+import { useSelector } from "react-redux";
 
 const Shop = () => {
-  const active = useSelector(state => state.market.active)
-  const isActive = useSelector(state => state.author.activeUser)
- 
+  const active = useSelector((state) => state.market.active);
+  const isActive = useSelector((state) => state.author.activeUser);
 
-  const storedData = JSON.parse(localStorage.getItem('market'));
-  const [empty, setEmty] = useState(false)
-  useEffect(()=>{
-    if(!storedData || storedData.length === 0 ){
-      setEmty(false)
-     
+  const storedData = JSON.parse(localStorage.getItem("market"));
+  const [empty, setEmty] = useState(false);
+  useEffect(() => {
+    if (!storedData || storedData.length === 0) {
+      setEmty(false);
+    } else {
+      setEmty(true);
     }
-    else{
-      setEmty(true)
-    }
-  },[storedData])
-  
-  
+  }, [storedData]);
 
   return (
+    <div className="Shop">
+      {active && <Payment />}
+      {!active && (
+        <div className="Shop-center">
+          {!empty && <EmptyAlert />}
+          {!isActive && <EmptyAlert />}
 
-   
-    <div className='Shop'>
-   
-   {
-    active && <Payment/>
-   }
-   {
-    !active &&  <div className="Shop-center">
-    {
-         !empty && <EmptyAlert/> 
-      }  
-    {
-    !isActive &&    <EmptyAlert/>
-    }
-
-    {    
-      empty  && isActive && <>
-        <div className='Shop-product'>
-            <FilteredBasket/>
+          {empty && isActive && (
+            <>
+              <div className="Shop-product">
+                <FilteredBasket />
+              </div>
+              <div className="Payment-form">
+                <PaymentForm />
+              </div>
+            </>
+          )}
         </div>
-        <div className='Payment-form'>
-         <PaymentForm/>
-        </div>
-       </>
-     }
-      
-     </div>
-   }
+      )}
+    </div>
+  );
+};
 
-
- </div>
-   
-  )
-}
-
-export default Shop
+export default Shop;
