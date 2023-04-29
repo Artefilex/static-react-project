@@ -14,10 +14,14 @@
   --blackColor: rgb(27, 45, 54);
   --textColor: rgb(37, 37, 39);
   --whiteColorDeam: rgb(237, 237, 237);
+  --whiteColorDeam-2: rgb(215, 215, 215);
   --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
   --bodyColor: rgb(240, 240, 240);
+  --background-bg: rgb(244, 244, 244);
   --cardBG: rgb(225, 225, 235);
+  --dark: rgba(0, 0, 0, 0.688);
+  --icon-color: rgb(75, 75, 75);
 }
 
 a {
@@ -222,6 +226,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   padding-top: 6rem;
 }
@@ -229,6 +234,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 95%;
   margin-bottom: 2rem;
 }
@@ -236,6 +242,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   position: relative;
 }
@@ -259,12 +266,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   justify-content: center;
 }
@@ -285,12 +294,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: center;
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .date {
   width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -323,6 +334,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   justify-content: space-between;
   padding: 1rem;
   gap: 1rem;
@@ -344,6 +356,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   justify-content: center;
   font-weight: 600;
   font-size: 15px;

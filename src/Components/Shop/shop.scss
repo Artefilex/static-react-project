@@ -1,20 +1,17 @@
 @import "../../index.scss";
 
 .Shop {
-  @include row;
-  align-items: flex-start;
+  @include flex(row ,flex-start ,flex-start);
   width: $max-width;
-  justify-content: flex-start;
   background: var(--cardBG);
   zoom: 0.75;
   form {
-    @include column;
-    justify-content: flex-start;
+    @include flex( column ,center ,flex-start);
     gap: 2rem;
     width: $max-width;
     .form-div {
       width: $large-width;
-      @include column;
+      @include flex( column ,center ,flex-start);
       h2 {
         text-align: left;
         width: $large-width;
@@ -292,7 +289,7 @@
         width: $max-width;
         display: flex;
         flex-direction: column;
-        
+
         align-items: flex-start;
         margin-top: 3rem;
 
@@ -455,7 +452,7 @@
       .Payment {
         width: $small-width;
         .Payment-method {
-         width: 80%;
+          width: 80%;
           .Payment-information {
             display: flex;
             flex-direction: row;
@@ -474,7 +471,7 @@
                     }
                   }
                   .summary-body {
-                    @include row()
+                    @include row();
                   }
                 }
               }

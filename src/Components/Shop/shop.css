@@ -103,10 +103,9 @@ body {
 .Shop {
   display: flex;
   flex-direction: row;
-  align-items: center;
   align-items: flex-start;
-  width: 100%;
   justify-content: flex-start;
+  width: 100%;
   background: var(--cardBG);
   zoom: 0.75;
 }
@@ -123,6 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 .Shop form .form-div h2 {
   text-align: left;
@@ -132,6 +132,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   padding: 0.5rem;
   width: 100%;
@@ -157,6 +158,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -181,6 +183,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: center;
   width: 100%;
   padding: 1rem;
   padding-top: 10rem;
@@ -190,6 +193,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-left: 5rem;
   justify-content: center;
   height: 10rem;
@@ -235,6 +239,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   width: 100%;
   padding: 1rem;
@@ -281,6 +286,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: center;
   gap: 1rem;
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount .Shop-button .buttons {
@@ -321,6 +327,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: center;
   gap: 1rem;
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .clear-button button {
@@ -342,6 +349,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 10rem;
   padding: 1rem;
@@ -356,6 +364,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -389,6 +398,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .Shop .Payment .Payment-method {
   position: relative;
@@ -396,6 +406,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   justify-content: flex-start;
   width: 100%;
   padding: 1rem;
@@ -414,6 +425,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   padding: 1rem;
 }
@@ -424,6 +436,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
@@ -433,6 +446,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 90%;
   border: 1px solid rgb(181, 181, 181);
   padding: 1rem;
@@ -461,6 +475,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-Card .card-flex {
@@ -483,6 +498,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   width: 90%;
 }
@@ -494,6 +510,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   margin-right: 1rem;
 }
@@ -509,6 +526,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -546,6 +564,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   justify-content: center;
 }
@@ -563,6 +582,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -580,6 +600,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 .Shop .Payment .Payment-method .Payment-information .Payment-info .summary .summary-location {

@@ -9,7 +9,7 @@
   .overlay {
     position: absolute;
     @include largeSize();
-    background: var(--SecondaryColor);
+    background: var(--blackColor);
     top: 0;
     bottom: 0;
     z-index: 1;
@@ -25,13 +25,12 @@
   }
 
   .homeContent {
+    @include flex(column  ,stretch ,center);
     width: $large-width;
-    height: max-content;
-    padding: 3rem 1.5rem 3rem;
-    row-gap: 3rem;
-    @include column();
-    align-items: stretch;
-    justify-content: center;
+    height: 95vh;
+    padding: 1rem 1.5rem 0rem;
+    row-gap: 1rem;
+   
     margin: auto;
     z-index: 100;
     color: var(--whiteColor);
@@ -65,9 +64,8 @@
       }
 
       .label_total {
-        justify-content: space-between;
-        align-items: center;
-
+        @include flex(row ,center ,space-between);
+       
         .total {
           font-size: 18px;
           color: var(--blackColor);
@@ -130,8 +128,7 @@
       }
     }
     .danger {
-      @include row();
-      justify-content: center;
+      @include flex(row ,center ,center);
       background: rgb(235, 200, 196, 0.8);
       border: 1px solid rgb(236, 142, 142);
       padding: $padding;
@@ -198,7 +195,7 @@
 }
 @media screen and (min-width: 940px) {
   .home {
-    height: 80vh;
+    height: 100vh;
   }
 }
 

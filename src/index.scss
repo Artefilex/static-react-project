@@ -46,12 +46,13 @@ $span-size: 20px;
     justify-content: center;
     align-items: center;
 }
-@mixin column {
+@mixin column ($align-items: center, $justify-content: center) {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: $align-items ;
+    justify-content: $justify-content;
   }
-  @mixin row {
+  @mixin row  {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,6 +61,13 @@ $span-size: 20px;
     width: 100%;
     height: 100%;
   }
+
+ @mixin flex( $flex-direction: row, $align-items:flex-start , $justify-content: flex-start ){
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+ } 
 @mixin default {
    border: none;
    outline: none;
