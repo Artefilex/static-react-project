@@ -196,23 +196,6 @@ body {
     gap: 0;
   }
 }
-.Shop button {
-  border: none;
-  outline: none;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  width: 70%;
-  border-radius: var(--border-radius);
-  font-size: var(--span-size);
-  text-transform: capitalize;
-  font-weight: 700;
-}
-.Shop button:active {
-  transform: scale(0.98);
-}
 .Shop .Shop-center {
   display: flex;
   flex-direction: column;
@@ -234,12 +217,12 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 0;
+    gap: 1rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .Shop .Shop-center {
-    width: 80%;
+    width: 85%;
   }
 }
 .Shop .Shop-center .Shop-empty {
@@ -570,7 +553,7 @@ body {
 }
 @media screen and (min-width: 800px) {
   .Shop .Payment {
-    width: 80%;
+    width: 85%;
     margin-bottom: 1rem;
   }
 }
