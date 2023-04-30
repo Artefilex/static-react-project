@@ -1,9 +1,12 @@
+@import "../../index.scss";
+
+@include all();
 .header {
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--whiteColor);
+  background: $whiteColor;
   width: 100%;
   padding: 1rem;
   height: header;
@@ -11,14 +14,14 @@
   box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
  
   .logo {
-    color: var(--blackColor);
+    color: $blackColor;
     font-weight: 600;
     cursor: pointer;
     align-items: center;
     justify-content: center;
     .icon {
       font-size: 25px;
-      color: var(--PrimaryColor);
+      color: $PrimaryColor;
       transform: translateY(5px);
     }
   }
@@ -26,7 +29,7 @@
     .navBar {
       padding: 1rem;
       position: absolute;
-      background: var(--whiteColorDeam);
+      background: $whiteColorDeam;
       height: max-content;
       width: 80%;
       border-radius: 1rem;
@@ -46,10 +49,10 @@
           padding: 0.5rem 0rem;
           .navLink {
             font-size: 0.9rem;
-            color: var(--textColor);
+            color: $textColor;
             font-weight: 600;
             &:hover {
-              color: var(--PrimaryColor);
+              color: $PrimaryColor;
             }
           }
         }
@@ -57,7 +60,7 @@
           margin-top: 1rem;
           a {
             font-weight: 600;
-            color: var(--whiteColor);
+            color: $whiteColor;
           }
         }
       }
@@ -65,9 +68,9 @@
         position: absolute;
         top: 1rem;
         right: 1.5rem;
-        color: var(--PrimaryColor);
+        color: $PrimaryColor;
         &:hover {
-          color: var(--blackColor);
+          color: $blackColor;
         }
       }
     }
@@ -80,10 +83,10 @@
       .icon {
         font-size: 25px;
         cursor: pointer;
-        color: var(--PrimaryColor);
+        color: $PrimaryColor;
       }
       &:hover {
-        color: var(--SecondaryColor);
+        color: $SecondaryColor;
       }
     }
   }
@@ -101,19 +104,19 @@
         gap: 1rem;
         .navItem {
           .navLink {
-            color: var(--textColor);
+            color: $textColor;
             padding: 0 0.45rem;
             font-size: 0.9rem;
             font-weight: 500px;
             &:hover {
-              color: var(--PrimaryColor);
+              color: $PrimaryColor;
             }
           }
         }
         .btn {
           margin-left: 1rem;
           a {
-            color: var(--whiteColor);
+            color: $whiteColor;
             font-weight: 500;
           }
         }

@@ -1,3 +1,4 @@
+@import "../../index.scss";
 
 .Main{
     width: 100%;
@@ -12,14 +13,14 @@
         .title {
             position: relative;
             width: max-content;
-            color: var(--textColor);
+            color: $textColor;
             margin: 1rem ;
             z-index: 2;
 
             &::after {
                 position: absolute;
                 content: "";
-                background: var(--SecondaryColor);
+                background: $SecondaryColor;
                 height: 3px;
                 width: 110px;
                 right: 0;
@@ -41,7 +42,7 @@
             row-gap: 10px;
             border-radius: 10px;
             align-items: center;
-            background: var(--cardBG);
+            background: $cardBG;
             box-shadow: 0 2px 4px rgba(140, 140, 141, 0.9);
             overflow: hidden;
 
@@ -74,13 +75,13 @@
                 padding: 1rem;
 
                 .title {
-                    color: var(--blackColor);
+                    color: $blackColor;
                     font-size: 1.25rem;
 
                 }
 
                 .name {
-                    color: var(--textColor);
+                    color: $textColor;
                     font-weight: 400;
                     font-size: 14px;
 
@@ -91,10 +92,10 @@
                 justify-content: space-between;
                 padding: 1rem;
                 margin: 1rem 0;
-                border-top:  1.5px solid var(--greyText);
-                border-bottom: 1.5px solid var(--greyText);
+                border-top:  1.5px solid $greyText;
+                border-bottom: 1.5px solid $greyText;
                 .grade{
-                    color: var(--textColor);
+                    color: $textColor;
                     max-width: 100px;
                     line-height: 20px;
                     display: flex;
@@ -104,26 +105,26 @@
                      
                     small{
                         text-align: center;
-                        background: var(--gradientColor);
+                        background: $gradientColor;
                         border-radius: 1rem;
                         padding: 1px 10px;
-                        color: var(--whiteColor);
+                        color: $whiteColor;
                     }
                 }
                 .price{
                     font-size: 2rem;
-                    color: var(--blackColor);
+                    color: $blackColor;
                 }
 
             }
             .desc{
                 font-size: 13.5px;
-                color: var(--textColor);
+                color: $textColor;
                 font-weight: 500;
             }
             .btn{
                 margin-top: 1rem;
-                color: var(--whiteColor);
+                color: $whiteColor;
                 font-weight: 600;
                 gap: .5rem;
                 .icon{

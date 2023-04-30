@@ -1,48 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+$PrimaryColor: rgb(0, 115, 168);
+$SecondaryColor: rgb(16, 181, 203);
+$gradientColor: linear-gradient( to right, rgb(16, 181, 203), rgb(0, 115, 168));
+$whiteColor: rgb(255, 255, 255);
+$blackColor: rgb(27, 45, 54);
+$textColor: rgb(37, 37, 39);
+$whiteColorDeam: rgb(237, 237, 237);
+$whiteColorDeam-2: rgb(215, 215, 215);
+$greyText: rgb(190, 190, 190);
+$inputColor: rgb(239, 239, 239);
+$bodyColor: rgb(240, 240, 240);
+$background-bg:  rgb(244, 244, 244);
+$cardBG: rgb(225, 225, 235); 
+$dark: rgba(0, 0, 0, 0.688);
+$icon-color: rgb(75, 75, 75);
+$userborder: 1px solid rgba(108, 108, 108, 0.5);
+$purple-bg: -webkit-linear-gradient( 181deg, rgba(92, 63, 150, 1) 24%,rgb(1, 130, 156) 100% );
+$purple-hover: -webkit-linear-gradient( 181deg, rgba(63, 150, 98, 1) 0%,rgba(0, 125, 150, 1) 100% );
+$box-shadow: 0px 5px  5px rgba(0, 0, 0, 0.5);
+$box-shadow-2:  0 2px 4px rgba(140, 140, 141, 0.9) ;
+$linear-gradient:  linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
+$text-shadow: 1px 0px 8px black;
+$input-text-shadow: 0px 0px 5px rgb(0, 0, 0);
+$border:1px solid rgb(181, 181, 181);
+$border-radius: 10px;
+$border-radius-2: 5px;
+$border-radius-3: 3rem;
+$margin-b: 1rem;
+$padding: 1rem;
+$padding-1: 0.5rem 1rem;
+$padding-2: 2rem 1rem;
+$padding-3:1rem 2rem;
+$span-size: 20px;
 $max-width: 100%;
 $large-width: 95%;
 $medium-width:90%;
 $small-width:85%;
 $xsmall-width:70%;
 $xxsmal-width:60%;
-
-:root{
-    --PrimaryColor: rgb(0, 115, 168);
-    --SecondaryColor: rgb(16, 181, 203);
-    --gradientColor: linear-gradient( to right, rgb(16, 181, 203), rgb(0, 115, 168));
-    --whiteColor: rgb(255, 255, 255);
-    --blackColor: rgb(27, 45, 54);
-    --textColor: rgb(37, 37, 39);
-    --whiteColorDeam: rgb(237, 237, 237);
-    --whiteColorDeam-2: rgb(215, 215, 215);
-    --greyText: rgb(190, 190, 190);
-    --inputColor: rgb(239, 239, 239);
-    --bodyColor: rgb(240, 240, 240);
-    --background-bg:  rgb(244, 244, 244);
-    --cardBG: rgb(225, 225, 235); 
-    --dark: rgba(0, 0, 0, 0.688);
-    --icon-color: rgb(75, 75, 75);
-    --userborder: 1px solid rgba(108, 108, 108, 0.5);
-    --purple-bg: -webkit-linear-gradient( 181deg, rgba(92, 63, 150, 1) 24%,rgb(1, 130, 156) 100% );
-    --purple-hover: -webkit-linear-gradient( 181deg, rgba(63, 150, 98, 1) 0%,rgba(0, 125, 150, 1) 100% );
-    --box-shadow: 0px 5px  5px rgba(0, 0, 0, 0.5);
-    --box-shadow-2:  0 2px 4px rgba(140, 140, 141, 0.9) ;
-    --linear-gradient:  linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
-    --text-shadow: 1px 0px 8px black;
-    --input-text-shadow: 0px 0px 5px rgb(0, 0, 0);
-    --border:1px solid rgb(181, 181, 181);
-    --border-radius: 10px;
-    --border-radius-2: 5px;
-    --border-radius-3: 3rem;
-    --margin-b: 1rem;
-    --padding: 1rem;
-    --padding-1: 0.5rem 1rem;
-    --padding-2: 2rem 1rem;
-    --padding-3:1rem 2rem;
-    --span-size: 20px;
-  }
-
+$btn-color: -webkit-linear-gradient(125deg, rgba(0, 234, 255, 1) 0%, rgba(53, 102, 223, 1) 50%, rgba(97, 31, 219, 1) 99%);
+$btn-hover-color:-webkit-linear-gradient(140deg, rgba(0, 234, 255, 1) 0%, rgba(53, 102, 223, 1) 50%, rgba(97, 31, 219, 1) 99%);
 
 @mixin button-danger{
     background:-moz-linear-gradient(205deg, rgba(255, 146, 0, 1) 0%, rgba(248, 190, 0, 1) 48%, rgba(255, 154, 0, 1) 100%); 
@@ -70,110 +68,108 @@ $xxsmal-width:60%;
 @mixin default {
    border: none;
    outline: none;
-}
-
-@mixin flex ($flex-direction:row, $align-items:center, $justify-content:center ,$gap:0){
-    display: flex;
-    flex-direction: $flex-direction;
-    
-    @if $align-items != null {
-        align-items: $align-items;
-    }
-
-    @if $justify-content != null {
-        justify-content: $justify-content;
-    }
-    @if $gap !=null {
-        gap: $gap;
-    }
-   
-}
-
-
-
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
-}
-
-
-a{ 
-  text-decoration: none;
-}
-
-li{
-  list-style: none;
-}
-
-.section{
-  padding: 4rem 0 2rem;
-
-}
-
-.container{
-  padding: 1.5rem 0rem;
-}
-
-.icon{
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.flex{
+};
+@mixin responsive-flex( $direction: null , $align:null , $justify:null, $min-width:null ) {
   display: flex;
-  align-items: center;
-}
+ @if $direction != null{
+  flex-direction: $direction;
+ }
+ @if $align != null{
+  align-items: $align;}
+  @if $justify != null{
+  justify-content: $justify;
+  }
 
-.grid{
-  display: grid;
-  align-items: center;
-}
+  @media (min-width: $min-width) {
+    @content
+  }
 
-.btn{
-  padding: .6rem  1.5rem;
-  background: var(--gradientColor);
-  border-radius: 3rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: white;
-  font-weight: 800;
-}
+ 
+};
+@mixin flex-reverse($direction:null,  $alignItem:null, $justifyContent:null) {
+  @if $direction != null{
+    flex-direction: $direction;
+  }
+  
+  @if $alignItem != null {
+    align-items: $alignItem;
+  };
+  @if $justifyContent != null {
+    justify-content: $justifyContent;
+  };
 
-.btn a {
-  color: var(--whiteColor);
-  font-weight: 500;
-}
+};
 
-.btn:hover{
-  background: var(--SecondaryColor);
-}
 
-img video{
-   width: 100%;
-   height: auto;
-}
-
-input{
-  font-size: 100%;
-}
-
-body{
-  background: rgb(255, 255, 255);
-}
-
-@media screen and ( min-width: 1400px) {
-  body{
-    zoom: 1;
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+  a{ 
+    text-decoration: none;
+  }
+  li{
+    list-style: none;
+  }
+  .section{
+    padding: 4rem 0 2rem;
+  
   }
   .container{
-    width: 80%;
-    margin: auto;
+    padding: 1.5rem 0rem;
   }
-  .seciton{
-    padding: 6rem 0 4rem ;
+  .icon{
+    font-size: 2rem;
+    cursor: pointer;
   }
-}
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+  .grid{
+    display: grid;
+    align-items: center;
+  }
+  .btn{
+    padding: .6rem  1.5rem;
+    background: $gradientColor;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 800;
+  }
+  .btn a {
+    color: $whiteColor;
+    font-weight: 500;
+  }
+  .btn:hover{
+    background: $SecondaryColor;
+  }
+  img video{
+     width: 100%;
+     height: auto;
+  }
+  input{
+    font-size: 100%;
+  }
+  body{
+    background: rgb(255, 255, 255);
+  }
+  @media screen and ( min-width: 1400px) {
+    body{
+      zoom: 1;
+    }
+    .container{
+      width: 80%;
+      margin: auto;
+    }
+    .seciton{
+      padding: 6rem 0 4rem ;
+    }
+  }
+
+

@@ -1,40 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-:root {
-  --PrimaryColor: rgb(0, 115, 168);
-  --SecondaryColor: rgb(16, 181, 203);
-  --gradientColor: linear-gradient( to right, rgb(16, 181, 203), rgb(0, 115, 168));
-  --whiteColor: rgb(255, 255, 255);
-  --blackColor: rgb(27, 45, 54);
-  --textColor: rgb(37, 37, 39);
-  --whiteColorDeam: rgb(237, 237, 237);
-  --whiteColorDeam-2: rgb(215, 215, 215);
-  --greyText: rgb(190, 190, 190);
-  --inputColor: rgb(239, 239, 239);
-  --bodyColor: rgb(240, 240, 240);
-  --background-bg: rgb(244, 244, 244);
-  --cardBG: rgb(225, 225, 235);
-  --dark: rgba(0, 0, 0, 0.688);
-  --icon-color: rgb(75, 75, 75);
-  --userborder: 1px solid rgba(108, 108, 108, 0.5);
-  --purple-bg: -webkit-linear-gradient( 181deg, rgba(92, 63, 150, 1) 24%,rgb(1, 130, 156) 100% );
-  --purple-hover: -webkit-linear-gradient( 181deg, rgba(63, 150, 98, 1) 0%,rgba(0, 125, 150, 1) 100% );
-  --box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  --box-shadow-2: 0 2px 4px rgba(140, 140, 141, 0.9) ;
-  --linear-gradient: linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
-  --text-shadow: 1px 0px 8px black;
-  --input-text-shadow: 0px 0px 5px rgb(0, 0, 0);
-  --border:1px solid rgb(181, 181, 181);
-  --border-radius: 10px;
-  --border-radius-2: 5px;
-  --border-radius-3: 3rem;
-  --margin-b: 1rem;
-  --padding: 1rem;
-  --padding-1: 0.5rem 1rem;
-  --padding-2: 2rem 1rem;
-  --padding-3:1rem 2rem;
-  --span-size: 20px;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -75,7 +39,7 @@ li {
 
 .btn {
   padding: 0.6rem 1.5rem;
-  background: var(--gradientColor);
+  background: linear-gradient(to right, rgb(16, 181, 203), rgb(0, 115, 168));
   border-radius: 3rem;
   border: none;
   outline: none;
@@ -85,12 +49,12 @@ li {
 }
 
 .btn a {
-  color: var(--whiteColor);
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
 
 .btn:hover {
-  background: var(--SecondaryColor);
+  background: rgb(16, 181, 203);
 }
 
 img video {
@@ -123,10 +87,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0;
   zoom: 0.75;
   width: 100%;
-  background: var(--background-bg);
+  background: rgb(244, 244, 244);
 }
 @media screen and (max-width: 700px) {
   .Shop {
@@ -146,7 +109,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 0;
   width: 95%;
 }
 .Shop .form-div h2 {
@@ -158,66 +120,58 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0;
   width: 100%;
   padding: 0.5rem;
 }
 .Shop .form-div .input-div label {
-  font-size: var(--span-size);
+  font-size: 20px;
   font-weight: 900;
   margin-bottom: 10px;
-  color: var(--icon-color);
+  color: rgb(75, 75, 75);
 }
 .Shop .form-div .input-div input,
 .Shop .form-div .input-div select {
-  padding: var(--padding-1);
-  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
   width: 100%;
 }
 .Shop .form-div .input-div input {
-  border: var(--border);
+  border: 1px solid rgb(181, 181, 181);
   outline: none;
-  background: var(--background-bg);
+  background: rgb(244, 244, 244);
 }
 .Shop .form-div .input-date {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
   width: 100%;
 }
-@media screen and (min-width: 400px) {
+@media (min-width: 400px) {
   .Shop .form-div .input-date {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
   }
 }
 .Shop .Shop-center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
+  justify-content: space-between;
   width: 100%;
-  padding: var(--padding);
+  padding: 1rem;
   padding-top: 10rem;
 }
-@media screen and (max-width: 250px) {
+@media (min-width: 700px) {
   .Shop .Shop-center {
-    padding-top: 15rem;
-  }
-}
-@media screen and (min-width: 700px) {
-  .Shop .Shop-center {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
+  }
+}
+@media screen and (max-width: 250px) {
+  .Shop .Shop-center {
+    padding-top: 15rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -230,13 +184,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
   width: 100%;
   height: 10rem;
-  padding: var(--padding-3);
-  background: var(--whiteColor);
-  border-radius: var(--border-radius-2);
-  box-shadow: var(--box-shadow);
+  padding: 1rem 2rem;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 1200px) {
   .Shop .Shop-center .Shop-empty {
@@ -254,16 +207,12 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  gap: 2rem;
   width: 100%;
 }
-@media screen and (max-width: 700px) {
+@media (min-width: 700px) {
   .Shop .Shop-center .Shop-empty .alert {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
+    gap: 2rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -285,18 +234,18 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: var(--purple-bg);
-  color: var(--whiteColor);
-  border-radius: var(--border-radius-3);
+  background: -webkit-linear-gradient(181deg, rgb(92, 63, 150) 24%, rgb(1, 130, 156) 100%);
+  color: rgb(255, 255, 255);
+  border-radius: 3rem;
   transition: 0.4s ease;
 }
 .Shop .Shop-center .Shop-empty .alert button:hover {
   transform: scale(0.96);
-  background: var(--purple-hover);
+  background: -webkit-linear-gradient(181deg, rgb(63, 150, 98) 0%, rgb(0, 125, 150) 100%);
 }
 .Shop .Shop-center .Shop-empty .alert button span {
-  text-shadow: var(--text-shadow);
-  font-size: var(--span-size);
+  text-shadow: 1px 0px 8px black;
+  font-size: 20px;
   font-weight: bold;
 }
 .Shop .Shop-center .Shop-product {
@@ -306,9 +255,9 @@ body {
   justify-content: flex-start;
   gap: 2rem;
   width: 100%;
-  padding: var(--padding);
+  padding: 1rem;
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .Shop .Shop-center .Shop-product {
     width: 60%;
   }
@@ -318,51 +267,38 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
   width: 100%;
   height: 10rem;
-  background: var(--whiteColor);
+  background: rgb(255, 255, 255);
   padding: 2rem;
-  border-radius: var(--border-radius-2);
-  box-shadow: var(--box-shadow);
-}
-@media screen and (max-width: 250px) {
-  .Shop .Shop-center .Shop-product .Shop-item-main {
-    height: 30rem;
-  }
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 400px) {
   .Shop .Shop-center .Shop-product .Shop-item-main {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    height: 24rem;
+    height: 30rem;
   }
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-item-seciton {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   height: 100%;
 }
 @media screen and (max-width: 400px) {
   .Shop .Shop-center .Shop-product .Shop-item-main .Shop-item-seciton {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 0;
     width: 100%;
     height: 50%;
     margin-bottom: 1rem;
   }
   .Shop .Shop-center .Shop-product .Shop-item-main .Shop-item-seciton span {
+    text-align: left;
     font-weight: 800;
-    font-size: var(--span-size);
+    font-size: 20px;
   }
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-item-seciton span {
@@ -380,21 +316,16 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
   width: 40%;
-}
-@media screen and (max-width: 250px) {
-  .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-  }
 }
 @media screen and (max-width: 400px) {
   .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount {
     width: 90%;
+  }
+}
+@media screen and (max-width: 230px) {
+  .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount {
+    flex-direction: column;
   }
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount .Shop-button {
@@ -423,14 +354,14 @@ body {
   width: 30%;
   height: 2.5rem;
   padding: 0rem;
-  border-radius: var(--border-radius-3);
-  background: var(--whiteColorDeam);
+  border-radius: 3rem;
+  background: rgb(237, 237, 237);
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount .Shop-button .buttons button:active {
   transform: scale(0.9);
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount .Shop-button .buttons span {
-  font-size: var(--span-size);
+  font-size: 20px;
 }
 .Shop .Shop-center .Shop-product .Shop-item-main .Shop-btn-amount .Shop-button span {
   font-weight: 600;
@@ -446,11 +377,6 @@ body {
 }
 @media screen and (max-width: 400px) {
   .Shop .Shop-center .Shop-product .clear-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
     width: 100%;
   }
   .Shop .Shop-center .Shop-product .clear-button button {
@@ -461,8 +387,8 @@ body {
   transition: 3s;
 }
 .Shop .Shop-center .Shop-product .clear-button button .icon {
-  font-size: var(--span-size);
-  color: var(--whiteColor);
+  font-size: 20px;
+  color: rgb(255, 255, 255);
 }
 .Shop .Shop-center .Shop-product .clear-button button:hover {
   background: -o-linear-gradient(205deg, rgb(255, 146, 0) 0%, rgb(248, 190, 0) 48%, rgb(255, 154, 0) 100%);
@@ -477,20 +403,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
   width: 100%;
   height: 10rem0;
-  padding: var(--padding);
+  padding: 1rem;
 }
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
   .Shop .Payment-form {
-    width: 25%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 0;
+    width: 25%;
+    height: 90vh;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -507,41 +429,34 @@ body {
   gap: 1rem;
   width: 100%;
   height: 10rem;
-  background: var(--whiteColor);
-  border-radius: var(--border-radius-2);
-  box-shadow: var(--box-shadow);
-  padding: var(--padding);
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
 }
 .Shop .Payment-form .Payment-form-section .total {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 3rem;
+  gap: 2rem;
 }
 .Shop .Payment-form .Payment-form-section .total h4 {
   white-space: nowrap;
 }
 .Shop .Payment-form .Payment-form-section h2 {
-  color: var(--dark);
+  color: rgba(0, 0, 0, 0.688);
 }
 .Shop .Payment-form .Payment-form-section h4:nth-child(1) {
-  color: var(--dark);
+  color: rgba(0, 0, 0, 0.688);
 }
 .Shop .Payment-form .Payment-form-section button {
-  border: none;
-  outline: none;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
   width: 100%;
-  padding: var(--padding-1);
-  font-size: var(--span-size);
+  padding: 0.5rem 1rem;
+  font-size: 20px;
   font-weight: 900;
-  border-radius: var(--border-radius-2);
-  color: var(--whiteColor);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
 }
 .Shop .Payment {
   width: 100%;
@@ -549,9 +464,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 0;
 }
-@media screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .Shop .Payment {
     width: 85%;
     margin-bottom: 1rem;
@@ -569,10 +483,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 0;
   width: 100%;
-  padding: var(--padding);
-  background: var(--whiteColor);
+  padding: 1rem;
+  background: rgb(255, 255, 255);
   margin-bottom: 8rem;
 }
 .Shop .Payment .Payment-method .invoice {
@@ -580,74 +493,63 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
   width: 100%;
 }
 .Shop .Payment .Payment-method .invoice .payment-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  gap: 0;
   width: 30%;
-  padding: var(--padding);
+  padding: 1rem;
 }
 .Shop .Payment .Payment-method .invoice .payment-info h2 {
-  margin-bottom: var(--margin-b);
+  margin-bottom: 1rem;
 }
 .Shop .Payment .Payment-method .invoice .payment-info .summary {
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
   width: 100%;
 }
 .Shop .Payment .Payment-method .invoice .payment-info .summary .summary-location {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
   width: 90%;
-  border: var(--border);
-  padding: var(--padding);
+  border: 1px solid rgb(181, 181, 181);
+  padding: 1rem;
 }
 .Shop .Payment .Payment-method .invoice .payment-info .total {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  gap: 0;
   margin-top: 2rem;
   width: 95%;
-  border: var(--border);
-  padding: var(--padding);
+  border: 1px solid rgb(181, 181, 181);
+  padding: 1rem;
 }
 .Shop .Payment .Payment-information {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
   width: 100%;
   margin-top: 3rem;
 }
-@media screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .Shop .Payment .Payment-information {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 0;
   }
 }
 .Shop .Payment .Payment-information .Payment-Card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0;
   width: 100%;
 }
 .Shop .Payment .Payment-information .Payment-Card .card-flex {
@@ -655,16 +557,15 @@ body {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0;
   width: 90%;
 }
 .Shop .Payment .Payment-information .Payment-Card .card-flex h2 {
-  margin-bottom: var(--margin-b);
+  margin-bottom: 1rem;
 }
 .Shop .Payment .Payment-information .Payment-Card .card-flex .icon {
   cursor: default;
-  margin-left: var(--margin-b);
-  color: var(--icon-color);
+  margin-left: 1rem;
+  color: rgb(75, 75, 75);
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section {
   display: flex;
@@ -682,16 +583,15 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0;
   width: 90%;
-  margin-right: var(--margin-b);
+  margin-right: 1rem;
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .address h4 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   width: -moz-max-content;
   width: max-content;
-  border-bottom: var(--border);
+  border-bottom: 1px solid rgb(181, 181, 181);
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo {
   width: 95%;
@@ -706,36 +606,31 @@ body {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0;
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .card-flex h2 {
-  margin-bottom: var(--margin-b);
+  margin-bottom: 1rem;
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .card-flex .icon {
   cursor: default;
-  margin-left: var(--margin-b);
-  color: var(--icon-color);
+  margin-left: 1rem;
+  color: rgb(75, 75, 75);
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0;
   padding-top: 4rem;
   padding-left: 2rem;
   zoom: 0.8;
   width: 95%;
-  background: var(--whiteColorDeam-2);
-  border-radius: var(--border-radius);
+  background: rgb(215, 215, 215);
+  border-radius: 10px;
   min-height: 15rem;
 }
 @media screen and (max-width: 250px) {
   .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
     gap: 1rem;
   }
 }
@@ -745,7 +640,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 0;
 }
 @media screen and (max-width: 250px) {
   .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div {
@@ -753,13 +647,13 @@ body {
   }
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div h4 {
-  font-size: var(--span-size);
+  font-size: 20px;
   font-weight: 900;
 }
 .Shop .Payment .Payment-information .Payment-Card .Payment-Card-Section .cardInfo .bank-card div span {
-  font-size: var(--span-size);
+  font-size: 20px;
   font-weight: 800;
-  color: var(--icon-color);
+  color: rgb(75, 75, 75);
 }
 .Shop .Payment .Payment-information .Payment-info {
   width: 90%;
@@ -767,10 +661,10 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
 }
-@media screen and (min-width: 400px) {
+@media (min-width: 400px) {
   .Shop .Payment .Payment-information .Payment-info {
+    gap: 1rem;
     margin-left: 3rem;
   }
 }
@@ -779,11 +673,10 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0;
 }
 .Shop .Payment .Payment-information .Payment-info .info-header .icon {
   margin-left: 1rem;
-  color: var(--icon-color);
+  color: rgb(75, 75, 75);
   font-size: 30px;
 }
 .Shop .Payment .Payment-information .Payment-info .summary .summary-header {
@@ -803,18 +696,18 @@ body {
   }
 }
 .Shop .Payment .Payment-information .Payment-info .total {
-  background: var(--cardBG);
+  background: rgb(225, 225, 235);
   width: 95%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
-  padding: var(--padding-2);
-  border-radius: var(--border-radius);
-  border: var(--border);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgb(181, 181, 181);
 }
 .Shop .Payment .Payment-information .Payment-info .total span {
   font-weight: 900;
-  font-size: var(--span-size);
+  font-size: 20px;
 }/*# sourceMappingURL=shop.css.map */

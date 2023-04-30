@@ -1,4 +1,7 @@
-  .footer{
+
+@import "../../index.scss";
+
+ .footer{
     position:relative;
     width: 100%;
     align-items: center;
@@ -46,10 +49,10 @@
                     small{
                         font-size: 13px;
                         font-weight: 600;
-                        color:var(--whiteColor)
+                        color: $whiteColor
                     }
                    h2{
-                    color: var(--whiteColor);
+                    color: $whiteColor;
                     font-size: 1.8rem;
                    }
                 }
@@ -61,12 +64,12 @@
                     input{
                         width: 100%;
                         padding: .5rem .6rem;
-                        border:  1px solid var(--whiteColor);
+                        border:  1px solid $whiteColor;
                         background: transparent;
                         border-radius: 3rem;
-                        color: var(--whiteColor);
+                        color: $whiteColor;
                         &::placeholder{
-                            color: var(--whiteColor);
+                            color: $whiteColor;
                             text-transform: capitalize;
 
                         }
@@ -75,7 +78,7 @@
                     .btn{
                         width: 100%;
                         justify-content: center;
-                        color: var(--whiteColor);
+                        color: $whiteColor;
                         gap: 0.5rem;
                         text-transform: uppercase;
                         font-weight: 600;
@@ -83,7 +86,7 @@
                             font-size: 14px;
                         }
                         &:hover{
-                            background: var(--PrimaryColor);
+                            background: $PrimaryColor;
                         }
                     }
                 }
@@ -93,7 +96,7 @@
             padding: 1rem 1rem 4rem;
             gap :2rem;
             border-radius:1rem;
-            background: var(--bodyColor);
+            background: $bodyColor;
             width: 100%;
             justify-content: center;
             flex-direction: column;
@@ -109,26 +112,26 @@
            }
            .logoDiv{
             .logo{
-                color: var(--blackColor);
+                color: $blackColor;
                 font-weight: 600;
                 .icon{
                     font-size: 25px;
-                    color: var(--PrimaryColor);
+                    color: $PrimaryColor;
                     margin-right: 10px;
                 }
              }
            }
            .footerP{
             font-size: 13px;
-            color:var(--textColor)
+            color:$textColor
            }
            .footerSocials{
                column-gap: .5rem;
                .icon{
-                color: var(--blackColor);
+                color: $blackColor;
                 font-size: 20px;
                 &:hover{
-                    color:var(--PrimaryColor);
+                    color:$PrimaryColor;
 
                 }
                }
@@ -144,20 +147,20 @@
                 .groupTitle{
                     display: block;
                     font-weight: 600;
-                    color: var(--blackColor);
+                    color: $blackColor;
                     margin-bottom: .5rem;
                 }
 
                 .footerList {
                     font-size: 15px;
-                    color: var(--textColor);
+                    color: $textColor;
                     transition: .3s ease-in-out;
 
                     .icon {
                          font-size: 15px;
-                        color: var(--greyText);
+                        color: $greyText;
                         &:hover{
-                            color: var(--PrimaryColor);
+                            color: $PrimaryColor;
                         }
                     }
                 }
@@ -167,7 +170,7 @@
         .footerDiv{
             flex-direction: column;
             gap: .1rem;
-            background: var(--PrimaryColor);
+            background: $PrimaryColor;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -175,7 +178,7 @@
             padding: .5rem 2rem;
             small{
                 font-size: 10px;
-                color: var(--whiteColor);
+                color: $whiteColor;
                 font-weight: 500;
             }
         }
@@ -196,7 +199,7 @@
                     flex-direction: row;
                     small{
                         font-size: 14px;
-                        color:  var(--whiteColor);
+                        color:  $whiteColor;
                     }
                 }
             }
@@ -210,7 +213,6 @@
         .secContent{
             .footerCard{
                 flex-direction: row;
-
                 .footerLinks{
                     grid-template-columns: repeat(3,1fr);
                     padding-bottom: 1rem;
@@ -231,16 +233,16 @@
             .footerIntro{
                 .footerP{
                     font-size: 15px;
-                    color: var(--textColor);
+                    color: $textColor;
 
                 }
                 .footerSocials{
                     column-gap: .5rem;
                     .icon{
-                        color: var(--textColor);
+                        color: $textColor;
                         font-size: 25px;
                              &:hover{
-                                color: var(--PrimaryColor);
+                                color: $PrimaryColor;
                              }
                     }
                 }

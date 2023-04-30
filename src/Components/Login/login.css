@@ -1,3 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding: 1.5rem 0rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(to right, rgb(16, 181, 203), rgb(0, 115, 168));
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+}
+
+.btn a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: rgb(16, 181, 203);
+}
+
+img video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}
+
+body {
+  background: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    zoom: 1;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .seciton {
+    padding: 6rem 0 4rem;
+  }
+}
 .Login {
   display: flex;
   flex-direction: column;
@@ -68,7 +152,7 @@
   padding: 0.5rem 1rem;
   font-weight: 600;
   color: rgb(241, 241, 241);
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
   border-radius: 5px;
 }
 .Login .Login-Item form button {

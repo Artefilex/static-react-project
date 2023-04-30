@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 
 .home {
     width: 100%;
@@ -39,7 +41,7 @@
         justify-content: center;
         margin: auto;
         z-index: 100;
-        color: var(--whiteColor);
+        color: $whiteColor;
 
         .textDiv {
             padding: 4rem;
@@ -58,14 +60,14 @@
         .cardDiv {
             position: relative;
             padding: 2rem 1rem;
-            background: var(--whiteColor);
+            background: $whiteColor;
             border-radius: 10px;
             gap: 1rem;
 
 
             label {
                 display: block;
-                color: var(--textColor);
+                color: $textColor;
                 padding-bottom: 10px;
                 font-size: 14px;
                 font-weight: 500;
@@ -77,7 +79,7 @@
 
                 .total {
                     font-size: 18px;
-                    color: var(--blackColor);
+                    color: $blackColor;
                     padding-bottom: 10px;
                 }
 
@@ -86,7 +88,7 @@
             .input {
                 height: 40px;
                 padding: 0 1rem;
-                background: var(--inputColor);
+                background: $inputColor;
                 border-radius: 3rem;
 
                 input {
@@ -107,7 +109,7 @@
                 }
 
                 .icon {
-                    color: var(--PrimaryColor);
+                    color: $PrimaryColor;
                     font-size: 18px;
                     margin-left: 10px;
                 }
@@ -117,7 +119,7 @@
                 border: none;
                 outline: none;
                 position: absolute;
-                background: var(--gradientColor);
+                background: $gradientColor;
                 width: max-content;
                 bottom: -0.7rem;
                 padding: 0.3rem 1rem;
@@ -129,7 +131,7 @@
                 color: white;
                 font-weight: 700;
                 &:hover {
-                    background: var(--PrimaryColor);
+                    background: $PrimaryColor;
                     cursor: pointer;
                 }
                 .icon{
@@ -164,10 +166,10 @@
           .icon{
             font-size: 20px;
             margin: 0 5px;
-            color: var(--whiteColor);
+            color: $whiteColor;
             font-weight: 600;
             &:hover{
-              color: var(--PrimaryColor);
+              color: $PrimaryColor;
             }
           }
         }

@@ -118,7 +118,6 @@ const Fotter = () => {
           <small>Lorem ipsum dolor sit.</small>
           <small>Copyright © 2023 Apinizer • Powered by Scroll Viewport </small>
          </div>
-          {/* try new branch push github project */}
          </div>
         </div>   
        </section>

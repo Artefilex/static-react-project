@@ -1,40 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-:root {
-  --PrimaryColor: rgb(0, 115, 168);
-  --SecondaryColor: rgb(16, 181, 203);
-  --gradientColor: linear-gradient( to right, rgb(16, 181, 203), rgb(0, 115, 168));
-  --whiteColor: rgb(255, 255, 255);
-  --blackColor: rgb(27, 45, 54);
-  --textColor: rgb(37, 37, 39);
-  --whiteColorDeam: rgb(237, 237, 237);
-  --whiteColorDeam-2: rgb(215, 215, 215);
-  --greyText: rgb(190, 190, 190);
-  --inputColor: rgb(239, 239, 239);
-  --bodyColor: rgb(240, 240, 240);
-  --background-bg: rgb(244, 244, 244);
-  --cardBG: rgb(225, 225, 235);
-  --dark: rgba(0, 0, 0, 0.688);
-  --icon-color: rgb(75, 75, 75);
-  --userborder: 1px solid rgba(108, 108, 108, 0.5);
-  --purple-bg: -webkit-linear-gradient( 181deg, rgba(92, 63, 150, 1) 24%,rgb(1, 130, 156) 100% );
-  --purple-hover: -webkit-linear-gradient( 181deg, rgba(63, 150, 98, 1) 0%,rgba(0, 125, 150, 1) 100% );
-  --box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  --box-shadow-2: 0 2px 4px rgba(140, 140, 141, 0.9) ;
-  --linear-gradient: linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
-  --text-shadow: 1px 0px 8px black;
-  --input-text-shadow: 0px 0px 5px rgb(0, 0, 0);
-  --border:1px solid rgb(181, 181, 181);
-  --border-radius: 10px;
-  --border-radius-2: 5px;
-  --border-radius-3: 3rem;
-  --margin-b: 1rem;
-  --padding: 1rem;
-  --padding-1: 0.5rem 1rem;
-  --padding-2: 2rem 1rem;
-  --padding-3:1rem 2rem;
-  --span-size: 20px;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -75,7 +39,7 @@ li {
 
 .btn {
   padding: 0.6rem 1.5rem;
-  background: var(--gradientColor);
+  background: linear-gradient(to right, rgb(16, 181, 203), rgb(0, 115, 168));
   border-radius: 3rem;
   border: none;
   outline: none;
@@ -85,12 +49,12 @@ li {
 }
 
 .btn a {
-  color: var(--whiteColor);
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
 
 .btn:hover {
-  background: var(--SecondaryColor);
+  background: rgb(16, 181, 203);
 }
 
 img video {

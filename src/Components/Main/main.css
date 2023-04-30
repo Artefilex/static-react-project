@@ -1,3 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding: 1.5rem 0rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(to right, rgb(16, 181, 203), rgb(0, 115, 168));
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+}
+
+.btn a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: rgb(16, 181, 203);
+}
+
+img video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}
+
+body {
+  background: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    zoom: 1;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .seciton {
+    padding: 6rem 0 4rem;
+  }
+}
 .Main {
   width: 100%;
 }
@@ -13,14 +97,14 @@
   position: relative;
   width: -moz-max-content;
   width: max-content;
-  color: var(--textColor);
+  color: rgb(37, 37, 39);
   margin: 1rem;
   z-index: 2;
 }
 .Main .Main_Section_Title .title::after {
   position: absolute;
   content: "";
-  background: var(--SecondaryColor);
+  background: rgb(16, 181, 203);
   height: 3px;
   width: 110px;
   right: 0;
@@ -39,7 +123,7 @@
   row-gap: 10px;
   border-radius: 10px;
   align-items: center;
-  background: var(--cardBG);
+  background: rgb(225, 225, 235);
   box-shadow: 0 2px 4px rgba(140, 140, 141, 0.9);
   overflow: hidden;
 }
@@ -67,11 +151,11 @@
   padding: 1rem;
 }
 .Main .Main_Section_Content .Main_Content-Items .cardInfo .title {
-  color: var(--blackColor);
+  color: rgb(27, 45, 54);
   font-size: 1.25rem;
 }
 .Main .Main_Section_Content .Main_Content-Items .cardInfo .name {
-  color: var(--textColor);
+  color: rgb(37, 37, 39);
   font-weight: 400;
   font-size: 14px;
 }
@@ -80,11 +164,11 @@
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem 0;
-  border-top: 1.5px solid var(--greyText);
-  border-bottom: 1.5px solid var(--greyText);
+  border-top: 1.5px solid rgb(190, 190, 190);
+  border-bottom: 1.5px solid rgb(190, 190, 190);
 }
 .Main .Main_Section_Content .Main_Content-Items .fees .grade {
-  color: var(--textColor);
+  color: rgb(37, 37, 39);
   max-width: 100px;
   line-height: 20px;
   display: flex;
@@ -94,23 +178,23 @@
 }
 .Main .Main_Section_Content .Main_Content-Items .fees .grade small {
   text-align: center;
-  background: var(--gradientColor);
+  background: linear-gradient(to right, rgb(16, 181, 203), rgb(0, 115, 168));
   border-radius: 1rem;
   padding: 1px 10px;
-  color: var(--whiteColor);
+  color: rgb(255, 255, 255);
 }
 .Main .Main_Section_Content .Main_Content-Items .fees .price {
   font-size: 2rem;
-  color: var(--blackColor);
+  color: rgb(27, 45, 54);
 }
 .Main .Main_Section_Content .Main_Content-Items .desc {
   font-size: 13.5px;
-  color: var(--textColor);
+  color: rgb(37, 37, 39);
   font-weight: 500;
 }
 .Main .Main_Section_Content .Main_Content-Items .btn {
   margin-top: 1rem;
-  color: var(--whiteColor);
+  color: rgb(255, 255, 255);
   font-weight: 600;
   gap: 0.5rem;
 }
