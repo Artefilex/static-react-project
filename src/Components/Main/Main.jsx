@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { clearFilter } from '../../Reducer/reducer/DataSlice'
-import "./main.css"
+import "../../Assests/scss/main/main.css"
 import { Data } from "../../Assests/data"
 import DataMain from './DataMain'
 import Aos from 'aos'

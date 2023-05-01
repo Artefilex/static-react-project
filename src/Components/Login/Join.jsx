@@ -1,5 +1,5 @@
 import React from 'react'
-import "./login.css"
+import "../../Assests/scss/login/login.css"
 import { useFormik } from "formik";
 import validationSchema from "./validations";
 import { addUserToLocalStorage} from '../../Reducer/reducer/AuthorSlice';

@@ -1,48 +1,48 @@
-@import "../../index.scss";
-
-@include all();
+@import "../index.scss";
 .header {
+  @include responsive-flex(row,center,space-between,1240px){
+    @include flex-reverse($justifyContent:space-around);
+    padding: 1rem 8.5rem;
+    
+  };
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: $whiteColor;
-  width: 100%;
+  width: weight(max);
   padding: 1rem;
   height: header;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
- 
+  box-shadow: $navbarShadow;
+  zoom: 0.75;
   .logo {
     color: $blackColor;
     font-weight: 600;
     cursor: pointer;
-    align-items: center;
-    justify-content: center;
+    @include responsive-flex(row,center,center);   
     .icon {
       font-size: 25px;
       color: $PrimaryColor;
       transform: translateY(5px);
     }
+
   }
-  @media screen and (max-width: 768px) {
+  
+  @include tablet-2{
     .navBar {
       padding: 1rem;
       position: absolute;
       background: $whiteColorDeam;
       height: max-content;
-      width: 80%;
+      width: weight(small);
       border-radius: 1rem;
       top: -500rem;
       left: 50%;
       transform: translate(-50%);
       z-index: 2000;
-      box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+      box-shadow: $navbarShadow;
       transition: 0.9s ease-in-out;
       .navList {
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
+        @include responsive-flex(column,center,center);   
+        width: weight(max);
         margin: auto;
         padding: 0.5rem 0;
         .navItem {
@@ -90,6 +90,7 @@
       }
     }
   }
+  
   @media screen and (min-width: 769px) {
     .closeNavbar,
     .toogleNavbar {
@@ -97,10 +98,7 @@
     }
     .navBar {
       .navList {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
+        @include responsive-flex(row,center,center);
         gap: 1rem;
         .navItem {
           .navLink {
@@ -133,8 +131,5 @@
       }
     }
   }
-  @media screen and (min-width: 1240px) {
-    padding: 1rem 8.5rem;
-    justify-content: space-around;
-  }
+ 
 }

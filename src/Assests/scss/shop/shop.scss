@@ -1,33 +1,28 @@
-@import "../../index.scss";
+@import "../index.scss";
 
 
 
 .Shop{
   @include responsive-flex(row,center,center);
-  zoom: 0.75;
-  width: $max-width;
+  width: weight(max);
   background: $background-bg;
 
-  @media screen and ( max-width:700px ){
-    zoom: .5;
-  }
- 
   form{
     @include responsive-flex(column, center, flex-start);
     gap:2rem;
-    width: $max-width;
+    width: weight(max);
    
   }
   .form-div{
     @include responsive-flex(column, center, flex-start);
-    width: $large-width;
+    width: weight(large);
     h2{
       text-align: left;
-      width: $large-width;
+      width: weight(large);
     }
     .input-div{
       @include responsive-flex(column, flex-start, flex-start);
-      width: $max-width;
+      width: weight(max);
       padding: 0.5rem;
       label{
         font-size: $span-size;
@@ -39,7 +34,7 @@
       select {
           padding: $padding-1;
           border-radius: $border-radius;
-          width: $max-width;
+          width: weight(max);
         }
         input {
           border: $border;
@@ -51,7 +46,7 @@
       @include responsive-flex(column, center, space-between,400px){
         @include flex-reverse(row);
       };
-      width: $max-width;
+      width: weight(max);
     }
   }
   
@@ -61,28 +56,28 @@
       gap: 1rem;
     };
    
-    width: $max-width;
+    width: weight(max);
     padding: $padding;
     padding-top: 10rem;
     @media screen and (max-width:250px){
       padding-top: 15rem;
     }
-    @media screen and (min-width:1200px ) {
-      width: $small-width;
+    @include deskop{
+      width: weight(xsmall) ;
     }
     .Shop-empty{
       @include responsive-flex(column, center, center);
-      width: $max-width;
+      width: weight(max);
       height: 10rem;
       padding: $padding-3;
       background: $whiteColor;
       border-radius: $border-radius-2;
       box-shadow: $box-shadow;
-      @media screen and (min-width:1200px ) {
-        width: 75%;
+      @include deskop{
+        width: weight(xsmall);
       }
-      @media screen and (max-width:400px){
-        width: $max-width;
+      @include mobile{
+        width: weight(max);
         height: 15rem;
       }
       .alert{
@@ -90,13 +85,13 @@
           @include flex-reverse(column);
           gap: 2rem;
         };
-        width: $max-width;
-        @media screen and (min-width:1200px ) {
+        width: weight(max);
+        @include deskop{
           h2{
             text-align: center; 
            }
            button{
-            width: $xsmall-width;
+            width:  weight(xsmall);
            }
         }
         h2 {
@@ -122,32 +117,30 @@
     }
     .Shop-product{
       @include responsive-flex(column,center,flex-start,1200px){
-        width: $xxsmal-width;
+        width:  weight(xxsmall)
       };  
      gap:2rem;
-     width: $max-width;
+     width: weight(max);
      padding: $padding;
      .Shop-item-main {
       @include responsive-flex(row, center, space-between);
-      width: $max-width;
+      width: weight(max);
       height: 10rem;
       background: $whiteColor;
       padding: 2rem;
       border-radius: $border-radius-2;
       box-shadow: $box-shadow;
-      
-       @media screen and (max-width:400px){
-         @include flex-reverse( column);
-         height: 30rem;
-        }
-    
+      @include mobile{
+        @include flex-reverse( column);
+        height: 30rem;
+      }
       .Shop-item-seciton{
         @include responsive-flex(row,center);
         gap:1rem;
-        height: 100%;
-        @media screen and (max-width:400px) {
+        height: weight(max);
+        @include mobile{
           @include flex-reverse(column,center);
-          width: $max-width;
+          width: weight(max);
           height: 50%;
           margin-bottom: 1rem;
           span{
@@ -161,16 +154,16 @@
           white-space: nowrap;
         }
         img{
-          width: $max-width;
-          height:$max-width;;
+          width: weight(max);
+          height:weight(max);;
           object-fit: cover;
         }
       }
       .Shop-btn-amount{
         @include responsive-flex(row,center,space-between);
         width: 40% ;  
-        @media screen and (max-width:400px){
-          width:$medium-width ;
+        @include mobile{
+          width: weight(medium) ;
         }
         @media screen and (max-width:230px){
          @include flex-reverse(column)
@@ -181,7 +174,7 @@
           .buttons{
             @include responsive-flex(row, center,center);
             gap:0.5rem;
-            width: $max-width;
+            width: weight(max);
             button{
               @include button;
               width: 30%;
@@ -210,11 +203,10 @@
       }
      }
      .clear-button{
-      @media screen and (max-width:400px) {
-      
-        width: $max-width;
+      @include mobile{
+        width: weight(max);
         button{
-          width: $max-width;
+          width: weight(max);
         }
       }
       button{
@@ -238,7 +230,7 @@
      width:25%;
      height: 90vh;
     };
-    width: $max-width;
+    width: weight(max);
     height: 10rem0;
     padding: $padding;
    
@@ -250,7 +242,7 @@
     .Payment-form-section{
       @include responsive-flex(column ,flex-start,space-between );
       gap:1rem;
-      width: $max-width;
+      width: weight(max);
       height: 10rem;
       background: $whiteColor;
       border-radius: $border-radius-2;
@@ -271,7 +263,7 @@
       }
       button{
          
-        width: $max-width;
+        width: weight(max);
         padding: $padding-1;
         font-size: $span-size;
         font-weight: 900;
@@ -281,26 +273,25 @@
     }
   }
   .Payment{
-    width: $max-width;
+    width: weight(max);
     @include responsive-flex(column, center,flex-start,800px){
-      width: $small-width;
+      width:weight(small);
       margin-bottom: 1rem;
     };
     @media screen and ( min-width: 1200px ) {
-      width: $xsmall-width;
+      width:  weight(xsmall);
     }
 
     .Payment-method{
-      position: relative;
-      top: 8rem;
+      @include position(relative,8rem);
       @include responsive-flex(column, center,flex-start);
-      width: $max-width ;
+      width: weight(max) ;
       padding: $padding;
       background: $whiteColor;
       margin-bottom: 8rem;
       .invoice{
         @include responsive-flex(row, center,space-between);
-        width:$max-width ;
+        width:weight(max) ;
         .payment-info{
           @include responsive-flex(column, flex-start);
           width: 30% ;
@@ -311,10 +302,10 @@
           .summary{
             gap:  1rem;
             @include responsive-flex(column, flex-start, space-between);
-            width:$max-width ;
+            width:weight(max) ;
             .summary-location {
               @include responsive-flex(column, center);
-              width:$medium-width;
+              width: weight(medium);
               border: $border;
               padding: $padding;
   
@@ -323,10 +314,10 @@
           .total{
             @include responsive-flex(row, center, space-around);
             margin-top: 2rem;
-            width:$large-width ;
+            width:weight(large); 
             border: $border;
             padding: $padding;
-  
+            
           }
         }
       }
@@ -335,14 +326,14 @@
       @include responsive-flex(column,center,center,800px){
         @include flex-reverse(row, flex-start, space-between)
       };
-      width:$max-width ;
+      width:weight(max) ;
       margin-top: 3rem;
       .Payment-Card{
         @include responsive-flex(row,center);
-        width: $max-width ;
+        width: weight(max) ;
         .card-flex {
           @include responsive-flex(row, flex-start, flex-start);
-          width: $medium-width ;
+          width:  weight(medium) ;
           h2 {
             margin-bottom: $margin-b;
           }
@@ -355,13 +346,13 @@
         .Payment-Card-Section {
           @include responsive-flex(column, center, flex-start);
           gap:  2rem;
-          width: $max-width ;
+          width: weight(max) ;
           .btn {
-            width: $large-width ;
+            width: weight(large); 
           }
           .address{
             @include responsive-flex(column, flex-start, flex-start);
-            width: $medium-width;
+            width:  weight(medium);
             margin-right: $margin-b;
             h4 {
               margin-top: 1rem;
@@ -371,7 +362,7 @@
             }
           }
           .cardInfo{
-            width:$large-width ;
+            width:weight(large); 
             @include responsive-flex(column,flex-start, flex-start);
             gap:1rem;
             .card-flex{
@@ -389,8 +380,7 @@
               @include responsive-flex(row, flex-start, space-between);
               padding-top:4rem;
               padding-left: 2rem;
-              zoom: 0.8;
-              width:$large-width ;
+              width:weight(large); 
               background: $whiteColorDeam-2;
               border-radius: $border-radius;
               min-height: 15rem;
@@ -402,7 +392,7 @@
                 width: 30%;
                 @include responsive-flex(column, flex-start, center);
                 @media screen and (max-width:250px) {
-                  width:$max-width ;
+                  width:weight(max) ;
                 }
                 h4 {
                   font-size: $span-size;
@@ -420,7 +410,7 @@
         }
       }
       .Payment-info{
-        width: $medium-width ;
+        width:  weight(medium) ;
         @include responsive-flex(column, flex-start,flex-start,400px){
           gap:1rem;
           margin-left: 3rem;
@@ -437,9 +427,9 @@
         .summary-header{
           @include responsive-flex(row, flex-start ,flex-start);
           gap:1rem;
-          width:$max-width ;
+          width:weight(max) ;
           @media screen and (min-width: 800px) {
-            width: $large-width ;
+            width: weight(large); 
             span{
               &::before{
                   content: "|";
@@ -450,7 +440,7 @@
       }
        .total{
         background: $cardBG;
-        width: $large-width;
+        width: weight(large);
         @include responsive-flex(row, flex-start, flex-start);
         gap:2rem;
         padding: $padding-2; 

@@ -4,7 +4,7 @@ import {AiOutlineUnorderedList} from "react-icons/ai"
 import {TbBrandTripadvisor ,TbApps} from "react-icons/tb"
 const HomeIcons = () => {
   return (
-    <div  data-aos="fade-up" className="homeFooterIcons flex">
+    <div  data-aos="fade-up" className="homeFooterIcons">
            <div className="rightIcons">
             <FiFacebook className="icon" />
             <FiInstagram className="icon"/>

@@ -1,0 +1,121 @@
+@import "../index.scss";
+
+.Login {
+  @include responsive-flex(column,center,center);
+  width: weight(max);
+  height: 95vh;
+  img {
+    @include max-size;
+    @include position(absolute,0,0,0,0);
+    object-fit: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+  }
+
+  .Login-Item {
+    @include position(absolute);
+    padding: 2rem;
+    width: 25rem;
+    height: 25rem;
+    background: $dark;
+    border-radius: $border-radius-2;
+    border: $log-border;
+    box-shadow: $box-shadow;
+    h1 {
+      text-align: center;
+      margin-bottom: $whiteColor;
+      color: $whiteColor;
+      text-shadow: $text-shadow;
+    }
+    form {
+      @include responsive-flex(column, center);
+      width: weight(max);
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .input-div {
+        @include responsive-flex(column, flex-start);
+          width: weight(medium) ;
+          gap: 0.5rem;
+          label{
+            color: $whiteColor;
+            text-shadow: $text-shadow ;
+            width: weight(max);
+            font-weight: 700;
+          }
+          input{
+            @include default;
+            width: weight(max);
+            background: $log-input;
+            padding: $padding-1 ;
+            font-weight: 600;
+            color: $bodyColor;
+            text-shadow: $input-text-shadow;
+            border-radius: $border-radius-2;
+          }
+      }
+      button{
+        width: weight(medium);
+        @include position(relative,1rem);
+        padding: $padding-1;
+        @include default;
+        background: $btn-color;
+        cursor: pointer;
+        border-radius:$border-radius-2;
+        transition: transform 0.3s ease;
+       span{
+        color: $whiteColor;
+        font-size: 1rem;
+        font-weight: 600;
+       }
+       &:hover{
+        transform: scale(0.98);
+        background: $btn-hover-color;
+
+        }
+      }
+      
+    }
+    .join-btn{
+      @include position(relative,2rem);
+      @include responsive-flex(row,center,center);
+       width: weight(max);
+       a{
+        color: $inputColor;
+        font-weight: 600;
+        text-shadow: $text-shadow;
+
+       }
+    }
+   
+
+  }
+  .join-div{
+    min-height: 36rem;
+    button{
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+ .Login{
+  
+  padding: 1rem;
+  .Login-Item{
+    margin-top: 3rem;
+    width: weight(large);
+    height: 30rem;
+    form{
+      .input-div{
+        width: weight(max);
+      }
+    }
+  }
+ }  
+}
+
+ 

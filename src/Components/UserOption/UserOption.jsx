@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./user.css";
+import "../../Assests/scss/user/user.css";
 import { useSelector } from "react-redux";
 
 const UserOption = () => {

@@ -1,65 +1,59 @@
-@import "../../index.scss";
+@import "../index.scss";
 
 .Main{
-    width: 100%;
-
+    @include responsive-flex(column,flex-start,center);
+    width: weight(large);
     .Main_Section_Title{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include responsive-flex(row,center);   
         .btn{
             margin-left: 1rem;
         }
         .title {
-            position: relative;
+            @include position(relative);
             width: max-content;
             color: $textColor;
             margin: 1rem ;
             z-index: 2;
 
             &::after {
-                position: absolute;
+                @include position(absolute,null,0,null,0);
                 content: "";
                 background: $SecondaryColor;
                 height: 3px;
                 width: 110px;
-                right: 0;
-                bottom: 0px;
                 z-index: -1;
             }
         }
     }
 
     .Main_Section_Content {
-        justify-content: center;
         gap: 1.5rem;
         padding: 1rem;
-
+        zoom:0.80;
         .Main_Content-Items{
             padding: 1rem;
-            height: 100%;
+            height: weight(max);
             display: grid;
             row-gap: 10px;
-            border-radius: 10px;
+            border-radius: $border-radius;
             align-items: center;
             background: $cardBG;
-            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.9);
+            box-shadow: $box-shadow-2;
             overflow: hidden;
 
             &:hover {
-               background: rgb(218, 218, 218);
-                box-shadow: 0 2px 4px rgba(64, 64, 79, 0.9);
+               background: $whiteColorDeam-2;
+                box-shadow: $box-shadow-2-hover;
                 transition: .3s ease;
             }
 
             .imageDiv {
                 height: 180px;
-                width: 100%;
+                width: weight(max);
                 overflow: hidden;
 
                 img {
-                    height: 100%;
-                    width: 100%;
+                    @include max-size;
                     object-fit: cover;
                     transition: 1s ease;
                 }
@@ -88,8 +82,8 @@
                 }
             }
             .fees{
-                width: 100%;
-                justify-content: space-between;
+                width: weight(max);
+                @include responsive-flex(row,center,space-between);
                 padding: 1rem;
                 margin: 1rem 0;
                 border-top:  1.5px solid $greyText;
@@ -98,9 +92,7 @@
                     color: $textColor;
                     max-width: 100px;
                     line-height: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include responsive-flex(row,center,center);
                     text-transform: uppercase;
                      
                     small{
@@ -138,33 +130,29 @@
     }
 }
 .Main_More{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    @include responsive-flex(column,center);
+    width: weight(max);
     padding-top: 6rem;
    
    
     .Main_More-details{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 95%;
+        @include responsive-flex(column,center);
+        width: weight(large);
         margin-bottom: 2rem;
         .Main_More-details-up{
-            
-            display:flex;
-            flex-direction: column;
+            @include responsive-flex(column,null,null,1000px){
+                @include flex-reverse(row)
+            };
             gap: 1rem; 
-            position: relative;
+            @include position(relative);
+          
             .Main_More-details-img{
-                width: 100%;
+                width: weight(max);
                 overflow: hidden;
-                border-radius: 3px;
+                border-radius: $border-radius-2 -2px;
                 img{
-                    border-radius: 5px;
-                    width: 100%;
-                    height: 100%;
+                    border-radius: $border-radius-2;
+                    @include max-size;
                     object-fit: cover;
                     transition: 1s ease;
                     &:hover{
@@ -173,20 +161,24 @@
                 }
             }
             .Main_More-details-market{
-                display: flex;
-                flex-direction: column;
+                @include responsive-flex(column);
                 gap: 2rem;
                 .Main_More-details-title{
-                    display:flex;
-                    flex-direction: column;
+                    @include responsive-flex(column,center,center,1000px){
+                        @include flex-reverse(row);
+                        h3{
+                            font-size: 25px;
+                            &:nth-child(2)::before{
+                                content: "|";
+                              }
+                        }
+                    };           
                     text-align: center;
-                    align-items: center;
-                    justify-content:center;
                      h3{
                         text-align: center;
                      &:nth-child(2){
                         margin-left: 1rem;
-                        color:rgba(118, 118, 118, 0.742);
+                        color:$icon-color;
                         text-transform: capitalize;
                         
                      }
@@ -197,27 +189,19 @@
                     }
                 }
                 .Main_More-details-market-descripton{
-                  width: 100%;
-                   display: flex;
-                   align-items: center;
-                   justify-content: center;
-                   flex-direction: column;
-                   
-
+                  width: weight(max);
+                  @include responsive-flex(column,center,center);
                     .date{
-                        width: 95%;
-                        display: flex;
-                        flex-direction: column;
+                        width:weight(large);
+                        @include responsive-flex(column,center,space-between,1000px){
+                            @include flex-reverse(row,center,space-around);
+                        };
                         gap:1rem;
-                        align-items: center;
-                        justify-content: space-between;
                         margin-bottom: 1rem;
                         padding-bottom: 1rem;
-                        border-bottom: 1px solid rgba(112, 112, 112, 0.568);
+                        border-bottom: $userborder;
                         .date-content{
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
+                            @include responsive-flex(row,center);
                             gap: 1rem;
                             height: 3rem;
                             padding: 0.5rem 1rem;
@@ -237,12 +221,11 @@
                         }
                     }
                     .payment-slogan{
-                        width: 95%;
+                        width:weight(large);
+                        @include responsive-flex(column,center,space-between,1000px){
+                            text-align: center
+                        };
                         text-align: center;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-between;
                         padding: 1rem;
                         gap: 1rem;
                         span{
@@ -253,8 +236,8 @@
                         }
                     }
                     .descption{
-                        width: 95%;
-                        color: rgba(15, 15, 15, 0.719);
+                        width:weight(large);
+                        color: $dark;
                         text-align: justify;
                         font-weight: 500;
                     }
@@ -268,20 +251,19 @@
 
 
         .Main_More-details-content{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            width: weight(max);
+            @include responsive-flex(column,center,center,1000px){
+                font-size: 20px;
+                line-height: 30px;
+            };
             font-weight: 600;
             font-size: 15px;
             line-height: 30px;
             margin-top: 2rem;
             .sections{
-               width: 95%;
-               color: rgba(0, 0, 0, 0.7); 
-               display: flex;
-               
+               width: weight(large);
+               color:$dark; 
+               @include responsive-flex(row,center); 
                span{
                     min-width: 25px;
                 }
@@ -290,7 +272,7 @@
              } 
             }
                h2{
-                width: 100%;
+                width: weight(max);
                 text-align: left;
                 margin-bottom: 2rem;
                }
@@ -298,8 +280,8 @@
         }
         .btn{
             font-weight: 700;
-            color: white;
-            text-shadow: 1px 1px  rgba(0, 0, 0, 0.7);
+            color: $whiteColor;
+            text-shadow: $text-shadow;
             overflow: hidden;
             &:hover{
                 transform: scale(1.01);
@@ -314,15 +296,13 @@
     &::after{
         width: 150px;
     }
-
    }
    .Main_Section_Content{
     grid-template-columns: repeat(2 ,1fr);
     .Main_Content-Items{
         height: auto;
     }
-   }
-   
+   } 
   }
 
   @media screen and (min-width: 840px) {
@@ -331,48 +311,8 @@
      .Main_Content-Items{
          height: auto;
      }
-
-    }
-   
-   
+    } 
    }  
-   
- @media screen and (min-width:1000px) {
-    .Main_More{
-        .Main_More-details{
-            .Main_More-details-up{
-                flex-direction: row;
-                .Main_More-details-market{
-                  .Main_More-details-title{
-                    justify-content: center;
-                    flex-direction: row;
-                    
-                    h3{
-                        font-size: 25px;
-                        &:nth-child(2)::before{
-                            content: "|";
-                          }
-                    }
-                  }
-                  .Main_More-details-market-descripton{
-                    .date{
-                        flex-direction: row;
-                        justify-content: space-around;
-                    }
-                    .payment-slogan{
-                        text-align: start;
-                    }
-                  }
-                }           
-            }
-            .Main_More-details-content{
-                font-size: 20px;
-                line-height: 30px;
-            }
-        } 
-    }
- }
-
    @media screen and (min-width: 1240px) {
     .Main_Section_Content{
      grid-template-columns: repeat(4 ,1fr);

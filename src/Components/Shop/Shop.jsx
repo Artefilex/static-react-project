@@ -1,4 +1,4 @@
-import "./shop.css";
+import "../../Assests/scss/shop/shop.css";
 import PaymentForm from "./PaymentForm";
 import FilteredBasket from "./FilteredBasket";
 import { useEffect, useState } from "react";

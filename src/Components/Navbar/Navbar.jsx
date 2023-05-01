@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "./navbar.css"
+import "../../Assests/scss/navbar/navbar.css"
 import { MdTravelExplore } from "react-icons/md"
 import { AiOutlineClose } from "react-icons/ai"
 import { TbGridDots } from "react-icons/tb"
@@ -15,14 +15,14 @@ const Navbar = () => {
 
   return (
     <section className='navbarSection'>
-      <header className="header flex">
+      <header className="header">
         <div className="logoDiv">
-          <a href="#home" className="logo flex">
+          <a href="#home" className="logo ">
             <h1> <MdTravelExplore className="icon" /> Travel.</h1>
           </a>
         </div>
         <div className={active}>
-          <div className="navList flex"> 
+          <div className="navList "> 
             <Links  />
             <UserBtn/>
           </div>

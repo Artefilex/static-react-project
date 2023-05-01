@@ -18,10 +18,6 @@ li {
   padding: 4rem 0 2rem;
 }
 
-.container {
-  padding: 1.5rem 0rem;
-}
-
 .icon {
   font-size: 2rem;
   cursor: pointer;
@@ -68,36 +64,44 @@ input {
 
 body {
   background: rgb(255, 255, 255);
+  zoom: 0.8;
 }
 
 @media screen and (min-width: 1400px) {
-  body {
-    zoom: 1;
-  }
   .container {
     width: 80%;
     margin: auto;
   }
-  .seciton {
+  .section {
     padding: 6rem 0 4rem;
   }
 }
 .header {
-  position: fixed;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
   background: rgb(255, 255, 255);
   width: 100%;
   padding: 1rem;
   height: header;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
+  zoom: 0.75;
+}
+@media (min-width: 1240px) {
+  .header {
+    justify-content: space-around;
+    padding: 1rem 8.5rem;
+  }
 }
 .header .logo {
-  color: rgb(27, 45, 54);
+  color: rgb(10, 84, 107);
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -106,26 +110,28 @@ body {
   color: rgb(0, 115, 168);
   transform: translateY(5px);
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 769px) {
   .header .navBar {
     padding: 1rem;
     position: absolute;
     background: rgb(237, 237, 237);
     height: -moz-max-content;
     height: max-content;
-    width: 80%;
+    width: 85%;
     border-radius: 1rem;
     top: -500rem;
     left: 50%;
     transform: translate(-50%);
     z-index: 2000;
-    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
     transition: 0.9s ease-in-out;
   }
   .header .navBar .navList {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
     justify-content: center;
+    width: 100%;
     margin: auto;
     padding: 0.5rem 0;
   }
@@ -154,7 +160,7 @@ body {
     color: rgb(0, 115, 168);
   }
   .header .navBar .closeNavbar:hover {
-    color: rgb(27, 45, 54);
+    color: rgb(10, 84, 107);
   }
   .header .activeNavbar {
     top: 7rem;
@@ -178,9 +184,9 @@ body {
   }
   .header .navBar .navList {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     gap: 1rem;
   }
   .header .navBar .navList .navItem .navLink {
@@ -203,11 +209,5 @@ body {
 @media screen and (min-width: 1000px) {
   .header .navbar .navList .navItem {
     padding: 0, 0.9rem;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .header {
-    padding: 1rem 8.5rem;
-    justify-content: space-around;
   }
 }/*# sourceMappingURL=navbar.css.map */

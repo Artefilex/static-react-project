@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import "./footer.css"
+import "../../Assests/scss/footer/footer.css"
 import Video from "../../Assests/header.mp4"
 import {FiSend} from  "react-icons/fi"
 import {MdTravelExplore} from "react-icons/md"
@@ -35,7 +35,7 @@ const Fotter = () => {
          <div className='footerCard flex'>
           <div className='footerIntro flex'>
             <div className='logoDiv'>
-              <a href="#" className='logo flex' >
+              <a href="http://localhost:3000/" className='logo flex' >
                <MdTravelExplore className='icon'/>  Travel.
               </a>
             </div>
@@ -118,6 +118,7 @@ const Fotter = () => {
           <small>Lorem ipsum dolor sit.</small>
           <small>Copyright © 2023 Apinizer • Powered by Scroll Viewport </small>
          </div>
+          {/* try new branch push github project */}
          </div>
         </div>   
        </section>

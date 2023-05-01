@@ -18,10 +18,6 @@ li {
   padding: 4rem 0 2rem;
 }
 
-.container {
-  padding: 1.5rem 0rem;
-}
-
 .icon {
   font-size: 2rem;
   cursor: pointer;
@@ -71,28 +67,26 @@ body {
 }
 
 @media screen and (min-width: 1400px) {
-  body {
-    zoom: 1;
-  }
   .container {
     width: 80%;
     margin: auto;
   }
-  .seciton {
+  .section {
     padding: 6rem 0 4rem;
   }
 }
 .footer {
   position: relative;
-  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   margin: auto;
 }
 .footer .videoDiv {
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .footer .videoDiv video {
   width: 100%;
@@ -103,30 +97,32 @@ body {
 .footer .videoDiv::after {
   content: "";
   position: absolute;
-  background: rgba(10, 84, 107, 0.3);
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  mix-blend-mode: multiply;
+  background: rgb(10, 84, 107);
+  mix-blend-mode: hard-light;
 }
 .footer .secContent {
-  width: 57%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: inherit;
+  width: 60%;
   height: -moz-max-content;
   height: max-content;
   padding: 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin: auto;
   row-gap: 2rem;
   z-index: 100;
-  position: inherit;
 }
 .footer .secContent .contactDiv {
-  justify-content: space-between;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 .footer .secContent .contactDiv .text small {
@@ -141,7 +137,9 @@ body {
 .footer .secContent .contactDiv .inputDiv {
   width: 100%;
   gap: 1rem;
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .footer .secContent .contactDiv .inputDiv input {
   width: 100%;
@@ -160,8 +158,11 @@ body {
   text-transform: capitalize;
 }
 .footer .secContent .contactDiv .inputDiv .btn {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
+  width: 100%;
   color: rgb(255, 255, 255);
   gap: 0.5rem;
   text-transform: uppercase;
@@ -175,25 +176,30 @@ body {
 }
 .footer .secContent .footerCard {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding: 1rem 1rem 4rem;
   gap: 2rem;
   border-radius: 1rem;
   background: rgb(240, 240, 240);
   width: 100%;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
   overflow: hidden;
 }
 .footer .secContent .footerCard .footerIntro {
-  flex-basis: 50%;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-basis: 50%;
   row-gap: 0.5rem;
 }
 .footer .secContent .footerCard .logoDiv .logo {
-  color: rgb(27, 45, 54);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(10, 84, 107);
   font-weight: 600;
 }
 .footer .secContent .footerCard .logoDiv .logo .icon {
@@ -210,7 +216,7 @@ body {
        column-gap: 0.5rem;
 }
 .footer .secContent .footerCard .footerSocials .icon {
-  color: rgb(27, 45, 54);
+  color: rgb(10, 84, 107);
   font-size: 20px;
 }
 .footer .secContent .footerCard .footerSocials .icon:hover {
@@ -221,13 +227,21 @@ body {
   width: 100%;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 500px) {
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
 }
 .footer .secContent .footerCard .footerLinks .linkGroup .groupTitle {
   display: block;
   font-weight: 600;
-  color: rgb(27, 45, 54);
+  color: rgb(10, 84, 107);
   margin-bottom: 0.5rem;
 }
 .footer .secContent .footerCard .footerLinks .linkGroup .footerList {
@@ -243,7 +257,9 @@ body {
   color: rgb(0, 115, 168);
 }
 .footer .secContent .footerCard .footerDiv {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.1rem;
   background: rgb(0, 115, 168);
   position: absolute;
@@ -252,26 +268,22 @@ body {
   right: 0;
   padding: 0.5rem 2rem;
 }
-.footer .secContent .footerCard .footerDiv small {
-  font-size: 10px;
-  color: rgb(255, 255, 255);
-  font-weight: 500;
-}
-
-@media screen and (min-width: 500px) {
-  .footer .secContent .footerCard .footerLinks {
-    grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 1rem;
-  }
+@media (min-width: 500px) {
   .footer .secContent .footerCard .footerDiv {
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
   }
   .footer .secContent .footerCard .footerDiv small {
     font-size: 14px;
     color: rgb(255, 255, 255);
   }
 }
+.footer .secContent .footerCard .footerDiv small {
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
 @media screen and (min-width: 840px) {
   .footer .secContent .footerCard {
     flex-direction: row;

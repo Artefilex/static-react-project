@@ -18,10 +18,6 @@ li {
   padding: 4rem 0 2rem;
 }
 
-.container {
-  padding: 1.5rem 0rem;
-}
-
 .icon {
   font-size: 2rem;
   cursor: pointer;
@@ -71,19 +67,20 @@ body {
 }
 
 @media screen and (min-width: 1400px) {
-  body {
-    zoom: 1;
-  }
   .container {
     width: 80%;
     margin: auto;
   }
-  .seciton {
+  .section {
     padding: 6rem 0 4rem;
   }
 }
 .Main {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 95%;
 }
 .Main .Main_Section_Title {
   display: flex;
@@ -103,18 +100,18 @@ body {
 }
 .Main .Main_Section_Title .title::after {
   position: absolute;
+  bottom: 0;
+  right: 0;
   content: "";
   background: rgb(16, 181, 203);
   height: 3px;
   width: 110px;
-  right: 0;
-  bottom: 0px;
   z-index: -1;
 }
 .Main .Main_Section_Content {
-  justify-content: center;
   gap: 1.5rem;
   padding: 1rem;
+  zoom: 0.8;
 }
 .Main .Main_Section_Content .Main_Content-Items {
   padding: 1rem;
@@ -128,7 +125,7 @@ body {
   overflow: hidden;
 }
 .Main .Main_Section_Content .Main_Content-Items:hover {
-  background: rgb(218, 218, 218);
+  background: rgb(215, 215, 215);
   box-shadow: 0 2px 4px rgba(64, 64, 79, 0.9);
   transition: 0.3s ease;
 }
@@ -138,8 +135,8 @@ body {
   overflow: hidden;
 }
 .Main .Main_Section_Content .Main_Content-Items .imageDiv img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 1s ease;
@@ -151,7 +148,7 @@ body {
   padding: 1rem;
 }
 .Main .Main_Section_Content .Main_Content-Items .cardInfo .title {
-  color: rgb(27, 45, 54);
+  color: rgb(10, 84, 107);
   font-size: 1.25rem;
 }
 .Main .Main_Section_Content .Main_Content-Items .cardInfo .name {
@@ -161,6 +158,9 @@ body {
 }
 .Main .Main_Section_Content .Main_Content-Items .fees {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem 0;
@@ -172,6 +172,7 @@ body {
   max-width: 100px;
   line-height: 20px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
@@ -185,7 +186,7 @@ body {
 }
 .Main .Main_Section_Content .Main_Content-Items .fees .price {
   font-size: 2rem;
-  color: rgb(27, 45, 54);
+  color: rgb(10, 84, 107);
 }
 .Main .Main_Section_Content .Main_Content-Items .desc {
   font-size: 13.5px;
@@ -223,10 +224,15 @@ body {
   gap: 1rem;
   position: relative;
 }
+@media (min-width: 1000px) {
+  .Main_More .Main_More-details .Main_More-details-up {
+    flex-direction: row;
+  }
+}
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-img {
   width: 100%;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 5px -2px;
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-img img {
   border-radius: 5px;
@@ -247,16 +253,27 @@ body {
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title {
+    flex-direction: row;
+  }
+  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3 {
+    font-size: 25px;
+  }
+  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3:nth-child(2)::before {
+    content: "|";
+  }
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3 {
   text-align: center;
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3:nth-child(2) {
   margin-left: 1rem;
-  color: rgba(118, 118, 118, 0.742);
+  color: rgb(75, 75, 75);
   text-transform: capitalize;
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3:nth-child(2)::before {
@@ -265,20 +282,27 @@ body {
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .date {
   width: 95%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(112, 112, 112, 0.568);
+  border-bottom: 1px solid rgba(108, 108, 108, 0.5);
+}
+@media (min-width: 1000px) {
+  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .date {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .date .date-content {
   display: flex;
@@ -302,13 +326,18 @@ body {
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .payment-slogan {
   width: 95%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   padding: 1rem;
   gap: 1rem;
+}
+@media (min-width: 1000px) {
+  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .payment-slogan {
+    text-align: center;
+  }
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .payment-slogan span {
   font-weight: 600;
@@ -318,7 +347,7 @@ body {
 }
 .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .descption {
   width: 95%;
-  color: rgba(15, 15, 15, 0.719);
+  color: rgba(0, 0, 0, 0.779);
   text-align: justify;
   font-weight: 500;
 }
@@ -333,10 +362,18 @@ body {
   line-height: 30px;
   margin-top: 2rem;
 }
+@media (min-width: 1000px) {
+  .Main_More .Main_More-details .Main_More-details-content {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 .Main_More .Main_More-details .Main_More-details-content .sections {
   width: 95%;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.779);
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .Main_More .Main_More-details .Main_More-details-content .sections span {
   min-width: 25px;
@@ -351,8 +388,8 @@ body {
 }
 .Main_More .Main_More-details .btn {
   font-weight: 700;
-  color: white;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 0px 8px black;
   overflow: hidden;
 }
 .Main_More .Main_More-details .btn:hover {
@@ -379,32 +416,6 @@ body {
   }
   .Main_Section_Content .Main_Content-Items {
     height: auto;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .Main_More .Main_More-details .Main_More-details-up {
-    flex-direction: row;
-  }
-  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title {
-    justify-content: center;
-    flex-direction: row;
-  }
-  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3 {
-    font-size: 25px;
-  }
-  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-title h3:nth-child(2)::before {
-    content: "|";
-  }
-  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .date {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .Main_More .Main_More-details .Main_More-details-up .Main_More-details-market .Main_More-details-market-descripton .payment-slogan {
-    text-align: start;
-  }
-  .Main_More .Main_More-details .Main_More-details-content {
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 @media screen and (min-width: 1240px) {

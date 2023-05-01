@@ -19,7 +19,6 @@ const Links = () => {
     <li className="navItem">
       <NavLink  to={"/pages"}  className='navLink'> Pages</NavLink>
     </li>
-   
  </>
   )
 }

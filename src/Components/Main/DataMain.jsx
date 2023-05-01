@@ -13,11 +13,11 @@ const DataMain = ({travels}) => {
             </div>
             <div className='cardInfo'>
                 <h4 className='title'> {travels.destTitle}</h4>
-                <span className='continent flex'>
+                <span className='continent'>
                     <GrLocation className='icon' />
                     <span className='name'>{travels.location} </span>
                 </span>
-                <div className='fees flex'>
+                <div className='fees'>
                     <div className='grade'>
                         <span> {travels.grade} <small>+1</small></span>
                     </div>

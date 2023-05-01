@@ -1,49 +1,35 @@
-
-@import "../../index.scss";
+@import "../index.scss";
 
  .footer{
-    position:relative;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    @include position(relative);
+    @include responsive-flex(null, center, center);
+    width: weight(max);
     margin: auto ;
     .videoDiv{
-        position: absolute;
-        height: 100%;
-        width: 100%;   
+        @include position(absolute);
+        @include max-size;   
         video{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-           
+            @include max-size;
+            object-fit: cover;     
         }
         &::after{
             content: "";
-            position: absolute;
-            background: rgba(10,84,107,0.3);
-            top:0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-           mix-blend-mode: multiply;
-         
+            @include position(absolute,0,0,0,0);    
+            background: $blackColor;
+            mix-blend-mode: hard-light; 
         }
     }
     .secContent{
-        width: 57%;
+        @include responsive-flex(column,center,center);
+       @include position(inherit);
+        width: weight(xxsmall-width);
         height: max-content;
         padding: 2rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
         margin: auto;
         row-gap: 2rem;
         z-index: 100;
-        position:inherit;
         .contactDiv {
-            justify-content: space-between;
-            flex-direction: column;
+            @include responsive-flex(column,center,space-between);
             gap: 1rem;
                 .text{
                     small{
@@ -57,12 +43,11 @@
                    }
                 }
                 .inputDiv{
-                    width: 100%;
+                    width: weight(max);
                     gap: 1rem;
-                    flex-direction: column;
-
+                    @include responsive-flex(column,center);
                     input{
-                        width: 100%;
+                        width: weight(max);
                         padding: .5rem .6rem;
                         border:  1px solid $whiteColor;
                         background: transparent;
@@ -71,13 +56,12 @@
                         &::placeholder{
                             color: $whiteColor;
                             text-transform: capitalize;
-
                         }
                        
                     }
                     .btn{
-                        width: 100%;
-                        justify-content: center;
+                        @include responsive-flex(row,center,center);
+                        width: weight(max);
                         color: $whiteColor;
                         gap: 0.5rem;
                         text-transform: uppercase;
@@ -92,26 +76,22 @@
                 }
         }
         .footerCard{
-            position: relative;
+            @include position(relative);
+            @include responsive-flex(column,flex-start,center);
             padding: 1rem 1rem 4rem;
             gap :2rem;
             border-radius:1rem;
             background: $bodyColor;
-            width: 100%;
-            justify-content: center;
-            flex-direction: column;
-            align-items: flex-start;
+            width: weight(max);
             overflow: hidden;
            .footerIntro{
+            @include responsive-flex(column,flex-start,center);
             flex-basis: 50%;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
             row-gap: .5rem;
-
            }
            .logoDiv{
             .logo{
+                @include responsive-flex(row,center);
                 color: $blackColor;
                 font-weight: 600;
                 .icon{
@@ -132,17 +112,22 @@
                 font-size: 20px;
                 &:hover{
                     color:$PrimaryColor;
-
                 }
-               }
-           }
+           }           
+        }
           .footerLinks{
             flex-basis: 50% ;
-            width: 100%;
+            width: weight(max);
             gap:1rem;
             grid-template-columns: repeat((2,1fr));
+            flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             margin-bottom: 1rem;
+            @media screen and (min-width:500px) {
+                 grid-template-columns: repeat(3,1fr);
+                 padding-bottom: 1rem;         
+            }
             .linkGroup{
                 .groupTitle{
                     display: block;
@@ -150,14 +135,12 @@
                     color: $blackColor;
                     margin-bottom: .5rem;
                 }
-
                 .footerList {
                     font-size: 15px;
                     color: $textColor;
                     transition: .3s ease-in-out;
-
                     .icon {
-                         font-size: 15px;
+                        font-size: 15px;
                         color: $greyText;
                         &:hover{
                             color: $PrimaryColor;
@@ -165,16 +148,18 @@
                     }
                 }
             }
-
         }
         .footerDiv{
-            flex-direction: column;
+            @include responsive-flex(column,center,null,500px){
+                @include flex-reverse(row,null,space-between);
+                    small{
+                        font-size: 14px;
+                        color:  $whiteColor;
+                    }
+            };
             gap: .1rem;
             background: $PrimaryColor;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            @include position(absolute,null,0,0,0);
             padding: .5rem 2rem;
             small{
                 font-size: 10px;
@@ -182,34 +167,12 @@
                 font-weight: 500;
             }
         }
-        }
-
+     }
     }
   }
-  @media screen and (min-width: 500px) {
-    .footer{
-        .secContent{
-            .footerCard{
-                .footerLinks{
-                    grid-template-columns: repeat(3,1fr);
-                    padding-bottom: 1rem;
-                }
-                .footerDiv{
-                    justify-content: space-between;
-                    flex-direction: row;
-                    small{
-                        font-size: 14px;
-                        color:  $whiteColor;
-                    }
-                }
-            }
-        }
-
-    }
-   }  
+ 
    @media screen and (min-width: 840px) {
-    .footer{
-       
+    .footer{     
         .secContent{
             .footerCard{
                 flex-direction: row;
@@ -217,13 +180,10 @@
                     grid-template-columns: repeat(3,1fr);
                     padding-bottom: 1rem;
                 }
-                
             }
         }
-
     }
    }  
-
    @media screen and (min-width: 1024px) {
     .footer{
       .secContent{
@@ -234,7 +194,6 @@
                 .footerP{
                     font-size: 15px;
                     color: $textColor;
-
                 }
                 .footerSocials{
                     column-gap: .5rem;
@@ -262,22 +221,22 @@
    @media screen and  ( max-width : 1240px) {
     .footer{
         .secContent{
-            width: 95%;
+            width: weight(large);
         }
-    }
-    
+    }    
    }
-
    @media screen and  ( max-width : 370px) {
     .footer{
         .secContent{
-            width: 95%;
+            width: weight(large);
             .footerCard{
                 .footerLinks{
                     flex-direction: column;
                 }
             }
         }
-    }
-    
+    }  
    }
+
+
+   

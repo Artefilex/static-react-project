@@ -1,6 +1,6 @@
 
 import {useEffect} from 'react'
-import "./home.css"
+import "../../Assests/scss/home/home.css"
 import videos from "../../Assests/header.mp4"
 
 import HomeHeader from "./Home_Content/HomeHeader"
@@ -21,7 +21,7 @@ useEffect(()=>{
 
       </div>
       <video src={videos} typeof='video/mp4' muted loop autoPlay ></video>
-      <div className="homeContent container">
+      <div className="homeContent">
          <HomeHeader/>
          <InputArea/> 
          <HomeIcons/>
