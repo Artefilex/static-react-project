@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useCallback} from 'react'
+import React, { useEffect, useState,useCallback } from 'react'
 import { CiLocationOn } from "react-icons/ci"
 import {HiFilter} from "react-icons/hi"
 import {useSelector ,useDispatch} from 'react-redux'
@@ -10,7 +10,7 @@ const InputArea = () => {
 const filteredData = useSelector(state => state.data.filtered) 
 const filtered = useSelector(state => state.data.filter) 
 const dispatch = useDispatch()
- console.log("InputArea render")
+console.log( "ınput rendered")
 
 
  const [destination , setDestination] = useState("")
@@ -34,6 +34,7 @@ const handleRange = (e) => { setRange(e.target.value)};
     setDate("")
     setDestination("")
     setRange("")
+    
     if(filtered.length !== 0 && filteredData.length === 0){
       setShowAlert(true)
     }
@@ -49,16 +50,14 @@ const handleRange = (e) => { setRange(e.target.value)};
  }
  return () =>clearTimeout(setTime)
  },[showAlert])
-console.log(filteredData)
-console.log(filtered)
-console.log( showAlert)
+
   return (
    <>
-    <form onSubmit={handleSubmit}  data-aos="fade-up" className="cardDiv grid">
+    <form onSubmit={handleSubmit} data-aos="fade-up"  className="cardDiv grid">
           <div className="destinationInput">
             <label htmlFor="city">Search Your destination: </label>
             <div className='input flex'>
-              <input type="text" value={destination} onChange={handleLocation} placeholder='Enter A country' />
+              <input type="text" maxLength={20} value={destination} onChange={handleLocation} placeholder='Enter A country' />
               <CiLocationOn className='icon' />
             </div>
           </div>
@@ -74,7 +73,7 @@ console.log( showAlert)
               <h3 className='total'> $ {range}</h3>
             </div>
             <div className="input flex">
-              <input type="text" value={range} onChange={handleRange} max={5000} min={0} />
+              <input type="text" value={range} maxLength={20} onChange={handleRange} max={5000} min={0} />
             </div>
           </div>
          
@@ -98,4 +97,4 @@ console.log( showAlert)
   )
 }
 
-export default InputArea
+export default  InputArea 

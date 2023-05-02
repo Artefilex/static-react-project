@@ -1,11 +1,11 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { useDispatch} from "react-redux";
 import { addUser } from "../../Reducer/reducer/AuthorSlice";
 import "../../Assests/scss/login/login.css";
 
 
 const Login = () => {
- 
+  console.log("login render")
   const [form ,setForm] = useState({
     username:"",
     password: ""
@@ -71,4 +71,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login

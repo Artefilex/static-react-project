@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {FiFacebook, FiInstagram  } from "react-icons/fi"
 import {AiOutlineUnorderedList} from "react-icons/ai"
 import {TbBrandTripadvisor ,TbApps} from "react-icons/tb"
@@ -21,4 +21,4 @@ const HomeIcons = () => {
   )
 }
 
-export default HomeIcons
+export default  HomeIcons

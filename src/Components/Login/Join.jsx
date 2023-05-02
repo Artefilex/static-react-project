@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "../../Assests/scss/login/login.css"
 import { useFormik } from "formik";
 import validationSchema from "./validations";
@@ -6,7 +6,7 @@ import { addUserToLocalStorage} from '../../Reducer/reducer/AuthorSlice';
 import { useDispatch} from 'react-redux';
 import { addUser } from '../../Reducer/reducer/AuthorSlice';
 const Join = () => {
-   
+    console.log("join render")
     const dispatch = useDispatch()
     const { handleSubmit, handleChange, handleBlur, values, errors, touched } =  
   useFormik({
@@ -97,4 +97,4 @@ const Join = () => {
   )
 }
 
-export default Join
+export default  Join 

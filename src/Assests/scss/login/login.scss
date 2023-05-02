@@ -3,7 +3,8 @@
 .Login {
   @include responsive-flex(column,center,center);
   width: weight(max);
-  height: 95vh;
+  zoom: 0.65;
+  height: 45rem;
   img {
     @include max-size;
     @include position(absolute,0,0,0,0);

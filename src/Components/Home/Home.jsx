@@ -1,5 +1,5 @@
 
-import {useEffect} from 'react'
+import {useEffect } from 'react'
 import "../../Assests/scss/home/home.css"
 import videos from "../../Assests/header.mp4"
 
@@ -9,12 +9,13 @@ import HomeIcons from './Home_Content/HomeIcons'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
-// import HomeInput from './Home_Content/HomeInput'
 const Home = () => {
+  
 useEffect(()=>{
   Aos.init({duration:2000})
 })
 
+console.log("InputArea render")
   return (
     <section className='home'>
       <div className='overlay'>

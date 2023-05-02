@@ -81,7 +81,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 95vh;
+  zoom: 0.65;
+  height: 45rem;
 }
 .Login img {
   width: 100%;

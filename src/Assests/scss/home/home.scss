@@ -7,7 +7,6 @@
     @include responsive-flex(row,center,center);
     margin: auto;
    
-   
     .overlay {
         @include position(absolute,0,0);
         @include max-size;
@@ -26,9 +25,9 @@
     .homeContent {
         width: weight(large);
         height: max-content;
-        padding: 3rem .5rem 0rem;
+        padding: 3rem 1.5rem 2rem;
         @include responsive-flex(column, stretch,center);
-        row-gap: 1.5rem;
+        row-gap: 3.5rem;
         margin: auto;
         z-index: 100;
         color: $whiteColor;
@@ -121,16 +120,16 @@
                @include position(absolute, null, -0.7rem, 50%);
                 background: $gradientColor;
                 width: max-content;
-                padding: 0.3rem 1rem;
+                padding: $padding-1;
                 column-gap: 1rem;
                 border-radius: 3rem;
                 transform: translate(-50%);
                 justify-content: center;
                 color: $whiteColor;
                 font-weight: 700;
+                cursor: pointer;
                 &:hover {
                     background: $PrimaryColor;
-                    cursor: pointer;
                 }
                 .icon{
                   font-size: 18px;

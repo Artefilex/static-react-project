@@ -1,16 +1,17 @@
-import React from 'react'
+
 
 const HomeHeader = () => {
+  console.log("home header render")
   return (
     <div className='textDiv'>
-      <span data-aos="fade-up" className='smallText'>
+      <span data-aos="fade-down" className='smallText'>
         Our Packages
       </span>
-      <h1 data-aos="fade-up" className="homeTitle">
+      <h1 data-aos="fade-down" className="homeTitle">
         Search Your Holiday
       </h1>
     </div>
   )
 }
 
-export default HomeHeader
+export default  HomeHeader

@@ -6,18 +6,14 @@ const Links = () => {
      <li className="navItem">
       <NavLink to={"/"}  className='navLink'> Home </NavLink>
     </li>
-     
-    <li className="navItem">
-      <NavLink to={"/packages"} className='navLink'>Packages </NavLink>
-    </li>
     <li className="navItem">
       <NavLink to={"/shop"} className='navLink'> Shop </NavLink>
     </li>
     <li className="navItem">
-      <NavLink  to={"/about "} className='navLink'>About </NavLink>
+      <NavLink  to={"/about "} className='navLink'>Lorem </NavLink>
     </li>
     <li className="navItem">
-      <NavLink  to={"/pages"}  className='navLink'> Pages</NavLink>
+      <NavLink  to={"/pages"}  className='navLink'> Lorem</NavLink>
     </li>
  </>
   )

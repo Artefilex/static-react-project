@@ -12,6 +12,7 @@ import Home from '../Home/Home'
 
 
 const Main = () => {
+      console.log("main-render")
 
       const [filter, setFilter] = useState(false)
       const filtered = useSelector(state => state.data.filtered)
