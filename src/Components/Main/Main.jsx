@@ -36,7 +36,7 @@ const Main = () => {
       return (
             <>  
             <Home/>
-            <section className='Main container'>
+            <section className='Main container' id='packages'>
                   <div data-aos="fade-down" className='Main_Section_Title'>
                         <h3 className='title'>
                               Most visited destinations

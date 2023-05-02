@@ -80,7 +80,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 95%;
+  width: 100%;
 }
 .Main .Main_Section_Title {
   display: flex;

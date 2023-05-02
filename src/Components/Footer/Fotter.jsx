@@ -35,7 +35,7 @@ const Fotter = () => {
          <div className='footerCard flex'>
           <div className='footerIntro flex'>
             <div className='logoDiv'>
-              <a href="http://localhost:3000/" className='logo flex' >
+              <a href="#" className='logo flex' >
                <MdTravelExplore className='icon'/>  Travel.
               </a>
             </div>

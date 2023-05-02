@@ -31,30 +31,27 @@ const handleRange = (e) => { setRange(e.target.value)};
    const title = destination.toString().toLocaleLowerCase("TR")
    const action = [{title, range, date }]
    dispatch(addData(action))
-  
     setDate("")
     setDestination("")
     setRange("")
+    if(filtered.length !== 0 && filteredData.length === 0){
+      setShowAlert(true)
+    }
   }
-},[date,range,destination,dispatch])
-
- useEffect(()=>{
-  if(handleSubmit && filtered.length !== 0 && filteredData.length === 0){
-    setShowAlert(true) 
-  }
- },[handleSubmit,filteredData ,filtered])
+},[date,range,destination,dispatch,filtered,filteredData])
 
  useEffect(()=>{
   let setTime;
- if(showAlert){
+ if( showAlert === true ){
    setTime = setTimeout(()=>{
     setShowAlert(false)
    },2000)
  }
  return () =>clearTimeout(setTime)
  },[showAlert])
-
-
+console.log(filteredData)
+console.log(filtered)
+console.log( showAlert)
   return (
    <>
     <form onSubmit={handleSubmit}  data-aos="fade-up" className="cardDiv grid">

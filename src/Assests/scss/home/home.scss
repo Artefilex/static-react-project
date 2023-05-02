@@ -6,10 +6,8 @@
     @include position(relative);
     @include responsive-flex(row,center,center);
     margin: auto;
-    @include deskop{
-        height: 95vh;
-    }
-    zoom:0.80;
+   
+   
     .overlay {
         @include position(absolute,0,0);
         @include max-size;
@@ -28,9 +26,9 @@
     .homeContent {
         width: weight(large);
         height: max-content;
-        padding: 3rem 1.5rem 3rem;
+        padding: 3rem .5rem 0rem;
         @include responsive-flex(column, stretch,center);
-        row-gap: 3rem;
+        row-gap: 1.5rem;
         margin: auto;
         z-index: 100;
         color: $whiteColor;
@@ -82,11 +80,12 @@
             }
 
             .label_total {
-                @include responsive-flex(row,space-between,center);
+                @include responsive-flex(row,center,space-between);
                 .total {
                     font-size: 18px;
-                    color: $blackColor;
+                    color: $dark;
                     padding-bottom: 10px;
+                   padding:  0 1rem 2px 1rem;
                 }
 
             }
@@ -201,8 +200,3 @@
     }
     }
 
-    @media screen and (min-width:940px) {
-        .home{
-          height: 80vh;
-        }
-        }    

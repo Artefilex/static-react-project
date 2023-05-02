@@ -64,7 +64,6 @@ input {
 
 body {
   background: rgb(255, 255, 255);
-  zoom: 0.8;
 }
 
 @media screen and (min-width: 1400px) {
@@ -84,12 +83,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  zoom: 0.8;
-}
-@media (min-width: 1200px) {
-  .home {
-    height: 95vh;
-  }
 }
 .home .overlay {
   position: absolute;
@@ -114,12 +107,12 @@ body {
   width: 95%;
   height: -moz-max-content;
   height: max-content;
-  padding: 3rem 1.5rem 3rem;
+  padding: 3rem 0.5rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  row-gap: 3rem;
+  row-gap: 1.5rem;
   margin: auto;
   z-index: 100;
   color: rgb(255, 255, 255);
@@ -173,13 +166,14 @@ body {
 .home .homeContent .cardDiv .label_total {
   display: flex;
   flex-direction: row;
-  align-items: space-between;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 .home .homeContent .cardDiv .label_total .total {
   font-size: 18px;
-  color: rgb(10, 84, 107);
+  color: rgba(0, 0, 0, 0.779);
   padding-bottom: 10px;
+  padding: 0 1rem 2px 1rem;
 }
 .home .homeContent .cardDiv .input {
   height: 40px;
@@ -295,10 +289,5 @@ body {
   .home .homeContent .cardDiv {
     padding: 2rem 1rem;
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 940px) {
-  .home {
-    height: 80vh;
   }
 }/*# sourceMappingURL=home.css.map */

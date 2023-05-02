@@ -6,6 +6,7 @@
   @include responsive-flex(row,center,center);
   width: weight(max);
   background: $background-bg;
+  zoom: 0.55;
 
   form{
     @include responsive-flex(column, center, flex-start);
@@ -417,13 +418,22 @@
         };
         .info-header{
           @include responsive-flex(row, center ,flex-start);
+          
           .icon{
             margin-left: 1rem;
             color: $icon-color;
             font-size: 30px;
         }
+       
       } 
       .summary{
+        @include responsive-flex(column );
+        gap: 1rem;
+        .summary-location{
+          border: $border;
+          padding: $padding-2;
+          border-radius: $border-radius-2;
+        }
         .summary-header{
           @include responsive-flex(row, flex-start ,flex-start);
           gap:1rem;
@@ -440,7 +450,7 @@
       }
        .total{
         background: $cardBG;
-        width: weight(large);
+        width: weight(max);
         @include responsive-flex(row, flex-start, flex-start);
         gap:2rem;
         padding: $padding-2; 
@@ -450,7 +460,7 @@
           font-weight: 900;
           font-size: $span-size;
       }
-      }   
+      } 
      } 
     }
   }

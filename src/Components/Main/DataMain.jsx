@@ -7,7 +7,7 @@ const DataMain = ({travels}) => {
     return (
       
       
-      <div className='Main_Content-Items' data-aos="zoom-in" >
+      <div className='Main_Content-Items'  >
             <div className="imageDiv">
                 <img src={travels.imgSrc} alt={travels.destTitle} />
             </div>

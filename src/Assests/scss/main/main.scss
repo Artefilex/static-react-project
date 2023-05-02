@@ -2,7 +2,7 @@
 
 .Main{
     @include responsive-flex(column,flex-start,center);
-    width: weight(large);
+    width: weight(max);
     .Main_Section_Title{
         @include responsive-flex(row,center);   
         .btn{

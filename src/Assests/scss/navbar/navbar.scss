@@ -1,14 +1,12 @@
 @import "../index.scss";
 .header {
   @include responsive-flex(row,center,space-between,1240px){
-    @include flex-reverse($justifyContent:space-around);
-    padding: 1rem 8.5rem;
-    
+    @include flex-reverse($justifyContent:space-around); 
   };
   position: fixed;
   background: $whiteColor;
   width: weight(max);
-  padding: 1rem;
+  padding: 0.5rem;
   height: header;
   z-index: 1000;
   box-shadow: $navbarShadow;

@@ -64,7 +64,6 @@ input {
 
 body {
   background: rgb(255, 255, 255);
-  zoom: 0.8;
 }
 
 @media screen and (min-width: 1400px) {
@@ -84,7 +83,7 @@ body {
   position: fixed;
   background: rgb(255, 255, 255);
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   height: header;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
@@ -93,7 +92,6 @@ body {
 @media (min-width: 1240px) {
   .header {
     justify-content: space-around;
-    padding: 1rem 8.5rem;
   }
 }
 .header .logo {

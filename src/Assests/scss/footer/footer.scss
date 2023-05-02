@@ -30,8 +30,10 @@
         z-index: 100;
         .contactDiv {
             @include responsive-flex(column,center,space-between);
+            width: 60%;
             gap: 1rem;
                 .text{
+                    width: weight(max);
                     small{
                         font-size: 13px;
                         font-weight: 600;
@@ -45,16 +47,17 @@
                 .inputDiv{
                     width: weight(max);
                     gap: 1rem;
-                    @include responsive-flex(column,center);
+                    @include responsive-flex(column,flex-start);
                     input{
+                        @include default;
                         width: weight(max);
                         padding: .5rem .6rem;
                         border:  1px solid $whiteColor;
                         background: transparent;
                         border-radius: 3rem;
-                        color: $whiteColor;
+                        color: $whiteColorDeam;
                         &::placeholder{
-                            color: $whiteColor;
+                            color: $whiteColorDeam-2;
                             text-transform: capitalize;
                         }
                        
