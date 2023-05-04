@@ -1,7 +1,7 @@
 
-import {useEffect } from 'react'
+import {useEffect ,memo} from 'react'
 import "../../Assests/scss/home/home.css"
-import videos from "../../Assests/header.mp4"
+// import videos from "../../Assests/header.mp4"
 
 import HomeHeader from "./Home_Content/HomeHeader"
 import InputArea from './Home_Content/InputArea'
@@ -15,13 +15,13 @@ useEffect(()=>{
   Aos.init({duration:2000})
 })
 
-console.log("InputArea render")
   return (
     <section className='home'>
       <div className='overlay'>
 
       </div>
-      <video src={videos} typeof='video/mp4' muted loop autoPlay ></video>
+      <img src="https://images.pexels.com/photos/13290973/pexels-photo-13290973.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" />
+      {/* <video src={videos} typeof='video/mp4' autoPlay muted loop ></video> */}
       <div className="homeContent">
          <HomeHeader/>
          <InputArea/> 
@@ -31,4 +31,4 @@ console.log("InputArea render")
   )
 }
 
-export default Home
+export default memo( Home )

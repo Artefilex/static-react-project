@@ -95,7 +95,7 @@ body {
   z-index: 1;
   mix-blend-mode: hard-light;
 }
-.home video {
+.home video, .home img {
   position: absolute;
   top: 0;
   bottom: 0;

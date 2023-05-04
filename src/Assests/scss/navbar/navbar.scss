@@ -1,8 +1,8 @@
 @import "../index.scss";
 .header {
-  @include responsive-flex(row,center,space-between,1240px){
-    @include flex-reverse($justifyContent:space-around); 
-  };
+  @include responsive-flex(row, center, space-between, 1240px) {
+    @include flex-reverse($justifyContent: space-around);
+  }
   position: fixed;
   background: $whiteColor;
   width: weight(max);
@@ -15,16 +15,15 @@
     color: $blackColor;
     font-weight: 600;
     cursor: pointer;
-    @include responsive-flex(row,center,center);   
+    @include responsive-flex(row, center, center);
     .icon {
       font-size: 25px;
       color: $PrimaryColor;
       transform: translateY(5px);
     }
-
   }
-  
-  @include tablet-2{
+
+  @include tablet-2 {
     .navBar {
       padding: 1rem;
       position: absolute;
@@ -39,7 +38,7 @@
       box-shadow: $navbarShadow;
       transition: 0.9s ease-in-out;
       .navList {
-        @include responsive-flex(column,center,center);   
+        @include responsive-flex(column, center, center);
         width: weight(max);
         margin: auto;
         padding: 0.5rem 0;
@@ -88,7 +87,7 @@
       }
     }
   }
-  
+
   @media screen and (min-width: 769px) {
     .closeNavbar,
     .toogleNavbar {
@@ -96,7 +95,7 @@
     }
     .navBar {
       .navList {
-        @include responsive-flex(row,center,center);
+        @include responsive-flex(row, center, center);
         gap: 1rem;
         .navItem {
           .navLink {
@@ -129,5 +128,4 @@
       }
     }
   }
- 
 }

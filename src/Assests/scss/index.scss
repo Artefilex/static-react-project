@@ -1,32 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 $PrimaryColor: rgb(0, 115, 168);
 $SecondaryColor: rgb(16, 181, 203);
-$gradientColor: linear-gradient( to right, rgb(16, 181, 203), rgb(0, 115, 168));
+$gradientColor: linear-gradient(to right, rgb(16, 181, 203), rgb(0, 115, 168));
 $whiteColor: rgb(255, 255, 255);
-$navbarShadow:  0 2px 4px rgba(0, 61, 127, 0.521);
-$blackColor: rgba(10,84,107);
+$navbarShadow: 0 2px 4px rgba(0, 61, 127, 0.521);
+$blackColor: rgba(10, 84, 107);
 $textColor: rgb(37, 37, 39);
 $whiteColorDeam: rgb(237, 237, 237);
 $whiteColorDeam-2: rgb(215, 215, 215);
 $greyText: rgb(190, 190, 190);
 $inputColor: rgb(239, 239, 239);
 $bodyColor: rgb(240, 240, 240);
-$background-bg:  rgb(244, 244, 244);
-$cardBG: rgb(225, 225, 235); 
+$background-bg: rgb(244, 244, 244);
+$cardBG: rgb(225, 225, 235);
 $dark: rgba(0, 0, 0, 0.779);
 $icon-color: rgb(75, 75, 75);
-$log-input:  rgba(255, 255, 255, 0.475);
+$log-input: rgba(255, 255, 255, 0.475);
 $userborder: 1px solid rgba(108, 108, 108, 0.5);
-$purple-bg: -webkit-linear-gradient( 181deg, rgba(92, 63, 150, 1) 24%,rgb(1, 130, 156) 100% );
-$purple-hover: -webkit-linear-gradient( 181deg, rgba(63, 150, 98, 1) 0%,rgba(0, 125, 150, 1) 100% );
-$box-shadow: 0px 5px  5px rgba(0, 0, 0, 0.5);
-$box-shadow-2:  0 2px 4px rgba(140, 140, 141, 0.9) ;
+$purple-bg: -webkit-linear-gradient(
+  181deg,
+  rgba(92, 63, 150, 1) 24%,
+  rgb(1, 130, 156) 100%
+);
+$purple-hover: -webkit-linear-gradient(
+  181deg,
+  rgba(63, 150, 98, 1) 0%,
+  rgba(0, 125, 150, 1) 100%
+);
+$box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+$box-shadow-2: 0 2px 4px rgba(140, 140, 141, 0.9);
 $box-shadow-2-hover: 0 2px 4px rgba(64, 64, 79, 0.9);
-$linear-gradient:  linear-gradient( to right, hsl(187,85%,43%), hsl(199, 100%,33%));
+$linear-gradient: linear-gradient(
+  to right,
+  hsl(187, 85%, 43%),
+  hsl(199, 100%, 33%)
+);
 $text-shadow: 1px 0px 8px black;
 $input-text-shadow: 0px 0px 5px rgb(0, 0, 0);
-$border:1px solid rgb(181, 181, 181);
+$border: 1px solid rgb(181, 181, 181);
 $border-radius: 10px;
 $border-radius-2: 5px;
 $border-radius-3: 3rem;
@@ -34,165 +46,199 @@ $margin-b: 1rem;
 $padding: 1rem;
 $padding-1: 0.5rem 1rem;
 $padding-2: 2rem 1rem;
-$padding-3:1rem 2rem;
+$padding-3: 1rem 2rem;
 $span-size: 20px;
-$btn-color: -webkit-linear-gradient(125deg, rgba(0, 234, 255, 1) 0%, rgba(53, 102, 223, 1) 50%, rgba(97, 31, 219, 1) 99%);
-$btn-hover-color:-webkit-linear-gradient(140deg, rgba(0, 234, 255, 1) 0%, rgba(53, 102, 223, 1) 50%, rgba(97, 31, 219, 1) 99%);
+$btn-color: -webkit-linear-gradient(
+  125deg,
+  rgba(0, 234, 255, 1) 0%,
+  rgba(53, 102, 223, 1) 50%,
+  rgba(97, 31, 219, 1) 99%
+);
+$btn-hover-color: -webkit-linear-gradient(
+  140deg,
+  rgba(0, 234, 255, 1) 0%,
+  rgba(53, 102, 223, 1) 50%,
+  rgba(97, 31, 219, 1) 99%
+);
 $log-border: 2px solid rgba(7, 55, 83, 0.222);
-$size:(
+$size: (
   "max": 100%,
   "large": 95%,
   "medium": 90%,
   "small": 85%,
-  "xsmall":70%,
-  "xxsmall-width":60%
-  );
+  "xsmall": 70%,
+  "xxsmall-width": 60%,
+);
 
+@function weight($weight-name) {
+  @return map-get($size, $weight-name);
+}
 
-@function weight($weight-name){
-  @return map-get($size, $weight-name)
-};
-
-@mixin max-size{
+@mixin max-size {
   width: weight(max);
   height: weight(max);
 }
 
-
-@mixin button-danger{
-    background:-moz-linear-gradient(205deg, rgba(255, 146, 0, 1) 0%, rgba(248, 190, 0, 1) 48%, rgba(255, 154, 0, 1) 100%); 
-    background:-webkit-linear-gradient(205deg, rgba(255, 146, 0, 1) 0%, rgba(248, 190, 0, 1) 48%, rgba(255, 154, 0, 1) 100%);
-    background:-o-linear-gradient(205deg, rgba(255, 146, 0, 1) 0%, rgba(248, 190, 0, 1) 48%, rgba(255, 154, 0, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF9A00', endColorstr='#FF9200', GradientType=1 );
-    background:-ms-linear-gradient(205deg, rgba(255, 146, 0, 1) 0%, rgba(248, 190, 0, 1) 48%, rgba(255, 154, 0, 1) 100%);
-    background:linear-gradient(205deg, rgba(255, 146, 0, 1) 0%, rgba(248, 190, 0, 1) 48%, rgba(255, 154, 0, 1) 100%);
-    .icon{
-        color:rgba(0, 0, 0, 0.701)
-    }
-};
-@mixin danger-div{
-  background: rgb(235, 200, 196 , 0.8);
-            border: 1px solid rgb(236, 142, 142);
-            padding: 1rem;
-            border-radius: 3px;
-            h3{
-                color:rgb(177, 81, 81);
-            }
+@mixin button-danger {
+  background: -moz-linear-gradient(
+    205deg,
+    rgba(255, 146, 0, 1) 0%,
+    rgba(248, 190, 0, 1) 48%,
+    rgba(255, 154, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    205deg,
+    rgba(255, 146, 0, 1) 0%,
+    rgba(248, 190, 0, 1) 48%,
+    rgba(255, 154, 0, 1) 100%
+  );
+  background: -o-linear-gradient(
+    205deg,
+    rgba(255, 146, 0, 1) 0%,
+    rgba(248, 190, 0, 1) 48%,
+    rgba(255, 154, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF9A00', endColorstr='#FF9200', GradientType=1 );
+  background: -ms-linear-gradient(
+    205deg,
+    rgba(255, 146, 0, 1) 0%,
+    rgba(248, 190, 0, 1) 48%,
+    rgba(255, 154, 0, 1) 100%
+  );
+  background: linear-gradient(
+    205deg,
+    rgba(255, 146, 0, 1) 0%,
+    rgba(248, 190, 0, 1) 48%,
+    rgba(255, 154, 0, 1) 100%
+  );
+  .icon {
+    color: rgba(0, 0, 0, 0.701);
+  }
+}
+@mixin danger-div {
+  background: rgb(235, 200, 196, 0.8);
+  border: 1px solid rgb(236, 142, 142);
+  padding: 1rem;
+  border-radius: 3px;
+  h3 {
+    color: rgb(177, 81, 81);
+  }
 }
 
 @mixin button {
-    border: none;
-    outline: none;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@mixin mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 
-};
-@mixin mobile{
-  @media(max-width:400px){
-    @content
+@mixin position($p, $t: null, $b: null, $l: null, $r: null) {
+  position: $p;
+  @if $t != null {
+    top: $t;
   }
-};
-
-@mixin position($p, $t:null, $b:null, $l:null, $r:null){
- position: $p;
- @if $t != null{
-  top: $t;
- };
- @if $b != null{
-  bottom: $b;
- };
- @if $l != null{
-  left: $l;
- };
- @if $r != null{
-  right: $r;
- }
-};
-@mixin deskop{
-  @media(min-width:1200px){
-    @content
+  @if $b != null {
+    bottom: $b;
   }
-};
-@mixin tablet{
-  @media(min-width: 769px){
-    @content
+  @if $l != null {
+    left: $l;
   }
-};
-@mixin tablet-2{
-  @media(max-width: 769px){
-    @content
+  @if $r != null {
+    right: $r;
   }
-};
+}
+@mixin deskop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+@mixin tablet-2 {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
 
 @mixin default {
-   border: none;
-   outline: none;
-};
+  border: none;
+  outline: none;
+}
 
-@mixin responsive-flex( $direction: null , $align:null , $justify:null, $min-width:null ) {
+@mixin responsive-flex(
+  $direction: null,
+  $align: null,
+  $justify: null,
+  $min-width: null
+) {
   display: flex;
- @if $direction != null{
-  flex-direction: $direction;
- }
- @if $align != null{
-  align-items: $align;}
-  @if $justify != null{
-  justify-content: $justify;
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+  @if $align != null {
+    align-items: $align;
+  }
+  @if $justify != null {
+    justify-content: $justify;
   }
 
   @media (min-width: $min-width) {
-    @content
+    @content;
   }
-
- 
-};
-@mixin flex-reverse($direction:null,  $alignItem:null, $justifyContent:null) {
-  @if $direction != null{
+}
+@mixin flex-reverse($direction: null, $alignItem: null, $justifyContent: null) {
+  @if $direction != null {
     flex-direction: $direction;
   }
-  
+
   @if $alignItem != null {
     align-items: $alignItem;
-  };
+  }
   @if $justifyContent != null {
     justify-content: $justifyContent;
-  };
+  }
+}
 
-};
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
-a{ 
+a {
   text-decoration: none;
 }
-li{
+li {
   list-style: none;
 }
-.section{
+.section {
   padding: 4rem 0 2rem;
-
 }
-.icon{
+.icon {
   font-size: 2rem;
   cursor: pointer;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
-.grid{
+.grid {
   display: grid;
   align-items: center;
 }
-.btn{
-  padding: .6rem  1.5rem;
+.btn {
+  padding: 0.6rem 1.5rem;
   background: $gradientColor;
   border-radius: 3rem;
   border: none;
@@ -205,31 +251,28 @@ li{
   color: $whiteColor;
   font-weight: 500;
 }
-.btn:hover{
+.btn:hover {
   background: $SecondaryColor;
 }
-img video{
-   width: 100%;
-   height: auto;
+img video {
+  width: 100%;
+  height: auto;
 }
 
-input{
+input {
   font-size: 100%;
 }
-body{
+body {
   background: rgb(255, 255, 255);
   zoom: 0.85;
 }
 
-@media screen and ( min-width: 1400px) {
-  .container{
+@media screen and (min-width: 1400px) {
+  .container {
     width: 80%;
     margin: auto;
   }
-  .section{
-    padding: 6rem 0 4rem ;
+  .section {
+    padding: 6rem 0 4rem;
   }
 }
-  
-
-

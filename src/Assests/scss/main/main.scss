@@ -1,326 +1,309 @@
 @import "../index.scss";
 
-.Main{
-    @include responsive-flex(column,flex-start,center);
-    width: weight(max);
-    .Main_Section_Title{
-        @include responsive-flex(row,center);   
-        .btn{
-            margin-left: 1rem;
-        }
-        .title {
-            @include position(relative);
-            width: max-content;
-            color: $textColor;
-            margin: 1rem ;
-            z-index: 2;
-
-            &::after {
-                @include position(absolute,null,0,null,0);
-                content: "";
-                background: $SecondaryColor;
-                height: 3px;
-                width: 110px;
-                z-index: -1;
-            }
-        }
+.Main {
+  @include responsive-flex(column, flex-start, center);
+  width: weight(max);
+  .Main_Section_Title {
+    @include responsive-flex(row, center);
+    .btn {
+      margin-left: 1rem;
     }
+    .title {
+      @include position(relative);
+      width: max-content;
+      color: $textColor;
+      margin: 1rem;
+      z-index: 2;
 
-    .Main_Section_Content {
-        gap: 1.5rem;
+      &::after {
+        @include position(absolute, null, 0, null, 0);
+        content: "";
+        background: $SecondaryColor;
+        height: 3px;
+        width: 110px;
+        z-index: -1;
+      }
+    }
+  }
+
+  .Main_Section_Content {
+    gap: 1.5rem;
+    padding: 1rem;
+
+    .Main_Content-Items {
+      padding: 1rem;
+      height: weight(max);
+      display: grid;
+      row-gap: 10px;
+      border-radius: $border-radius;
+      align-items: center;
+      background: $cardBG;
+      box-shadow: $box-shadow-2;
+      overflow: hidden;
+
+      &:hover {
+        background: $whiteColorDeam-2;
+        box-shadow: $box-shadow-2-hover;
+        transition: 0.3s ease;
+      }
+
+      .imageDiv {
+        height: 180px;
+        width: weight(max);
+        overflow: hidden;
+
+        img {
+          @include max-size;
+          object-fit: cover;
+          transition: 1s ease;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .cardInfo {
         padding: 1rem;
-        
-        .Main_Content-Items{
-            padding: 1rem;
-            height: weight(max);
-            display: grid;
-            row-gap: 10px;
-            border-radius: $border-radius;
-            align-items: center;
-            background: $cardBG;
-            box-shadow: $box-shadow-2;
-            overflow: hidden;
 
-            &:hover {
-               background: $whiteColorDeam-2;
-                box-shadow: $box-shadow-2-hover;
-                transition: .3s ease;
-            }
-
-            .imageDiv {
-                height: 180px;
-                width: weight(max);
-                overflow: hidden;
-
-                img {
-                    @include max-size;
-                    object-fit: cover;
-                    transition: 1s ease;
-                }
-
-                &:hover {
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-            .cardInfo {
-                padding: 1rem;
-
-                .title {
-                    color: $blackColor;
-                    font-size: 1.25rem;
-
-                }
-
-                .name {
-                    color: $textColor;
-                    font-weight: 400;
-                    font-size: 14px;
-
-                }
-            }
-            .fees{
-                width: weight(max);
-                @include responsive-flex(row,center,space-between);
-                padding: 1rem;
-                margin: 1rem 0;
-                border-top:  1.5px solid $greyText;
-                border-bottom: 1.5px solid $greyText;
-                .grade{
-                    color: $textColor;
-                    max-width: 100px;
-                    line-height: 20px;
-                    @include responsive-flex(row,center,center);
-                    text-transform: uppercase;
-                     
-                    small{
-                        text-align: center;
-                        background: $gradientColor;
-                        border-radius: 1rem;
-                        padding: 1px 10px;
-                        color: $whiteColor;
-                    }
-                }
-                .price{
-                    font-size: 2rem;
-                    color: $blackColor;
-                }
-
-            }
-            .desc{
-                font-size: 13.5px;
-                color: $textColor;
-                font-weight: 500;
-            }
-            .btn{
-                margin-top: 1rem;
-                color: $whiteColor;
-                font-weight: 600;
-                gap: .5rem;
-                .icon{
-                    align-self: center;
-                    font-size: 18px;
-
-                }
-            }
+        .title {
+          color: $blackColor;
+          font-size: 1.25rem;
         }
 
-    }
-}
-.Main_More{
-    @include responsive-flex(column,center);
-    width: weight(max);
-    padding-top: 6rem;
-   
-   
-    .Main_More-details{
-        @include responsive-flex(column,center);
-        width: weight(large);
-        margin-bottom: 2rem;
-        .Main_More-details-up{
-            @include responsive-flex(column,null,null,1000px){
-                @include flex-reverse(row)
-            };
-            gap: 1rem; 
-            @include position(relative);
-          
-            .Main_More-details-img{
-                width: weight(max);
-                overflow: hidden;
-                border-radius: $border-radius-2 -2px;
-                img{
-                    border-radius: $border-radius-2;
-                    @include max-size;
-                    object-fit: cover;
-                    transition: 1s ease;
-                    &:hover{
-                      transform: scale(1.1);
-                    }
-                }
-            }
-            .Main_More-details-market{
-                @include responsive-flex(column);
-                gap: 2rem;
-                .Main_More-details-title{
-                    @include responsive-flex(column,center,center,1000px){
-                        @include flex-reverse(row);
-                        h3{
-                            font-size: 25px;
-                            &:nth-child(2)::before{
-                                content: "|";
-                              }
-                        }
-                    };           
-                    text-align: center;
-                     h3{
-                        text-align: center;
-                     &:nth-child(2){
-                        margin-left: 1rem;
-                        color:$icon-color;
-                        text-transform: capitalize;
-                        
-                     }
-                     &:nth-child(2)::before{
-                       content: "";
-                     }
-                     
-                    }
-                }
-                .Main_More-details-market-descripton{
-                  width: weight(max);
-                  @include responsive-flex(column,center,center);
-                    .date{
-                        width:weight(large);
-                        @include responsive-flex(column,center,space-between,1000px){
-                            @include flex-reverse(row,center,space-around);
-                        };
-                        gap:1rem;
-                        margin-bottom: 1rem;
-                        padding-bottom: 1rem;
-                        border-bottom: $userborder;
-                        .date-content{
-                            @include responsive-flex(row,center);
-                            gap: 1rem;
-                            height: 3rem;
-                            padding: 0.5rem 1rem;
-                           
-                             span{
-                                font-weight: 600;
-                                width: 50px;
-                             }
-                        }
-                        .date-content:nth-child(1){
-                            background: rgba(4, 255, 54, 0.358);
-                            border-radius: 10px;
-                        }
-                        .date-content:nth-child(2){
-                            background: rgba(255, 0, 0, 0.5);
-                            border-radius: 10px;
-                        }
-                    }
-                    .payment-slogan{
-                        width:weight(large);
-                        @include responsive-flex(column,center,space-between,1000px){
-                            text-align: center
-                        };
-                        text-align: center;
-                        padding: 1rem;
-                        gap: 1rem;
-                        span{
-                          font-weight: 600;
-                        }
-                        h2{
-                            font-weight: 600;
-                        }
-                    }
-                    .descption{
-                        width:weight(large);
-                        color: $dark;
-                        text-align: justify;
-                        font-weight: 500;
-                    }
-                   
-                }
-               
-            }
+        .name {
+          color: $textColor;
+          font-weight: 400;
+          font-size: 14px;
         }
+      }
+      .fees {
+        width: weight(max);
+        @include responsive-flex(row, center, space-between);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-top: 1.5px solid $greyText;
+        border-bottom: 1.5px solid $greyText;
+        .grade {
+          color: $textColor;
+          max-width: 100px;
+          line-height: 20px;
+          @include responsive-flex(row, center, center);
+          text-transform: uppercase;
 
-
-
-
-        .Main_More-details-content{
-            width: weight(max);
-            @include responsive-flex(column,center,center,1000px){
-                font-size: 20px;
-                line-height: 30px;
-            };
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 30px;
-            margin-top: 2rem;
-            .sections{
-               width: weight(large);
-               color:$dark; 
-               @include responsive-flex(row,center); 
-               span{
-                    min-width: 25px;
-                }
-             p{
-                text-align: left;
-             } 
-            }
-               h2{
-                width: weight(max);
-                text-align: left;
-                margin-bottom: 2rem;
-               }
-
-        }
-        .btn{
-            font-weight: 700;
+          small {
+            text-align: center;
+            background: $gradientColor;
+            border-radius: 1rem;
+            padding: 1px 10px;
             color: $whiteColor;
-            text-shadow: $text-shadow;
-            overflow: hidden;
-            &:hover{
-                transform: scale(1.01);
-            }
+          }
         }
+        .price {
+          font-size: 2rem;
+          color: $blackColor;
+        }
+      }
+      .desc {
+        font-size: 13.5px;
+        color: $textColor;
+        font-weight: 500;
+      }
+      .btn {
+        margin-top: 1rem;
+        color: $whiteColor;
+        font-weight: 600;
+        gap: 0.5rem;
+        .icon {
+          align-self: center;
+          font-size: 18px;
+        }
+      }
     }
+  }
+}
+.Main_More {
+  @include responsive-flex(column, center);
+  width: weight(max);
+  padding-top: 6rem;
+
+  .Main_More-details {
+    @include responsive-flex(column, center);
+    width: weight(large);
+    margin-bottom: 2rem;
+    .Main_More-details-up {
+      @include responsive-flex(column, null, null, 1000px) {
+        @include flex-reverse(row);
+      }
+      gap: 1rem;
+      @include position(relative);
+
+      .Main_More-details-img {
+        width: weight(max);
+        overflow: hidden;
+        border-radius: $border-radius-2 -2px;
+        img {
+          border-radius: $border-radius-2;
+          @include max-size;
+          object-fit: cover;
+          transition: 1s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .Main_More-details-market {
+        @include responsive-flex(column);
+        gap: 2rem;
+        .Main_More-details-title {
+          @include responsive-flex(column, center, center, 1000px) {
+            @include flex-reverse(row);
+            h3 {
+              font-size: 25px;
+              &:nth-child(2)::before {
+                content: "|";
+              }
+            }
+          }
+          text-align: center;
+          h3 {
+            text-align: center;
+            &:nth-child(2) {
+              margin-left: 1rem;
+              color: $icon-color;
+              text-transform: capitalize;
+            }
+            &:nth-child(2)::before {
+              content: "";
+            }
+          }
+        }
+        .Main_More-details-market-descripton {
+          width: weight(max);
+          @include responsive-flex(column, center, center);
+          .date {
+            width: weight(large);
+            @include responsive-flex(column, center, space-between, 1000px) {
+              @include flex-reverse(row, center, space-around);
+            }
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: $userborder;
+            .date-content {
+              @include responsive-flex(row, center);
+              gap: 1rem;
+              height: 3rem;
+              padding: 0.5rem 1rem;
+
+              span {
+                font-weight: 600;
+                width: 50px;
+              }
+            }
+            .date-content:nth-child(1) {
+              background: rgba(4, 255, 54, 0.358);
+              border-radius: 10px;
+            }
+            .date-content:nth-child(2) {
+              background: rgba(255, 0, 0, 0.5);
+              border-radius: 10px;
+            }
+          }
+          .payment-slogan {
+            width: weight(large);
+            @include responsive-flex(column, center, space-between, 1000px) {
+              text-align: center;
+            }
+            text-align: center;
+            padding: 1rem;
+            gap: 1rem;
+            span {
+              font-weight: 600;
+            }
+            h2 {
+              font-weight: 600;
+            }
+          }
+          .descption {
+            width: weight(large);
+            color: $dark;
+            text-align: justify;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .Main_More-details-content {
+      width: weight(max);
+      @include responsive-flex(column, center, center, 1000px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 30px;
+      margin-top: 2rem;
+      .sections {
+        width: weight(large);
+        color: $dark;
+        @include responsive-flex(row, center);
+        span {
+          min-width: 25px;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      h2 {
+        width: weight(max);
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+    }
+    .btn {
+      font-weight: 700;
+      color: $whiteColor;
+      text-shadow: $text-shadow;
+      overflow: hidden;
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 500px) {
-   .title{
+  .title {
     font-size: 1.5rem;
-    &::after{
-        width: 150px;
+    &::after {
+      width: 150px;
     }
-   }
-   .Main_Section_Content{
-    grid-template-columns: repeat(2 ,1fr);
-    .Main_Content-Items{
-        height: auto;
-    }
-   } 
   }
-
-  @media screen and (min-width: 840px) {
-    .Main_Section_Content{
-     grid-template-columns: repeat(3 ,1fr);
-     .Main_Content-Items{
-         height: auto;
-     }
-    } 
-   }  
-   @media screen and (min-width: 1240px) {
-    .Main_Section_Content{
-     grid-template-columns: repeat(4 ,1fr);
-     .Main_Content-Items{
-         height: auto;
-     }
+  .Main_Section_Content {
+    grid-template-columns: repeat(2, 1fr);
+    .Main_Content-Items {
+      height: auto;
     }
-   
-   }  
- 
-  
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .Main_Section_Content {
+    grid-template-columns: repeat(3, 1fr);
+    .Main_Content-Items {
+      height: auto;
+    }
+  }
+}
+@media screen and (min-width: 1240px) {
+  .Main_Section_Content {
+    grid-template-columns: repeat(4, 1fr);
+    .Main_Content-Items {
+      height: auto;
+    }
+  }
+}

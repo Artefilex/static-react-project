@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import "../../Assests/scss/footer/footer.css"
-import Video from "../../Assests/header.mp4"
+// import Video from "../../Assests/header.mp4"
 import {FiSend} from  "react-icons/fi"
 import {MdTravelExplore} from "react-icons/md"
 import {AiFillTwitterCircle ,AiFillInstagram} from "react-icons/ai"
@@ -16,7 +16,8 @@ const Fotter = () => {
   return (
     <section className='footer'>
       <div className='videoDiv'>
-            <video src={Video} loop autoPlay muted  ></video>
+             <img src="https://images.pexels.com/photos/13392671/pexels-photo-13392671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" />
+            {/* <video src={Video} typeof='video/mp4' autoPlay muted loop ></video>  */}
       </div>
       <div className='secContent container'> 
          <div className="contactDiv flex">
@@ -35,7 +36,7 @@ const Fotter = () => {
          <div className='footerCard flex'>
           <div className='footerIntro flex'>
             <div className='logoDiv'>
-              <a href="#" className='logo flex' >
+              <a href="http://localhost:3000/" className='logo flex' >
                <MdTravelExplore className='icon'/>  Travel.
               </a>
             </div>
@@ -118,7 +119,7 @@ const Fotter = () => {
           <small>Lorem ipsum dolor sit.</small>
           <small>Copyright © 2023 Apinizer • Powered by Scroll Viewport </small>
          </div>
-          {/* try new branch push github project */}
+          
          </div>
         </div>   
        </section>

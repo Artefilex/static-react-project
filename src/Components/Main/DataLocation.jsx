@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { useCallback } from 'react'
 import { Data } from '../../Assests/data'
 import { addBasket } from '../../Reducer/reducer/MarketSlice'
 import { useDispatch } from 'react-redux'
@@ -7,12 +8,12 @@ function DataLocation() {
   const { id } = useParams()
   const dispatch = useDispatch()
   
-  const handleClick = (imgSrc) => {
-     dispatch(addBasket(imgSrc))
-     if (!localStorage.getItem('market')?.includes(imgSrc)) {
-      addBasketToLocalStorage(imgSrc)
-    }
-  } 
+  const handleClick = useCallback((imgSrc) => {
+    dispatch(addBasket(imgSrc))
+    if (!localStorage.getItem('market')?.includes(imgSrc)) {
+     addBasketToLocalStorage(imgSrc)
+   }
+ } ,[dispatch])
   
     return (
         <div  className='Main_More' >

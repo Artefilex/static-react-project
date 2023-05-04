@@ -1,201 +1,195 @@
 @import "../index.scss";
 
-
 .home {
-    width: weight(max);
-    @include position(relative);
-    @include responsive-flex(row,center,center);
+  width: weight(max);
+  @include position(relative);
+  @include responsive-flex(row, center, center);
+  margin: auto;
+
+  .overlay {
+    @include position(absolute, 0, 0);
+    @include max-size;
+    background: $blackColor;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+  }
+
+  video,img {
+    @include position(absolute, 0, 0);
+    @include max-size;
+    object-fit: cover;
+  }
+
+  .homeContent {
+    width: weight(large);
+    height: max-content;
+    padding: 3rem 1.5rem 2rem;
+    @include responsive-flex(column, stretch, center);
+    row-gap: 3.5rem;
     margin: auto;
-   
-    .overlay {
-        @include position(absolute,0,0);
-        @include max-size;
-        background: $blackColor;
-        z-index: 1;
-        mix-blend-mode: hard-light;
+    z-index: 100;
+    color: $whiteColor;
+    @include deskop {
+      width: weight(xsmall);
+    }
+    .textDiv {
+      padding: 4rem;
+
+      .smallText {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .homeTitle {
+        @include position(relative);
+        font-size: 1.8rem;
+      }
     }
 
-    video {
-       
-        @include position(absolute,0,0 );
-        @include max-size;
-        object-fit: cover;
-    }
-
-    .homeContent {
-        width: weight(large);
-        height: max-content;
-        padding: 3rem 1.5rem 2rem;
-        @include responsive-flex(column, stretch,center);
-        row-gap: 3.5rem;
-        margin: auto;
-        z-index: 100;
-        color: $whiteColor;
-        @include deskop{
-            width: weight(xsmall);
+    .cardDiv {
+      @include position(relative);
+      padding: $padding-2;
+      background: $whiteColor;
+      border-radius: 10px;
+      gap: 1rem;
+      @include deskop {
+        padding: $padding-2;
+        grid-template-columns: repeat(3, 1fr);
+        .input {
+          margin-bottom: $margin-b;
         }
-        .textDiv {
-            padding: 4rem;
-
-            .smallText {
-                font-size: 13px;
-                text-transform: uppercase;
-            }
-
-            .homeTitle {
-                @include position(relative);
-                font-size: 1.8rem;
-            }
-        }
-
-        .cardDiv {
-            @include position(relative);
-            padding: $padding-2;
-            background: $whiteColor;
-            border-radius: 10px;
-            gap: 1rem;
-           @include deskop{
-            padding: $padding-2;
-            grid-template-columns: repeat(3 ,1fr);
-            .input{
-                margin-bottom: $margin-b;
-
-            }
-            .searchOption{
-                bottom: -1rem;
-                padding: $padding-1;
-                span{
-                    font-size: 17px;
-                }
-            }
-           }
-
-            label {
-                display: block;
-                color: $textColor;
-                padding-bottom: 10px;
-                font-size: 14px;
-                font-weight: 500;
-            }
-
-            .label_total {
-                @include responsive-flex(row,center,space-between);
-                .total {
-                    font-size: 18px;
-                    color: $dark;
-                    padding-bottom: 10px;
-                   padding:  0 1rem 2px 1rem;
-                }
-
-            }
-
-            .input {
-                height: 40px;
-                padding: 0 1rem;
-                background: $inputColor;
-                border-radius: 3rem;
-
-                input {
-                    background: none;
-                    @include default;
-                    width: weight(max) ;
-                    font-size: 13px;
-
-                    &::placeholder {
-                        font-size: 13px;
-                    }
-                    &:hover{
-                        cursor: poniter;
-                    }
-                }
-                .icon {
-                    color: $PrimaryColor;
-                    font-size: 18px;
-                    margin-left: 10px;
-                }
-            }
-
-            .searchOption {
-               @include default;
-               @include position(absolute, null, -0.7rem, 50%);
-                background: $gradientColor;
-                width: max-content;
-                padding: $padding-1;
-                column-gap: 1rem;
-                border-radius: 3rem;
-                transform: translate(-50%);
-                justify-content: center;
-                color: $whiteColor;
-                font-weight: 700;
-                cursor: pointer;
-                &:hover {
-                    background: $PrimaryColor;
-                }
-                .icon{
-                  font-size: 18px;
-                }
-                span{
-                    font-size: 13px;
-                    cursor: pointer;
-                }
-            }
-        }
-        .danger{
-            @include responsive-flex(row,center,center);
-            @include danger-div;
-        }  
-        .homeFooterIcons{
-            width:weight(max);
-            @include responsive-flex(row,center,space-between);
-          .icon{
-            font-size: 20px;
-            margin: 0 5px;
-            color: $whiteColor;
-            font-weight: 600;
-            &:hover{
-              color: $PrimaryColor;
-            }
+        .searchOption {
+          bottom: -1rem;
+          padding: $padding-1;
+          span {
+            font-size: 17px;
           }
         }
+      }
+
+      label {
+        display: block;
+        color: $textColor;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .label_total {
+        @include responsive-flex(row, center, space-between);
+        .total {
+          font-size: 18px;
+          color: $dark;
+          padding-bottom: 10px;
+          padding: 0 1rem 2px 1rem;
+        }
+      }
+
+      .input {
+        height: 40px;
+        padding: 0 1rem;
+        background: $inputColor;
+        border-radius: 3rem;
+
+        input {
+          background: none;
+          @include default;
+          width: weight(max);
+          font-size: 13px;
+
+          &::placeholder {
+            font-size: 13px;
+          }
+          &:hover {
+            cursor: poniter;
+          }
+        }
+        .icon {
+          color: $PrimaryColor;
+          font-size: 18px;
+          margin-left: 10px;
+        }
+      }
+
+      .searchOption {
+        @include default;
+        @include position(absolute, null, -0.7rem, 50%);
+        background: $gradientColor;
+        width: max-content;
+        padding: $padding-1;
+        column-gap: 1rem;
+        border-radius: 3rem;
+        transform: translate(-50%);
+        justify-content: center;
+        color: $whiteColor;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover {
+          background: $PrimaryColor;
+        }
+        .icon {
+          font-size: 18px;
+        }
+        span {
+          font-size: 13px;
+          cursor: pointer;
+        }
+      }
     }
+    .danger {
+      @include responsive-flex(row, center, center);
+      @include danger-div;
+    }
+    .homeFooterIcons {
+      width: weight(max);
+      @include responsive-flex(row, center, space-between);
+      .icon {
+        font-size: 20px;
+        margin: 0 5px;
+        color: $whiteColor;
+        font-weight: 600;
+        &:hover {
+          color: $PrimaryColor;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width:500px) {
-.home{
-    .homeContent{
-        .textDiv{
-            .smallText{
-                font-size: 16px;
-            }
-            .homeTitle{
-                position: relative;
-                font-size: 2.3rem;
-                width: max-content;
-                &::after{
-                    @include position(absolute,null,5px,null,0);
-                    content: "";
-                    background: rgb(5, 186, 236) ;
-                    width: 145px ;
-                    height: 3px;
-                    z-index: -1;
-                }
-            }
+@media screen and (min-width: 500px) {
+  .home {
+    .homeContent {
+      .textDiv {
+        .smallText {
+          font-size: 16px;
         }
-        .cardDiv{
-            grid-template-columns: repeat(2,1fr);
-
+        .homeTitle {
+          position: relative;
+          font-size: 2.3rem;
+          width: max-content;
+          &::after {
+            @include position(absolute, null, 5px, null, 0);
+            content: "";
+            background: rgb(5, 186, 236);
+            width: 145px;
+            height: 3px;
+            z-index: -1;
+          }
         }
+      }
+      .cardDiv {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
+  }
 }
+@media screen and (min-width: 660px) {
+  .home {
+    .homeContent {
+      .cardDiv {
+        padding: $padding-2;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }
-@media screen and (min-width:660px) {
-    .home{
-        .homeContent{
-            .cardDiv{
-                padding: $padding-2;
-                grid-template-columns: repeat(3, 1fr);
-         }
-        }
-    }
-    }
-

@@ -1,11 +1,11 @@
-import {  useState } from "react";
+import { memo , useState ,useMemo, useCallback} from "react";
 import { useDispatch} from "react-redux";
 import { addUser } from "../../Reducer/reducer/AuthorSlice";
 import "../../Assests/scss/login/login.css";
 
 
 const Login = () => {
-  console.log("login render")
+
   const [form ,setForm] = useState({
     username:"",
     password: ""
@@ -13,15 +13,14 @@ const Login = () => {
   const dispatch = useDispatch();
   
 
-  const handleChange = (e) => {
+  const handleChange =useCallback( (e) => {
     const {name, value}= e.target;
-
     setForm(preveState => ({
       ...preveState,
       [name]: value
     }))
-  }
-  const handleSubmit = (e) =>{
+  },[])
+  const handleSubmit = useCallback((e) =>{
     e.preventDefault()
     setForm({username:"" , password: ""})
     dispatch(addUser(form))
@@ -29,7 +28,7 @@ const Login = () => {
    if(form.username && form.password){
     window.location.href= "http://localhost:3000" 
    }
-  }
+  },[dispatch,form])
 
 
   return (
@@ -71,4 +70,4 @@ const Login = () => {
   );
 };
 
-export default Login
+export default memo(Login)

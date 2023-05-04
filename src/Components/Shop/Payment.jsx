@@ -1,6 +1,6 @@
 import Summary from "./Summary";
 import Form from "./Form";
-
+import { memo } from "react";
 
 const Payment = () => {
   return (
@@ -8,14 +8,12 @@ const Payment = () => {
       <div className="Payment-method">
         <h1>Ödeme Bilgileri</h1>
         <div className="invoice">
-        {!localStorage.getItem("allInfo") &&  <Form /> }
+          {!localStorage.getItem("allInfo") && <Form />}
         </div>
-     
-            <Summary />
-       
+        <Summary />
       </div>
     </div>
   );
 };
 
-export default Payment;
+export default memo(Payment);
