@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo } from "react";
+import { memo, useCallback} from "react";
 import { useDispatch } from "react-redux";
 import { userCard } from "../../../Reducer/reducer/AuthorSlice";
 import { useEffect, useState } from "react";
@@ -34,7 +34,7 @@ const CardForm = () => {
     }
   }, []);
 
-  const handleSubmit = useMemo(
+  const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
       setForm({
