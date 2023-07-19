@@ -2,7 +2,7 @@ import { memo , useState ,useCallback} from "react";
 import { useDispatch} from "react-redux";
 import { addUser } from "../../Reducer/reducer/AuthorSlice";
 import "../../Assests/scss/login/login.css";
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -26,7 +26,7 @@ const Login = () => {
     dispatch(addUser(form))
     window.location.reload();
    if(form.username && form.password){
-    window.location.href= "http://localhost:3000" 
+    window.location.href= "/" 
    }
   },[dispatch,form])
 
@@ -64,7 +64,7 @@ const Login = () => {
 
           <button   type="submit"> <span>Login</span></button>
         </form>
-        <div className="join-btn"> <a href="http://localhost:3000/join" > Don't have an account ? Join </a> </div>
+        <div className="join-btn"> <Link to={"/join"} > Don't have an account ? Join </Link> </div>
       </div>
     </div>
   );

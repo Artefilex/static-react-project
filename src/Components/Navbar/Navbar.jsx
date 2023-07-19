@@ -5,7 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 import Links from "./Links/Links";
 import UserBtn from "./UserBtn";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState("navBar");
   const toogleNavbar = useCallback(() => {
@@ -16,12 +16,11 @@ const Navbar = () => {
     <section className="navbarSection">
       <header className="header">
         <div className="logoDiv">
-          <a href="http://localhost:3000/" className="logo ">
+          <Link to={"/"} className="logo ">
             <h1>
-              {" "}
-              <MdTravelExplore className="icon" /> Travel.
+              <MdTravelExplore className="icon" /> Travel
             </h1>
-          </a>
+          </Link>
         </div>
         <div className={active}>
           <div className="navList ">

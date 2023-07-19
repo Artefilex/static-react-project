@@ -1,7 +1,7 @@
 import { useEffect, useState, memo, useCallback } from "react";
 import "../../Assests/scss/user/user.css";
 import { useSelector } from "react-redux";
-
+import {Link} from "react-router-dom"
 const UserOption = () => {
   const [count, setCount] = useState(null);
 
@@ -44,19 +44,19 @@ const UserOption = () => {
                   </div>
                 </div>
                 <div className="user-options">
-                  <a href="/shop" className="user-box">
+                  <Link to={"/shop"}  className="user-box">
                     <span>Sepet</span> <span>{count}</span>
-                  </a>
-                  <a href="/gift">Ayrıcalıklar</a>
-                  <a href="/setting">ayarlar </a>
-                  <a href="/"> span</a>
-                  <a href="/"> span</a>
-                  <a href="/"> span</a>
-                  <a href="/"> span</a>
+                  </Link>
+                  <Link to={"/gift"}>Ayrıcalıklar</Link>
+                  <Link to={"/setting"}>ayarlar </Link>
+                  <Link to={"/"}> span</Link>
+                  <Link to={"/"}> span</Link>
+                  <Link to={"/"}> span</Link>
+                  <Link  to={"/"}> span</Link>
                 </div>
 
                 <button className="logout" onClick={handleClick}>
-                  Logout{" "}
+                  Logout
                 </button>
               </div>
             ))}

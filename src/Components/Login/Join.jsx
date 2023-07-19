@@ -97,8 +97,8 @@ const Join = () => {
             </div>
           </div>
           <button type="submit">
-            {" "}
-            <span>Create Acount</span>{" "}
+          
+            <span>Create Acount</span>
           </button>
         </form>
       </div>

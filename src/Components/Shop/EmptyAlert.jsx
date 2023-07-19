@@ -4,7 +4,7 @@ const EmptyAlert = () => {
   const isActive = useSelector((state) => state.author.activeUser);
 
   const backPage = () => {
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "/";
   };
   return (
     <div className="Shop-empty" data-aos="fade-up">
@@ -22,7 +22,6 @@ const EmptyAlert = () => {
         <div className="alert">
           <h2>Şuan tatil planınız bulunmamaktadır </h2>
           <button onClick={backPage}>
-            {" "}
             <span>Planlara Göz At</span>
           </button>
         </div>

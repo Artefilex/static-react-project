@@ -15,17 +15,7 @@ const Links = () => {
           Shop
         </NavLink>
       </li>
-      {/* <li className="navItem">
-        <NavLink to={"/about "} className="navLink">
-          Lorem
-        </NavLink>
-      </li>
-      <li className="navItem">
-        <NavLink to={"/pages"} className="navLink">
-       
-          Lorem
-        </NavLink>
-      </li> */}
+     
     </>
   );
 };

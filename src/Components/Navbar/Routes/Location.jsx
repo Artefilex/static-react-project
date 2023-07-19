@@ -9,10 +9,7 @@ const Location = () => {
   return (
     <Routes>
       <Route path="/" exact Component={Main} />
-      <Route path="/packages" Component={Main} />
       <Route path="/shop" Component={Shop} />
-      <Route path="/about" Component={Main} />
-      <Route path="/pages" Component={Main} />
       <Route path="/:id" Component={DataLocation} />
       <Route path="/login" Component={Login} />
       <Route path="/join" Component={Join} />

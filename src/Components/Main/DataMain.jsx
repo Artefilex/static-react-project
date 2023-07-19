@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { GrLocation } from "react-icons/gr";
 import { BsClipboardCheck } from "react-icons/bs";
-
+import { Link } from "react-router-dom";
 const DataMain = ({ travels }) => {
   return (
     <div className="Main_Content-Items">
@@ -17,7 +17,6 @@ const DataMain = ({ travels }) => {
         <div className="fees">
           <div className="grade">
             <span>
-              {" "}
               {travels.grade} <small>+1</small>
             </span>
           </div>
@@ -29,10 +28,9 @@ const DataMain = ({ travels }) => {
           <p>{travels.descripton}</p>
         </div>
         <button className="btn">
-          <a href={`/${encodeURIComponent(travels.imgSrc.trim())}`}>
-            {" "}
-            <span>DETAİLS</span> <BsClipboardCheck className="icon" />{" "}
-          </a>
+          <Link to={`/${encodeURIComponent(travels.imgSrc.trim())}`}  >
+            <span>DETAİLS</span> <BsClipboardCheck className="icon" />
+          </Link>
         </button>
       </div>
     </div>

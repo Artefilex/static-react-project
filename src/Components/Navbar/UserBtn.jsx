@@ -1,17 +1,16 @@
 import { useEffect, useState, memo, useCallback } from "react";
 import { useSelector } from "react-redux";
 import UserOption from "../UserOption/UserOption";
-
+import {Link} from "react-router-dom"
 const UserBtn = () => {
+ 
   const activeUser = useSelector((state) => state.author.user);
   const userActive = JSON.parse(localStorage.getItem("isActive"));
   const [open, setOpen] = useState(false);
 
   useEffect(() => {}, [activeUser]);
 
-  const handleLocation = useCallback(() => {
-    window.location.href = "/login";
-  }, []);
+
   const handleClick = useCallback(() => {
     setOpen(!open);
   }, [open]);
@@ -19,8 +18,10 @@ const UserBtn = () => {
   return (
     <div>
       {!userActive && (
-        <button onClick={handleLocation} className="btn">
-          Log In
+        <button  className="btn">
+        <Link to={"/login"} >
+           Log In
+        </Link>
         </button>
       )}
 
