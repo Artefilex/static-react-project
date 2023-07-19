@@ -135,7 +135,7 @@ $size: (
   cursor: pointer;
 }
 @mixin mobile {
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     @content;
   }
 }
@@ -161,12 +161,12 @@ $size: (
   }
 }
 @mixin tablet {
-  @media (min-width: 769px) {
+  @media (min-width: 900px) {
     @content;
   }
 }
 @mixin tablet-2 {
-  @media (max-width: 769px) {
+  @media (min-width: 769px) {
     @content;
   }
 }
@@ -264,7 +264,6 @@ input {
 }
 body {
   background: rgb(255, 255, 255);
-  zoom: 0.85;
 }
 
 @media screen and (min-width: 1400px) {

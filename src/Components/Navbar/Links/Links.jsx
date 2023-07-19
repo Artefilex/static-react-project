@@ -5,27 +5,27 @@ const Links = () => {
     <>
       <li className="navItem">
         <NavLink to={"/"} className="navLink">
-          {" "}
-          Home{" "}
+         
+          Home
         </NavLink>
       </li>
       <li className="navItem">
         <NavLink to={"/shop"} className="navLink">
-          {" "}
-          Shop{" "}
+         
+          Shop
         </NavLink>
       </li>
-      <li className="navItem">
+      {/* <li className="navItem">
         <NavLink to={"/about "} className="navLink">
-          Lorem{" "}
+          Lorem
         </NavLink>
       </li>
       <li className="navItem">
         <NavLink to={"/pages"} className="navLink">
-          {" "}
+       
           Lorem
         </NavLink>
-      </li>
+      </li> */}
     </>
   );
 };

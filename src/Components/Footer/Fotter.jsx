@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import "../../Assests/scss/footer/footer.css"
-// import Video from "../../Assests/header.mp4"
+
 import {FiSend} from  "react-icons/fi"
 import {MdTravelExplore} from "react-icons/md"
 import {AiFillTwitterCircle ,AiFillInstagram} from "react-icons/ai"
@@ -17,7 +17,7 @@ const Fotter = () => {
     <section className='footer'>
       <div className='videoDiv'>
              <img src="https://images.pexels.com/photos/13392671/pexels-photo-13392671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" />
-            {/* <video src={Video} typeof='video/mp4' autoPlay muted loop ></video>  */}
+          
       </div>
       <div className='secContent container'> 
          <div className="contactDiv flex">
@@ -41,7 +41,7 @@ const Fotter = () => {
               </a>
             </div>
             <div className='footerP'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus accusantium deleniti alias odit, aliquam itaque cupiditate ullam suscipit saepe.
+              Lorffem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus accusantium deleniti alias odit, aliquam itaque cupiditate ullam suscipit saepe.
 
             </div>
            <div className='footerSocials'>

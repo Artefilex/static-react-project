@@ -64,7 +64,6 @@ input {
 
 body {
   background: rgb(255, 255, 255);
-  zoom: 0.85;
 }
 
 @media screen and (min-width: 1400px) {

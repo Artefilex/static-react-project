@@ -4,7 +4,8 @@
   @include responsive-flex(row, center, center);
   width: weight(max);
   background: $background-bg;
-  zoom: 0.55;
+  min-height: 100vh;
+  
 
   form {
     @include responsive-flex(column, center, flex-start);
@@ -49,7 +50,7 @@
   }
 
   .Shop-center {
-    @include responsive-flex(column, center, space-between, 700px) {
+    @include responsive-flex(column, center, space-between, 1200px) {
       @include flex-reverse(row, flex-start, flex-start);
       gap: 1rem;
     }
@@ -71,13 +72,7 @@
       background: $whiteColor;
       border-radius: $border-radius-2;
       box-shadow: $box-shadow;
-      @include deskop {
-        width: weight(xsmall);
-      }
-      @include mobile {
-        width: weight(max);
-        height: 15rem;
-      }
+    
       .alert {
         @include responsive-flex(row, center, space-around, 700px) {
           @include flex-reverse(column);
@@ -128,7 +123,7 @@
         padding: 2rem;
         border-radius: $border-radius-2;
         box-shadow: $box-shadow;
-        @include mobile {
+        @include mobile{
           @include flex-reverse(column);
           height: 30rem;
         }
@@ -138,7 +133,7 @@
           height: weight(max);
           @include mobile {
             @include flex-reverse(column, center);
-            width: weight(max);
+            width: weight(xsmall);
             height: 50%;
             margin-bottom: 1rem;
             span {
@@ -222,7 +217,7 @@
     }
   }
   .Payment-form {
-    @include responsive-flex(column, center, center, 700px) {
+    @include responsive-flex(column, center, center,1200px) {
       @include flex-reverse(
         $alignItem: flex-start,
         $justifyContent: flex-start

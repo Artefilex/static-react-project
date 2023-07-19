@@ -1,7 +1,7 @@
-import React, { useEffect,  useCallback } from "react";
+import React, { useEffect,  useCallback, useState  } from "react";
 import { useDispatch } from "react-redux";
 import { userLocation } from "../../../Reducer/reducer/AuthorSlice";
-import { useState } from "react";
+
 
 const AddressForm = () => {
   const dispatch = useDispatch();
@@ -95,6 +95,7 @@ const AddressForm = () => {
   });
 
   let data = JSON.parse(localStorage.getItem("allInfo"));
+
 
   const handleChange =(e) => {
     const { name, value } = e.target;

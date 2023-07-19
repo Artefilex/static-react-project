@@ -37,7 +37,7 @@ const UsersSlice = createSlice({
      },
      userLocation(state,action){
         state.userAdrress = action.payload
-        if(state.userAdrress){
+        if(state.userAdrress ){
             localStorage.setItem("locationInfo",JSON.stringify(state.userAdrress))
           }
      }

@@ -94,7 +94,7 @@ export const Data = [
 },
 {
     id: 6,
-    location: " Hong Kong | China",
+    location: "Hong Kong | China",
     imgSrc: "https://bigseventravel.com/wp-content/uploads/2019/08/hk.jpg",
     destTitle: "Hong Kong",
     grade: "cultural relax",

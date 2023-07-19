@@ -64,7 +64,6 @@ input {
 
 body {
   background: rgb(255, 255, 255);
-  zoom: 0.85;
 }
 
 @media screen and (min-width: 1400px) {
@@ -88,7 +87,6 @@ body {
   height: header;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 61, 127, 0.521);
-  zoom: 0.75;
 }
 @media (min-width: 1240px) {
   .header {

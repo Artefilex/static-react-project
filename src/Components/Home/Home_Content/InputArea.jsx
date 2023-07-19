@@ -78,11 +78,11 @@ const InputArea = () => {
           </div>
           <div className="input flex">
             <input
-              type="text"
+              type="number"
               value={range}
               maxLength={20}
               onChange={handleRange}
-              max={5000}
+              max={10000}
               min={0}
             />
           </div>

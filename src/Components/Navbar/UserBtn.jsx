@@ -20,16 +20,14 @@ const UserBtn = () => {
     <div>
       {!userActive && (
         <button onClick={handleLocation} className="btn">
-          {" "}
-          Log In{" "}
+          Log In
         </button>
       )}
 
       {userActive && (
         <>
           <button className="btn" onClick={handleClick}>
-            {" "}
-            User{" "}
+            User
           </button>
           {open && <UserOption />}
         </>
